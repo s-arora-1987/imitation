@@ -1,0 +1,112 @@
+{
+  "artifacts": [],
+  "command": "train",
+  "experiment": {
+    "base_dir": "/home/katy/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.0",
+      "sacred==0.8.2"
+    ],
+    "mainfile": "train_adversarial.py",
+    "name": "train_adversarial",
+    "repositories": [
+      {
+        "commit": "740f4eefd6eb6aa04e5fee68151336dc1861615d",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "train_adversarial.py",
+        "_sources/train_adversarial_3f01b1290aecd11c6b40c22c09762fdd.py"
+      ]
+    ]
+  },
+  "heartbeat": "2021-09-06T20:04:25.505773",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "gpus": {
+      "driver_version": "470.57.02",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 1070",
+          "persistence_mode": false,
+          "total_memory": 8116
+        }
+      ]
+    },
+    "hostname": "katy-desktop",
+    "os": [
+      "Linux",
+      "Linux-5.4.0-81-generic-x86_64-with-debian-buster-sid"
+    ],
+    "python_version": "3.7.10"
+  },
+  "meta": {
+    "command": "train",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "airl",
+        "pendulum",
+        "rollout_path=output/expert_demos/Pendulum-v0/20210906_153932_094b49/rollouts/final.pkl"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": {
+    "expert_stats": {
+      "len_max": 200,
+      "len_mean": 200.0,
+      "len_min": 200,
+      "len_std": 0.0,
+      "n_traj": 16,
+      "return_max": -6.780679702327849,
+      "return_mean": -8.440103932570818,
+      "return_min": -9.239323660122798,
+      "return_std": 0.7890485710554812
+    },
+    "imit_stats": {
+      "len_max": 200,
+      "len_mean": 200.0,
+      "len_min": 200,
+      "len_std": 0.0,
+      "monitor_return_max": -748.614682,
+      "monitor_return_mean": -1259.838899214286,
+      "monitor_return_min": -1805.584753,
+      "monitor_return_std": 289.2385556933791,
+      "n_traj": 56,
+      "return_max": -1450.0479307174683,
+      "return_mean": -4110.80278545831,
+      "return_min": -6936.289821624756,
+      "return_std": 1612.1937054705388
+    }
+  },
+  "start_time": "2021-09-06T19:52:34.002169",
+  "status": "COMPLETED",
+  "stop_time": "2021-09-06T20:04:23.502383"
+}

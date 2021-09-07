@@ -1,0 +1,88 @@
+{
+  "artifacts": [],
+  "command": "train",
+  "experiment": {
+    "base_dir": "/home/katy/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.0",
+      "sacred==0.8.2"
+    ],
+    "mainfile": "train_adversarial.py",
+    "name": "train_adversarial",
+    "repositories": [
+      {
+        "commit": "740f4eefd6eb6aa04e5fee68151336dc1861615d",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "train_adversarial.py",
+        "_sources/train_adversarial_86f2b7b411a1eaf40a9515a0674d5095.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/katy/imitation/src/imitation/scripts/train_adversarial.py\", line 236, in train\n    trainer.gen_algo, trainer.venv_train, sample_until=sample_until_eval\n",
+    "  File \"/home/katy/imitation/src/imitation/data/rollout.py\", line 315, in generate_trajectories\n    for obs in venv.observation_space:\n",
+    "TypeError: 'Box' object is not iterable\n"
+  ],
+  "heartbeat": "2021-07-26T20:42:59.307049",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "gpus": {
+      "driver_version": "470.57.02",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 1070",
+          "persistence_mode": false,
+          "total_memory": 8116
+        }
+      ]
+    },
+    "hostname": "katy-desktop",
+    "os": [
+      "Linux",
+      "Linux-5.4.0-80-generic-x86_64-with-debian-buster-sid"
+    ],
+    "python_version": "3.7.10"
+  },
+  "meta": {
+    "command": "train",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2021-07-26T20:42:49.241779",
+  "status": "FAILED",
+  "stop_time": "2021-07-26T20:42:59.312621"
+}

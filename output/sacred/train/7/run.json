@@ -1,0 +1,112 @@
+{
+  "artifacts": [],
+  "command": "train",
+  "experiment": {
+    "base_dir": "/home/katy/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.0",
+      "sacred==0.8.2"
+    ],
+    "mainfile": "train_adversarial.py",
+    "name": "train_adversarial",
+    "repositories": [
+      {
+        "commit": "740f4eefd6eb6aa04e5fee68151336dc1861615d",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "train_adversarial.py",
+        "_sources/train_adversarial_a15be611f0eefa095dbb30e4aabdd4a9.py"
+      ]
+    ]
+  },
+  "heartbeat": "2021-07-18T15:06:00.969256",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "gpus": {
+      "driver_version": "465.27",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 1070",
+          "persistence_mode": false,
+          "total_memory": 8116
+        }
+      ]
+    },
+    "hostname": "katy-desktop",
+    "os": [
+      "Linux",
+      "Linux-5.4.0-77-generic-x86_64-with-debian-buster-sid"
+    ],
+    "python_version": "3.7.10"
+  },
+  "meta": {
+    "command": "train",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "gail",
+        "mountain_car",
+        "rollout_path=quickstart/rl/mountain_car/rollouts/final.pkl"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": {
+    "expert_stats": {
+      "len_max": 175,
+      "len_mean": 127.56521739130434,
+      "len_min": 85,
+      "len_std": 30.417137742249878,
+      "n_traj": 23,
+      "return_max": -85.0,
+      "return_mean": -127.56521739130434,
+      "return_min": -175.0,
+      "return_std": 30.417137742249878
+    },
+    "imit_stats": {
+      "len_max": 200,
+      "len_mean": 172.35087719298247,
+      "len_min": 151,
+      "len_std": 13.663231782389715,
+      "monitor_return_max": -151.0,
+      "monitor_return_mean": -172.35087719298247,
+      "monitor_return_min": -200.0,
+      "monitor_return_std": 13.663231782389715,
+      "n_traj": 57,
+      "return_max": 6.464461138704792,
+      "return_mean": 5.3269553432453485,
+      "return_min": 3.8789975659456104,
+      "return_std": 0.5165464502909904
+    }
+  },
+  "start_time": "2021-07-18T15:04:48.530073",
+  "status": "COMPLETED",
+  "stop_time": "2021-07-18T15:05:58.966691"
+}

@@ -1,0 +1,175 @@
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:ClaimNewOnion
+new obs 13
+dones [ True  True][0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable

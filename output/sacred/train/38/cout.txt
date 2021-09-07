@@ -1,0 +1,362 @@
+INFO - train_adversarial - Running command 'train'
+INFO - train_adversarial - Started run with ID "38"
+INFO - root - Logging to output/train_adversarial/CliffWalking-v0/20210726_170212_80cef7
+Logging to output/train_adversarial/CliffWalking-v0/20210726_170212_80cef7
+Using cuda device
+INFO - root - Using AIRL
+round:   0%|          | 0/4 [00:00<?, ?it/s]----------------------------------
+| raw/                    |      |
+|    gen/time/fps         | 3822 |
+|    gen/time/iterations  | 1    |
+|    gen/time/time_ela... | 0    |
+|    gen/time/total_ti... | 2048 |
+----------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.484    |
+|    disc/disc_loss       | 0.968    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 1        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.485    |
+|    disc/disc_loss       | 0.969    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 1        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.488    |
+|    disc/disc_loss       | 0.962    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 1        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.489    |
+|    disc/disc_loss       | 0.962    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 1        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| mean/                   |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.486    |
+|    disc/disc_loss       | 0.965    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 1        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+|    gen/time/fps         | 3.82e+03 |
+|    gen/time/iterations  | 1        |
+|    gen/time/time_ela... | 0        |
+|    gen/time/total_ti... | 2.05e+03 |
+|    gen/train/approx_kl  | 0.00577  |
+|    gen/train/clip_fr... | 0.0207   |
+|    gen/train/clip_range | 0.2      |
+|    gen/train/entropy... | -1.38    |
+|    gen/train/explain... | -2.24    |
+|    gen/train/learnin... | 0.0003   |
+|    gen/train/loss       | 0.121    |
+|    gen/train/n_updates  | 10       |
+|    gen/train/policy_... | -0.00426 |
+|    gen/train/value_loss | 1.06     |
+--------------------------------------
+round:  25%|██▌       | 1/4 [00:01<00:05,  1.87s/it]-----------------------------------------
+| raw/                    |             |
+|    gen/time/fps         | 7789        |
+|    gen/time/iterations  | 1           |
+|    gen/time/time_ela... | 0           |
+|    gen/time/total_ti... | 4096        |
+|    gen/train/approx_kl  | 0.005771785 |
+|    gen/train/clip_fr... | 0.0207      |
+|    gen/train/clip_range | 0.2         |
+|    gen/train/entropy... | -1.38       |
+|    gen/train/explain... | -2.24       |
+|    gen/train/learnin... | 0.0003      |
+|    gen/train/loss       | 0.121       |
+|    gen/train/n_updates  | 10          |
+|    gen/train/policy_... | -0.00426    |
+|    gen/train/value_loss | 1.06        |
+-----------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.481    |
+|    disc/disc_loss       | 0.948    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 2        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.482    |
+|    disc/disc_loss       | 0.947    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 2        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.485    |
+|    disc/disc_loss       | 0.94     |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 2        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.487    |
+|    disc/disc_loss       | 0.938    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 2        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| mean/                   |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.484    |
+|    disc/disc_loss       | 0.943    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 2        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+|    gen/time/fps         | 7.79e+03 |
+|    gen/time/iterations  | 1        |
+|    gen/time/time_ela... | 0        |
+|    gen/time/total_ti... | 4.1e+03  |
+|    gen/train/approx_kl  | 0.00904  |
+|    gen/train/clip_fr... | 0.123    |
+|    gen/train/clip_range | 0.2      |
+|    gen/train/entropy... | -1.36    |
+|    gen/train/explain... | -7.3     |
+|    gen/train/learnin... | 0.0003   |
+|    gen/train/loss       | -0.00154 |
+|    gen/train/n_updates  | 20       |
+|    gen/train/policy_... | -0.0106  |
+|    gen/train/value_loss | 0.152    |
+--------------------------------------
+round:  50%|█████     | 2/4 [00:03<00:03,  1.83s/it]-----------------------------------------
+| raw/                    |             |
+|    gen/time/fps         | 11924       |
+|    gen/time/iterations  | 1           |
+|    gen/time/time_ela... | 0           |
+|    gen/time/total_ti... | 6144        |
+|    gen/train/approx_kl  | 0.009043026 |
+|    gen/train/clip_fr... | 0.123       |
+|    gen/train/clip_range | 0.2         |
+|    gen/train/entropy... | -1.36       |
+|    gen/train/explain... | -7.3        |
+|    gen/train/learnin... | 0.0003      |
+|    gen/train/loss       | -0.00154    |
+|    gen/train/n_updates  | 20          |
+|    gen/train/policy_... | -0.0106     |
+|    gen/train/value_loss | 0.152       |
+-----------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.463    |
+|    disc/disc_loss       | 0.921    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 3        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.465    |
+|    disc/disc_loss       | 0.917    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 3        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.465    |
+|    disc/disc_loss       | 0.92     |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 3        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.468    |
+|    disc/disc_loss       | 0.914    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 3        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| mean/                   |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.465    |
+|    disc/disc_loss       | 0.918    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 3        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+|    gen/time/fps         | 1.19e+04 |
+|    gen/time/iterations  | 1        |
+|    gen/time/time_ela... | 0        |
+|    gen/time/total_ti... | 6.14e+03 |
+|    gen/train/approx_kl  | 0.0171   |
+|    gen/train/clip_fr... | 0.246    |
+|    gen/train/clip_range | 0.2      |
+|    gen/train/entropy... | -1.32    |
+|    gen/train/explain... | -3.55    |
+|    gen/train/learnin... | 0.0003   |
+|    gen/train/loss       | -0.0135  |
+|    gen/train/n_updates  | 30       |
+|    gen/train/policy_... | -0.0286  |
+|    gen/train/value_loss | 0.0232   |
+--------------------------------------
+round:  75%|███████▌  | 3/4 [00:05<00:01,  1.79s/it]-----------------------------------------
+| raw/                    |             |
+|    gen/time/fps         | 15368       |
+|    gen/time/iterations  | 1           |
+|    gen/time/time_ela... | 0           |
+|    gen/time/total_ti... | 8192        |
+|    gen/train/approx_kl  | 0.017118862 |
+|    gen/train/clip_fr... | 0.246       |
+|    gen/train/clip_range | 0.2         |
+|    gen/train/entropy... | -1.32       |
+|    gen/train/explain... | -3.55       |
+|    gen/train/learnin... | 0.0003      |
+|    gen/train/loss       | -0.0135     |
+|    gen/train/n_updates  | 30          |
+|    gen/train/policy_... | -0.0286     |
+|    gen/train/value_loss | 0.0232      |
+-----------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.454    |
+|    disc/disc_loss       | 0.862    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 4        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.453    |
+|    disc/disc_loss       | 0.872    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 4        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.455    |
+|    disc/disc_loss       | 0.868    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 4        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| raw/                    |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.456    |
+|    disc/disc_loss       | 0.87     |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 4        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+--------------------------------------
+--------------------------------------
+| mean/                   |          |
+|    disc/disc_acc        | 0.5      |
+|    disc/disc_acc_expert | 1        |
+|    disc/disc_acc_gen    | 0        |
+|    disc/disc_entropy    | 0.454    |
+|    disc/disc_loss       | 0.868    |
+|    disc/disc_proport... | 0.5      |
+|    disc/global_step     | 4        |
+|    disc/n_expert        | 1.02e+03 |
+|    disc/n_generated     | 1.02e+03 |
+|    gen/time/fps         | 1.54e+04 |
+|    gen/time/iterations  | 1        |
+|    gen/time/time_ela... | 0        |
+|    gen/time/total_ti... | 8.19e+03 |
+|    gen/train/approx_kl  | 0.00971  |
+|    gen/train/clip_fr... | 0.336    |
+|    gen/train/clip_range | 0.2      |
+|    gen/train/entropy... | -1.26    |
+|    gen/train/explain... | -1.2     |
+|    gen/train/learnin... | 0.0003   |
+|    gen/train/loss       | -0.0592  |
+|    gen/train/n_updates  | 40       |
+|    gen/train/policy_... | -0.0396  |
+|    gen/train/value_loss | 0.0046   |
+--------------------------------------
+round: 100%|██████████| 4/4 [00:07<00:00,  1.78s/it]round: 100%|██████████| 4/4 [00:07<00:00,  1.79s/it]
+INFO - root - Saved policy to output/train_adversarial/CliffWalking-v0/20210726_170212_80cef7/checkpoints/final/gen_policy

@@ -1,0 +1,80 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "72"
+Logging to output/expert_demos/imitationNM_SortingOnions-v0/20210810_154716_18e836/rl
+Using cuda device
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210810_154716_18e836/policies/000000010000
+---------------------------------
+| time/              |          |
+|    fps             | 6.55e+03 |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 1.64e+04 |
+---------------------------------
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210810_154716_18e836/policies/000000020000
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210810_154716_18e836/policies/000000030000
+--------------------------------------
+| time/                   |          |
+|    fps                  | 2.2e+03  |
+|    iterations           | 2        |
+|    time_elapsed         | 14       |
+|    total_timesteps      | 3.28e+04 |
+| train/                  |          |
+|    approx_kl            | 0.00808  |
+|    clip_fraction        | 0.0338   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.94    |
+|    explained_variance   | -0.918   |
+|    learning_rate        | 0.0003   |
+|    loss                 | -0.014   |
+|    n_updates            | 10       |
+|    policy_gradient_loss | -0.00134 |
+|    value_loss           | 2.09e-05 |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210810_154716_18e836/policies/000000040000
+---------------------------------------
+| time/                   |           |
+|    fps                  | 1.83e+03  |
+|    iterations           | 3         |
+|    time_elapsed         | 26        |
+|    total_timesteps      | 4.92e+04  |
+| train/                  |           |
+|    approx_kl            | 0.00953   |
+|    clip_fraction        | 0.0196    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.93     |
+|    explained_variance   | nan       |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.014     |
+|    n_updates            | 20        |
+|    policy_gradient_loss | -0.000324 |
+|    value_loss           | 1.66e-05  |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210810_154716_18e836/policies/000000050000
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210810_154716_18e836/policies/000000060000
+---------------------------------------
+| time/                   |           |
+|    fps                  | 1.69e+03  |
+|    iterations           | 4         |
+|    time_elapsed         | 38        |
+|    total_timesteps      | 6.55e+04  |
+| train/                  |           |
+|    approx_kl            | 0.0106    |
+|    clip_fraction        | 0.0518    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.91     |
+|    explained_variance   | -7.82e+09 |
+|    learning_rate        | 0.0003    |
+|    loss                 | -0.00228  |
+|    n_updates            | 30        |
+|    policy_gradient_loss | -0.00136  |
+|    value_loss           | 1.2e-05   |
+---------------------------------------
+det_policy_as_dict_only_discr_sp 
+  {0: 0, 1: 5, 2: 0, 3: 5, 4: 5, 5: 0, 6: 0, 7: 0, 8: 0, 9: 5, 10: 0, 11: 0, 12: 5, 13: 2, 14: 5, 15: 5, 16: 0, 17: 0, 18: 0, 19: 0, 20: 0, 21: 0, 22: 3, 23: 5, 24: 0, 25: 0, 26: 0}
+INFO - root - Rollout stats: {'n_traj': 2000, 'return_min': 0.0, 'return_mean': 0.0023496503496503495, 'return_std': 0.026164598963788633, 'return_max': 0.2937062937062937, 'len_min': 1, 'len_mean': 1.0, 'len_std': 0.0, 'len_max': 1}
+INFO - root - Dumped demonstrations to output/expert_demos/imitationNM_SortingOnions-v0/20210810_154716_18e836/rollouts/final.pkl.
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210810_154716_18e836/policies/final
+det_policy_as_dict_only_discr_sp 
+  {0: 0, 1: 5, 2: 0, 3: 5, 4: 5, 5: 0, 6: 0, 7: 0, 8: 0, 9: 5, 10: 0, 11: 0, 12: 5, 13: 2, 14: 5, 15: 5, 16: 0, 17: 0, 18: 0, 19: 0, 20: 0, 21: 0, 22: 3, 23: 5, 24: 0, 25: 0, 26: 0}
+INFO - expert_demos - Result: {'n_traj': 56, 'return_min': 0.0, 'return_mean': 0.08916083916083917, 'return_std': 0.13504608240822097, 'return_max': 0.2937062937062937, 'len_min': 1, 'len_mean': 1.0, 'len_std': 0.0, 'len_max': 1}
+INFO - expert_demos - Completed after 0:00:55

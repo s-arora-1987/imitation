@@ -1,0 +1,98 @@
+{
+  "artifacts": [],
+  "command": "rollouts_and_policy",
+  "experiment": {
+    "base_dir": "/home/katy/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.0",
+      "sacred==0.8.2"
+    ],
+    "mainfile": "expert_demos.py",
+    "name": "expert_demos",
+    "repositories": [
+      {
+        "commit": "740f4eefd6eb6aa04e5fee68151336dc1861615d",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "expert_demos.py",
+        "_sources/expert_demos_0ee01c93eda8e6c06ad22f0c21aff984.py"
+      ]
+    ]
+  },
+  "heartbeat": "2021-07-18T15:01:11.038062",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "gpus": {
+      "driver_version": "465.27",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 1070",
+          "persistence_mode": false,
+          "total_memory": 8116
+        }
+      ]
+    },
+    "hostname": "katy-desktop",
+    "os": [
+      "Linux",
+      "Linux-5.4.0-77-generic-x86_64-with-debian-buster-sid"
+    ],
+    "python_version": "3.7.10"
+  },
+  "meta": {
+    "command": "rollouts_and_policy",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "mountain_car",
+        "log_dir=quickstart/rl/mountain_car/"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": {
+    "len_max": 193,
+    "len_mean": 126.14035087719299,
+    "len_min": 105,
+    "len_std": 23.547964188454696,
+    "monitor_return_max": -105.0,
+    "monitor_return_mean": -126.14035087719299,
+    "monitor_return_min": -193.0,
+    "monitor_return_std": 23.547964188454696,
+    "n_traj": 57,
+    "return_max": -4.75712366667193,
+    "return_mean": -5.715275825182923,
+    "return_min": -8.745283870541314,
+    "return_std": 1.0670857099112068
+  },
+  "start_time": "2021-07-18T14:50:46.473617",
+  "status": "COMPLETED",
+  "stop_time": "2021-07-18T15:01:09.036858"
+}

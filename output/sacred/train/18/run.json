@@ -1,0 +1,112 @@
+{
+  "artifacts": [],
+  "command": "train",
+  "experiment": {
+    "base_dir": "/home/katy/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.0",
+      "sacred==0.8.2"
+    ],
+    "mainfile": "train_adversarial.py",
+    "name": "train_adversarial",
+    "repositories": [
+      {
+        "commit": "740f4eefd6eb6aa04e5fee68151336dc1861615d",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "train_adversarial.py",
+        "_sources/train_adversarial_72afd55a5c5798dc573e05a2c95e64ba.py"
+      ]
+    ]
+  },
+  "heartbeat": "2021-07-19T21:25:52.569745",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "gpus": {
+      "driver_version": "465.27",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 1070",
+          "persistence_mode": false,
+          "total_memory": 8116
+        }
+      ]
+    },
+    "hostname": "katy-desktop",
+    "os": [
+      "Linux",
+      "Linux-5.4.0-77-generic-x86_64-with-debian-buster-sid"
+    ],
+    "python_version": "3.7.10"
+  },
+  "meta": {
+    "command": "train",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "airl",
+        "cliff_walker",
+        "rollout_path=quickstart/rl/cliff_walker/rollouts/final.pkl"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": {
+    "expert_stats": {
+      "len_max": 60541,
+      "len_mean": 25096.625,
+      "len_min": 3501,
+      "len_std": 18813.339994120528,
+      "n_traj": 8,
+      "return_max": -7758.0,
+      "return_mean": -60056.0,
+      "return_min": -142612.0,
+      "return_std": 45133.45297005316
+    },
+    "imit_stats": {
+      "len_max": 18,
+      "len_mean": 17.017857142857142,
+      "len_min": 17,
+      "len_std": 0.13243211584099396,
+      "monitor_return_max": -17,
+      "monitor_return_mean": -17.017857142857142,
+      "monitor_return_min": -18,
+      "monitor_return_std": 0.13243211584099396,
+      "n_traj": 56,
+      "return_max": -33.50340521335602,
+      "return_mean": -33.86201546873365,
+      "return_min": -34.46744650602341,
+      "return_std": 0.14749035332904217
+    }
+  },
+  "start_time": "2021-07-19T21:24:42.876060",
+  "status": "COMPLETED",
+  "stop_time": "2021-07-19T21:25:50.568414"
+}

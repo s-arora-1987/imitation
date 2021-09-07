@@ -1,0 +1,15 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "91"
+Logging to output/expert_demos/imitationNM_SortingOnions-v0/20210813_162404_d7f1ba/rl
+Using cuda device
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210813_162404_d7f1ba/policies/000000010000
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1.21     |
+|    ep_rew_mean     | 0.0627   |
+| time/              |          |
+|    fps             | 7.5e+03  |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 1.64e+04 |
+---------------------------------

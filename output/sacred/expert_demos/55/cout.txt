@@ -1,0 +1,15 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "55"
+Logging to quickstart/rl/cliff_walker/rl
+Using cuda device
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000010000
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 678       |
+|    ep_rew_mean     | -6.14e+03 |
+| time/              |           |
+|    fps             | 8.96e+03  |
+|    iterations      | 1         |
+|    time_elapsed    | 1         |
+|    total_timesteps | 1.64e+04  |
+----------------------------------

@@ -1,0 +1,106 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "50"
+Logging to quickstart/rl/cliff_walker/rl
+Using cuda device
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000010000
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 99.4      |
+|    ep_rew_mean     | -1.07e+03 |
+| time/              |           |
+|    fps             | 8.68e+03  |
+|    iterations      | 1         |
+|    time_elapsed    | 1         |
+|    total_timesteps | 1.64e+04  |
+----------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000020000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000030000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 99.5      |
+|    ep_rew_mean          | -639      |
+| time/                   |           |
+|    fps                  | 2.76e+03  |
+|    iterations           | 2         |
+|    time_elapsed         | 11        |
+|    total_timesteps      | 3.28e+04  |
+| train/                  |           |
+|    approx_kl            | 0.0177    |
+|    clip_fraction        | 0.268     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.37     |
+|    explained_variance   | -6.91e+05 |
+|    learning_rate        | 0.0003    |
+|    loss                 | 6.81e+03  |
+|    n_updates            | 10        |
+|    policy_gradient_loss | -0.0363   |
+|    value_loss           | 2.77e+04  |
+---------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000040000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 100      |
+|    ep_rew_mean          | -288     |
+| time/                   |          |
+|    fps                  | 2.25e+03 |
+|    iterations           | 3        |
+|    time_elapsed         | 21       |
+|    total_timesteps      | 4.92e+04 |
+| train/                  |          |
+|    approx_kl            | 0.0162   |
+|    clip_fraction        | 0.26     |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.33    |
+|    explained_variance   | -1.1e+07 |
+|    learning_rate        | 0.0003   |
+|    loss                 | 2.31e+03 |
+|    n_updates            | 20       |
+|    policy_gradient_loss | -0.0321  |
+|    value_loss           | 1.03e+04 |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000050000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000060000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 100      |
+|    ep_rew_mean          | -158     |
+| time/                   |          |
+|    fps                  | 2.07e+03 |
+|    iterations           | 4        |
+|    time_elapsed         | 31       |
+|    total_timesteps      | 6.55e+04 |
+| train/                  |          |
+|    approx_kl            | 0.0123   |
+|    clip_fraction        | 0.197    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.27    |
+|    explained_variance   | -40.2    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 825      |
+|    n_updates            | 30       |
+|    policy_gradient_loss | -0.0229  |
+|    value_loss           | 3e+03    |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000070000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000080000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 100      |
+|    ep_rew_mean          | -127     |
+| time/                   |          |
+|    fps                  | 1.99e+03 |
+|    iterations           | 5        |
+|    time_elapsed         | 41       |
+|    total_timesteps      | 8.19e+04 |
+| train/                  |          |
+|    approx_kl            | 0.0108   |
+|    clip_fraction        | 0.098    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.19    |
+|    explained_variance   | -13.8    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 470      |
+|    n_updates            | 40       |
+|    policy_gradient_loss | -0.0138  |
+|    value_loss           | 1.28e+03 |
+--------------------------------------

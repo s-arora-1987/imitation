@@ -1,0 +1,215 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "102"
+Logging to output/expert_demos/imitationNM_SortingOnions-v0/20210814_123604_858175/rl
+Using cuda device
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210814_123604_858175/policies/000000010000
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1.11     |
+|    ep_rew_mean     | 0.0331   |
+| time/              |          |
+|    fps             | 7.47e+03 |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 1.64e+04 |
+---------------------------------
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210814_123604_858175/policies/000000020000
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210814_123604_858175/policies/000000030000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 1.35     |
+|    ep_rew_mean          | 0.107    |
+| time/                   |          |
+|    fps                  | 2.64e+03 |
+|    iterations           | 2        |
+|    time_elapsed         | 12       |
+|    total_timesteps      | 3.28e+04 |
+| train/                  |          |
+|    approx_kl            | 0.148    |
+|    clip_fraction        | 0.876    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.81    |
+|    explained_variance   | -4.78    |
+|    learning_rate        | 0.0003   |
+|    loss                 | -0.128   |
+|    n_updates            | 10       |
+|    policy_gradient_loss | -0.123   |
+|    value_loss           | 0.0155   |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210814_123604_858175/policies/000000040000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 2.34     |
+|    ep_rew_mean          | 0.37     |
+| time/                   |          |
+|    fps                  | 2.18e+03 |
+|    iterations           | 3        |
+|    time_elapsed         | 22       |
+|    total_timesteps      | 4.92e+04 |
+| train/                  |          |
+|    approx_kl            | 0.202    |
+|    clip_fraction        | 0.981    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.31    |
+|    explained_variance   | -190     |
+|    learning_rate        | 0.0003   |
+|    loss                 | -0.171   |
+|    n_updates            | 20       |
+|    policy_gradient_loss | -0.169   |
+|    value_loss           | 0.0315   |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210814_123604_858175/policies/000000050000
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210814_123604_858175/policies/000000060000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 2.67     |
+|    ep_rew_mean          | 0.504    |
+| time/                   |          |
+|    fps                  | 1.99e+03 |
+|    iterations           | 4        |
+|    time_elapsed         | 32       |
+|    total_timesteps      | 6.55e+04 |
+| train/                  |          |
+|    approx_kl            | 0.146    |
+|    clip_fraction        | 0.978    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.864   |
+|    explained_variance   | -29.3    |
+|    learning_rate        | 0.0003   |
+|    loss                 | -0.149   |
+|    n_updates            | 30       |
+|    policy_gradient_loss | -0.158   |
+|    value_loss           | 0.0542   |
+--------------------------------------
+det_policy_as_dict_only_discr_sp 
+  {0: 2, 1: 2, 2: 4, 3: 5, 4: 2, 5: 0, 6: 3, 7: 2, 8: 2, 9: 2, 10: 2, 11: 2, 12: 2, 13: 2, 14: 2, 15: 2, 16: 2, 17: 2, 18: 2, 19: 2, 20: 2, 21: 0, 22: 2, 23: 0, 24: 2, 25: 3, 26: 2}
+INFO - root - Rollout stats: {'n_traj': 648, 'return_min': 0.8881118881118881, 'return_mean': 0.914853664853665, 'return_std': 0.08605434638721714, 'return_max': 1.4755244755244754, 'len_min': 3, 'len_mean': 3.0910493827160495, 'len_std': 0.2929945603183823, 'len_max': 5}
+INFO - root - Dumped demonstrations to output/expert_demos/imitationNM_SortingOnions-v0/20210814_123604_858175/rollouts/final.pkl.
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210814_123604_858175/policies/final
+det_policy_as_dict_only_discr_space 
+  {0: 2, 1: 2, 2: 4, 3: 5, 4: 2, 5: 0, 6: 3, 7: 2, 8: 2, 9: 2, 10: 2, 11: 2, 12: 2, 13: 2, 14: 2, 15: 2, 16: 2, 17: 2, 18: 2, 19: 2, 20: 2, 21: 0, 22: 2, 23: 0, 24: 2, 25: 3, 26: 2}
+here1
+here2
+here3
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -good, gripper -eye, LS -unavailable 
+PlaceInBin
+
+ onion -bin, pred -unknown, gripper -bin, LS -unavailable 
+ClaimNewOnion
+
+ onion -conv, pred -unknown, gripper -bin, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -good, gripper -eye, LS -unavailable 
+PlaceInBin
+
+ onion -bin, pred -unknown, gripper -bin, LS -unavailable 
+ClaimNewOnion
+
+ onion -conv, pred -unknown, gripper -bin, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -good, gripper -eye, LS -unavailable 
+PlaceInBin
+
+ onion -bin, pred -unknown, gripper -bin, LS -unavailable 
+ClaimNewOnion
+
+ onion -conv, pred -unknown, gripper -bin, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -good, gripper -eye, LS -unavailable 
+PlaceInBin
+
+ onion -eye, pred -good, gripper -eye, LS -unavailable 
+PlaceInBin
+
+ onion -bin, pred -unknown, gripper -bin, LS -unavailable 
+ClaimNewOnion
+
+ onion -conv, pred -unknown, gripper -bin, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -good, gripper -eye, LS -unavailable 
+PlaceInBin
+
+ onion -bin, pred -unknown, gripper -bin, LS -unavailable 
+ClaimNewOnion
+
+ onion -conv, pred -unknown, gripper -bin, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -good, gripper -eye, LS -unavailable 
+PlaceInBin
+
+ onion -eye, pred -good, gripper -eye, LS -unavailable 
+PlaceInBin
+
+ onion -bin, pred -unknown, gripper -bin, LS -unavailable 
+ClaimNewOnion
+
+ onion -conv, pred -unknown, gripper -bin, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -good, gripper -eye, LS -unavailable 
+PlaceInBin
+
+ onion -bin, pred -unknown, gripper -bin, LS -unavailable 
+ClaimNewOnion
+
+ onion -conv, pred -unknown, gripper -bin, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -good, gripper -eye, LS -unavailable 
+PlaceInBin
+
+ onion -bin, pred -unknown, gripper -bin, LS -unavailable 
+ClaimNewOnion
+
+ onion -conv, pred -unknown, gripper -bin, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -good, gripper -eye, LS -unavailable 
+PlaceInBin
+
+ onion -bin, pred -unknown, gripper -bin, LS -unavailable 
+ClaimNewOnion
+
+ onion -conv, pred -unknown, gripper -bin, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+INFO - expert_demos - Result: {'n_traj': 51, 'return_min': 0.8881118881118881, 'return_mean': 0.9111476758535583, 'return_std': 0.07896270210252122, 'return_max': 1.1818181818181817, 'len_min': 3, 'len_mean': 3.0784313725490198, 'len_std': 0.2688492000157272, 'len_max': 4, 'monitor_return_min': 0.888112, 'monitor_return_mean': 0.9111477647058822, 'monitor_return_std': 0.0789626231398192, 'monitor_return_max': 1.181818}
+INFO - expert_demos - Completed after 0:00:44

@@ -1,0 +1,1396 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "47"
+Logging to quickstart/rl/cliff_walker/rl
+Using cuda device
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000010000
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 857       |
+|    ep_rew_mean     | -9.57e+03 |
+| time/              |           |
+|    fps             | 8.64e+03  |
+|    iterations      | 1         |
+|    time_elapsed    | 1         |
+|    total_timesteps | 1.64e+04  |
+----------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000020000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000030000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.22e+03  |
+|    ep_rew_mean          | -1.17e+04 |
+| time/                   |           |
+|    fps                  | 2.7e+03   |
+|    iterations           | 2         |
+|    time_elapsed         | 12        |
+|    total_timesteps      | 3.28e+04  |
+| train/                  |           |
+|    approx_kl            | 0.0148    |
+|    clip_fraction        | 0.239     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.38     |
+|    explained_variance   | -7.23e+05 |
+|    learning_rate        | 0.0003    |
+|    loss                 | 1.43e+04  |
+|    n_updates            | 10        |
+|    policy_gradient_loss | -0.0342   |
+|    value_loss           | 3.53e+04  |
+---------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000040000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.4e+03   |
+|    ep_rew_mean          | -1.1e+04  |
+| time/                   |           |
+|    fps                  | 2.17e+03  |
+|    iterations           | 3         |
+|    time_elapsed         | 22        |
+|    total_timesteps      | 4.92e+04  |
+| train/                  |           |
+|    approx_kl            | 0.0156    |
+|    clip_fraction        | 0.236     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.33     |
+|    explained_variance   | -2.18e+06 |
+|    learning_rate        | 0.0003    |
+|    loss                 | 5.29e+03  |
+|    n_updates            | 20        |
+|    policy_gradient_loss | -0.0306   |
+|    value_loss           | 9.85e+03  |
+---------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000050000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000060000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 2.16e+03 |
+|    ep_rew_mean          | -1.5e+04 |
+| time/                   |          |
+|    fps                  | 2.01e+03 |
+|    iterations           | 4        |
+|    time_elapsed         | 32       |
+|    total_timesteps      | 6.55e+04 |
+| train/                  |          |
+|    approx_kl            | 0.0113   |
+|    clip_fraction        | 0.194    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.3     |
+|    explained_variance   | -3.3e+08 |
+|    learning_rate        | 0.0003   |
+|    loss                 | 939      |
+|    n_updates            | 30       |
+|    policy_gradient_loss | -0.0212  |
+|    value_loss           | 1.95e+03 |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000070000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000080000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 2.95e+03 |
+|    ep_rew_mean          | -1.8e+04 |
+| time/                   |          |
+|    fps                  | 1.89e+03 |
+|    iterations           | 5        |
+|    time_elapsed         | 43       |
+|    total_timesteps      | 8.19e+04 |
+| train/                  |          |
+|    approx_kl            | 0.0118   |
+|    clip_fraction        | 0.101    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.25    |
+|    explained_variance   | -31.4    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 362      |
+|    n_updates            | 40       |
+|    policy_gradient_loss | -0.0145  |
+|    value_loss           | 581      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000090000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 3.72e+03  |
+|    ep_rew_mean          | -1.87e+04 |
+| time/                   |           |
+|    fps                  | 1.84e+03  |
+|    iterations           | 6         |
+|    time_elapsed         | 53        |
+|    total_timesteps      | 9.83e+04  |
+| train/                  |           |
+|    approx_kl            | 0.013     |
+|    clip_fraction        | 0.121     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.19     |
+|    explained_variance   | -17.2     |
+|    learning_rate        | 0.0003    |
+|    loss                 | 30.4      |
+|    n_updates            | 50        |
+|    policy_gradient_loss | -0.0111   |
+|    value_loss           | 187       |
+---------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000100000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000110000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 3.72e+03  |
+|    ep_rew_mean          | -1.87e+04 |
+| time/                   |           |
+|    fps                  | 1.8e+03   |
+|    iterations           | 7         |
+|    time_elapsed         | 63        |
+|    total_timesteps      | 1.15e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0276    |
+|    clip_fraction        | 0.215     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.13     |
+|    explained_variance   | -5.44     |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.071     |
+|    n_updates            | 60        |
+|    policy_gradient_loss | -0.00756  |
+|    value_loss           | 43.7      |
+---------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000120000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000130000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 3.99e+03  |
+|    ep_rew_mean          | -1.27e+04 |
+| time/                   |           |
+|    fps                  | 1.78e+03  |
+|    iterations           | 8         |
+|    time_elapsed         | 73        |
+|    total_timesteps      | 1.31e+05  |
+| train/                  |           |
+|    approx_kl            | 0.00939   |
+|    clip_fraction        | 0.123     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.13     |
+|    explained_variance   | 0.622     |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.695     |
+|    n_updates            | 70        |
+|    policy_gradient_loss | -0.00868  |
+|    value_loss           | 0.903     |
+---------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000140000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -4.99e+03 |
+| time/                   |           |
+|    fps                  | 1.76e+03  |
+|    iterations           | 9         |
+|    time_elapsed         | 83        |
+|    total_timesteps      | 1.47e+05  |
+| train/                  |           |
+|    approx_kl            | 0.00674   |
+|    clip_fraction        | 0.0947    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.14     |
+|    explained_variance   | -3.83     |
+|    learning_rate        | 0.0003    |
+|    loss                 | 7.54      |
+|    n_updates            | 80        |
+|    policy_gradient_loss | -0.0112   |
+|    value_loss           | 106       |
+---------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000150000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000160000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 158      |
+|    ep_rew_mean          | -169     |
+| time/                   |          |
+|    fps                  | 1.74e+03 |
+|    iterations           | 10       |
+|    time_elapsed         | 93       |
+|    total_timesteps      | 1.64e+05 |
+| train/                  |          |
+|    approx_kl            | 0.00914  |
+|    clip_fraction        | 0.118    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.15    |
+|    explained_variance   | -10.1    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 31.7     |
+|    n_updates            | 90       |
+|    policy_gradient_loss | -0.015   |
+|    value_loss           | 283      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000170000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000180000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 76       |
+|    ep_rew_mean          | -78.9    |
+| time/                   |          |
+|    fps                  | 1.73e+03 |
+|    iterations           | 11       |
+|    time_elapsed         | 104      |
+|    total_timesteps      | 1.8e+05  |
+| train/                  |          |
+|    approx_kl            | 0.0134   |
+|    clip_fraction        | 0.178    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.14    |
+|    explained_variance   | -4.24    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 90       |
+|    n_updates            | 100      |
+|    policy_gradient_loss | -0.0217  |
+|    value_loss           | 390      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000190000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 47.3     |
+|    ep_rew_mean          | -53.2    |
+| time/                   |          |
+|    fps                  | 1.72e+03 |
+|    iterations           | 12       |
+|    time_elapsed         | 114      |
+|    total_timesteps      | 1.97e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0192   |
+|    clip_fraction        | 0.266    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.1     |
+|    explained_variance   | -0.69    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 174      |
+|    n_updates            | 110      |
+|    policy_gradient_loss | -0.0297  |
+|    value_loss           | 354      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000200000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000210000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 34.5     |
+|    ep_rew_mean          | -38.5    |
+| time/                   |          |
+|    fps                  | 1.72e+03 |
+|    iterations           | 13       |
+|    time_elapsed         | 123      |
+|    total_timesteps      | 2.13e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0177   |
+|    clip_fraction        | 0.297    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.01    |
+|    explained_variance   | 0.502    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 98.1     |
+|    n_updates            | 120      |
+|    policy_gradient_loss | -0.0357  |
+|    value_loss           | 194      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000220000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 25.7     |
+|    ep_rew_mean          | -26.7    |
+| time/                   |          |
+|    fps                  | 1.72e+03 |
+|    iterations           | 14       |
+|    time_elapsed         | 133      |
+|    total_timesteps      | 2.29e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0432   |
+|    clip_fraction        | 0.365    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.882   |
+|    explained_variance   | 0.76     |
+|    learning_rate        | 0.0003   |
+|    loss                 | 30.8     |
+|    n_updates            | 130      |
+|    policy_gradient_loss | -0.0437  |
+|    value_loss           | 76.2     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000230000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000240000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 21.7     |
+|    ep_rew_mean          | -21.7    |
+| time/                   |          |
+|    fps                  | 1.71e+03 |
+|    iterations           | 15       |
+|    time_elapsed         | 143      |
+|    total_timesteps      | 2.46e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0422   |
+|    clip_fraction        | 0.303    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.698   |
+|    explained_variance   | 0.801    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 5.07     |
+|    n_updates            | 140      |
+|    policy_gradient_loss | -0.0293  |
+|    value_loss           | 21.9     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000250000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000260000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 20.2     |
+|    ep_rew_mean          | -20.2    |
+| time/                   |          |
+|    fps                  | 1.7e+03  |
+|    iterations           | 16       |
+|    time_elapsed         | 154      |
+|    total_timesteps      | 2.62e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0306   |
+|    clip_fraction        | 0.224    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.552   |
+|    explained_variance   | 0.699    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 1.73     |
+|    n_updates            | 150      |
+|    policy_gradient_loss | -0.0234  |
+|    value_loss           | 21.5     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000270000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 19.2     |
+|    ep_rew_mean          | -22.2    |
+| time/                   |          |
+|    fps                  | 1.7e+03  |
+|    iterations           | 17       |
+|    time_elapsed         | 164      |
+|    total_timesteps      | 2.79e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0292   |
+|    clip_fraction        | 0.111    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.457   |
+|    explained_variance   | 0.753    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 1.48     |
+|    n_updates            | 160      |
+|    policy_gradient_loss | -0.0209  |
+|    value_loss           | 10.2     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000280000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000290000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17.8     |
+|    ep_rew_mean          | -17.8    |
+| time/                   |          |
+|    fps                  | 1.69e+03 |
+|    iterations           | 18       |
+|    time_elapsed         | 174      |
+|    total_timesteps      | 2.95e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0149   |
+|    clip_fraction        | 0.114    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.359   |
+|    explained_variance   | -0.0572  |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.497    |
+|    n_updates            | 170      |
+|    policy_gradient_loss | -0.0156  |
+|    value_loss           | 33.4     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000300000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000310000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17.8     |
+|    ep_rew_mean          | -17.8    |
+| time/                   |          |
+|    fps                  | 1.68e+03 |
+|    iterations           | 19       |
+|    time_elapsed         | 184      |
+|    total_timesteps      | 3.11e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0364   |
+|    clip_fraction        | 0.0644   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.294   |
+|    explained_variance   | 0.742    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.294    |
+|    n_updates            | 180      |
+|    policy_gradient_loss | -0.017   |
+|    value_loss           | 6.63     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000320000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17.2     |
+|    ep_rew_mean          | -17.2    |
+| time/                   |          |
+|    fps                  | 1.68e+03 |
+|    iterations           | 20       |
+|    time_elapsed         | 194      |
+|    total_timesteps      | 3.28e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0299   |
+|    clip_fraction        | 0.102    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.243   |
+|    explained_variance   | 0.981    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.122    |
+|    n_updates            | 190      |
+|    policy_gradient_loss | -0.0194  |
+|    value_loss           | 0.448    |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000330000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000340000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17       |
+|    ep_rew_mean          | -17      |
+| time/                   |          |
+|    fps                  | 1.68e+03 |
+|    iterations           | 21       |
+|    time_elapsed         | 205      |
+|    total_timesteps      | 3.44e+05 |
+| train/                  |          |
+|    approx_kl            | 0.016    |
+|    clip_fraction        | 0.0725   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.215   |
+|    explained_variance   | 0.208    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0743   |
+|    n_updates            | 200      |
+|    policy_gradient_loss | -0.0117  |
+|    value_loss           | 17.8     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000350000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000360000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16.8     |
+|    ep_rew_mean          | -16.8    |
+| time/                   |          |
+|    fps                  | 1.67e+03 |
+|    iterations           | 22       |
+|    time_elapsed         | 215      |
+|    total_timesteps      | 3.6e+05  |
+| train/                  |          |
+|    approx_kl            | 0.0161   |
+|    clip_fraction        | 0.11     |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.182   |
+|    explained_variance   | 0.992    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0262   |
+|    n_updates            | 210      |
+|    policy_gradient_loss | -0.0153  |
+|    value_loss           | 0.166    |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000370000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16.1     |
+|    ep_rew_mean          | -17.1    |
+| time/                   |          |
+|    fps                  | 1.67e+03 |
+|    iterations           | 23       |
+|    time_elapsed         | 225      |
+|    total_timesteps      | 3.77e+05 |
+| train/                  |          |
+|    approx_kl            | 0.054    |
+|    clip_fraction        | 0.138    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.154   |
+|    explained_variance   | 0.989    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.156    |
+|    n_updates            | 220      |
+|    policy_gradient_loss | -0.0262  |
+|    value_loss           | 0.215    |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000380000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000390000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.7     |
+|    ep_rew_mean          | -16.7    |
+| time/                   |          |
+|    fps                  | 1.66e+03 |
+|    iterations           | 24       |
+|    time_elapsed         | 236      |
+|    total_timesteps      | 3.93e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0579   |
+|    clip_fraction        | 0.151    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.182   |
+|    explained_variance   | 0.954    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0771   |
+|    n_updates            | 230      |
+|    policy_gradient_loss | -0.026   |
+|    value_loss           | 0.894    |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000400000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 18.1     |
+|    ep_rew_mean          | -42.8    |
+| time/                   |          |
+|    fps                  | 1.66e+03 |
+|    iterations           | 25       |
+|    time_elapsed         | 246      |
+|    total_timesteps      | 4.1e+05  |
+| train/                  |          |
+|    approx_kl            | 0.0569   |
+|    clip_fraction        | 0.169    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.23    |
+|    explained_variance   | 0.443    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0537   |
+|    n_updates            | 240      |
+|    policy_gradient_loss | 0.00997  |
+|    value_loss           | 10.6     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000410000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000420000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17.3     |
+|    ep_rew_mean          | -34.1    |
+| time/                   |          |
+|    fps                  | 1.66e+03 |
+|    iterations           | 26       |
+|    time_elapsed         | 257      |
+|    total_timesteps      | 4.26e+05 |
+| train/                  |          |
+|    approx_kl            | 0.00508  |
+|    clip_fraction        | 0.0589   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.217   |
+|    explained_variance   | -88.2    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 914      |
+|    n_updates            | 250      |
+|    policy_gradient_loss | -0.0162  |
+|    value_loss           | 1.38e+03 |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000430000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000440000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.3     |
+|    ep_rew_mean          | -16.3    |
+| time/                   |          |
+|    fps                  | 1.65e+03 |
+|    iterations           | 27       |
+|    time_elapsed         | 267      |
+|    total_timesteps      | 4.42e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0337   |
+|    clip_fraction        | 0.0532   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.154   |
+|    explained_variance   | -4.25    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 796      |
+|    n_updates            | 260      |
+|    policy_gradient_loss | -0.0173  |
+|    value_loss           | 931      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000450000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16.2     |
+|    ep_rew_mean          | -16.2    |
+| time/                   |          |
+|    fps                  | 1.65e+03 |
+|    iterations           | 28       |
+|    time_elapsed         | 277      |
+|    total_timesteps      | 4.59e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0334   |
+|    clip_fraction        | 0.0656   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.149   |
+|    explained_variance   | 0.252    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 77       |
+|    n_updates            | 270      |
+|    policy_gradient_loss | 0.000148 |
+|    value_loss           | 71.9     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000460000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000470000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16.3     |
+|    ep_rew_mean          | -19.3    |
+| time/                   |          |
+|    fps                  | 1.65e+03 |
+|    iterations           | 29       |
+|    time_elapsed         | 287      |
+|    total_timesteps      | 4.75e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0578   |
+|    clip_fraction        | 0.119    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.231   |
+|    explained_variance   | 0.722    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.485    |
+|    n_updates            | 280      |
+|    policy_gradient_loss | -0.014   |
+|    value_loss           | 7.28     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000480000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000490000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.4     |
+|    ep_rew_mean          | -15.4    |
+| time/                   |          |
+|    fps                  | 1.65e+03 |
+|    iterations           | 30       |
+|    time_elapsed         | 298      |
+|    total_timesteps      | 4.92e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0136   |
+|    clip_fraction        | 0.0469   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.205   |
+|    explained_variance   | -2.48    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 1.2      |
+|    n_updates            | 290      |
+|    policy_gradient_loss | -0.00753 |
+|    value_loss           | 71.6     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000500000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.5     |
+|    ep_rew_mean          | -17.5    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 31       |
+|    time_elapsed         | 308      |
+|    total_timesteps      | 5.08e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0193   |
+|    clip_fraction        | 0.0436   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.184   |
+|    explained_variance   | -1.94    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.139    |
+|    n_updates            | 300      |
+|    policy_gradient_loss | -0.00395 |
+|    value_loss           | 54.4     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000510000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000520000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 18.4     |
+|    ep_rew_mean          | -44.2    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 32       |
+|    time_elapsed         | 319      |
+|    total_timesteps      | 5.24e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0269   |
+|    clip_fraction        | 0.0858   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.198   |
+|    explained_variance   | -0.804   |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0511   |
+|    n_updates            | 310      |
+|    policy_gradient_loss | -0.00559 |
+|    value_loss           | 30.4     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000530000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000540000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16.7     |
+|    ep_rew_mean          | -29.6    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 33       |
+|    time_elapsed         | 329      |
+|    total_timesteps      | 5.41e+05 |
+| train/                  |          |
+|    approx_kl            | 0.00496  |
+|    clip_fraction        | 0.0714   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.193   |
+|    explained_variance   | -80.7    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 529      |
+|    n_updates            | 320      |
+|    policy_gradient_loss | -0.0157  |
+|    value_loss           | 1.2e+03  |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000550000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15       |
+|    ep_rew_mean          | -15      |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 34       |
+|    time_elapsed         | 339      |
+|    total_timesteps      | 5.57e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0212   |
+|    clip_fraction        | 0.0603   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.168   |
+|    explained_variance   | -6.07    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 533      |
+|    n_updates            | 330      |
+|    policy_gradient_loss | -0.017   |
+|    value_loss           | 747      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000560000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000570000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16.1     |
+|    ep_rew_mean          | -16.1    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 35       |
+|    time_elapsed         | 349      |
+|    total_timesteps      | 5.73e+05 |
+| train/                  |          |
+|    approx_kl            | 0.107    |
+|    clip_fraction        | 0.118    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.18    |
+|    explained_variance   | 0.347    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.387    |
+|    n_updates            | 340      |
+|    policy_gradient_loss | -0.0145  |
+|    value_loss           | 30.8     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000580000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.8     |
+|    ep_rew_mean          | -15.8    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 36       |
+|    time_elapsed         | 360      |
+|    total_timesteps      | 5.9e+05  |
+| train/                  |          |
+|    approx_kl            | 0.0264   |
+|    clip_fraction        | 0.1      |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.276   |
+|    explained_variance   | 0.862    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.621    |
+|    n_updates            | 350      |
+|    policy_gradient_loss | -0.0126  |
+|    value_loss           | 2.01     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000590000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000600000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.2     |
+|    ep_rew_mean          | -15.2    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 37       |
+|    time_elapsed         | 369      |
+|    total_timesteps      | 6.06e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0474   |
+|    clip_fraction        | 0.118    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.205   |
+|    explained_variance   | 0.678    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.495    |
+|    n_updates            | 360      |
+|    policy_gradient_loss | -0.0199  |
+|    value_loss           | 6.35     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000610000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000620000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15       |
+|    ep_rew_mean          | -15      |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 38       |
+|    time_elapsed         | 380      |
+|    total_timesteps      | 6.23e+05 |
+| train/                  |          |
+|    approx_kl            | 0.013    |
+|    clip_fraction        | 0.0413   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.176   |
+|    explained_variance   | 0.991    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0895   |
+|    n_updates            | 370      |
+|    policy_gradient_loss | -0.00531 |
+|    value_loss           | 0.144    |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000630000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 18.2     |
+|    ep_rew_mean          | -30.1    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 39       |
+|    time_elapsed         | 390      |
+|    total_timesteps      | 6.39e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0833   |
+|    clip_fraction        | 0.19     |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.228   |
+|    explained_variance   | 0.7      |
+|    learning_rate        | 0.0003   |
+|    loss                 | -0.0371  |
+|    n_updates            | 380      |
+|    policy_gradient_loss | -0.00644 |
+|    value_loss           | 5.21     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000640000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000650000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16.5     |
+|    ep_rew_mean          | -19.5    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 40       |
+|    time_elapsed         | 400      |
+|    total_timesteps      | 6.55e+05 |
+| train/                  |          |
+|    approx_kl            | 0.00669  |
+|    clip_fraction        | 0.0429   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.27    |
+|    explained_variance   | -29.3    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 122      |
+|    n_updates            | 390      |
+|    policy_gradient_loss | -0.0111  |
+|    value_loss           | 498      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000660000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000670000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.6     |
+|    ep_rew_mean          | -15.6    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 41       |
+|    time_elapsed         | 411      |
+|    total_timesteps      | 6.72e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0317   |
+|    clip_fraction        | 0.0516   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.213   |
+|    explained_variance   | -1.21    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 34.5     |
+|    n_updates            | 400      |
+|    policy_gradient_loss | -0.0136  |
+|    value_loss           | 112      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000680000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 41       |
+|    ep_rew_mean          | -54.9    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 42       |
+|    time_elapsed         | 421      |
+|    total_timesteps      | 6.88e+05 |
+| train/                  |          |
+|    approx_kl            | 0.184    |
+|    clip_fraction        | 0.299    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.323   |
+|    explained_variance   | 0.769    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.235    |
+|    n_updates            | 410      |
+|    policy_gradient_loss | -0.0284  |
+|    value_loss           | 6.16     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000690000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000700000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 28.6     |
+|    ep_rew_mean          | -29.6    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 43       |
+|    time_elapsed         | 431      |
+|    total_timesteps      | 7.05e+05 |
+| train/                  |          |
+|    approx_kl            | 0.014    |
+|    clip_fraction        | 0.162    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.523   |
+|    explained_variance   | -30.1    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 79.7     |
+|    n_updates            | 420      |
+|    policy_gradient_loss | -0.0165  |
+|    value_loss           | 416      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000710000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000720000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 21.9     |
+|    ep_rew_mean          | -21.9    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 44       |
+|    time_elapsed         | 442      |
+|    total_timesteps      | 7.21e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0281   |
+|    clip_fraction        | 0.249    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.453   |
+|    explained_variance   | -4.31    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 121      |
+|    n_updates            | 430      |
+|    policy_gradient_loss | -0.0295  |
+|    value_loss           | 113      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000730000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 18.2     |
+|    ep_rew_mean          | -18.2    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 45       |
+|    time_elapsed         | 452      |
+|    total_timesteps      | 7.37e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0243   |
+|    clip_fraction        | 0.221    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.356   |
+|    explained_variance   | 0.474    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 8.59     |
+|    n_updates            | 440      |
+|    policy_gradient_loss | -0.0316  |
+|    value_loss           | 20.7     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000740000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000750000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17.4     |
+|    ep_rew_mean          | -17.4    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 46       |
+|    time_elapsed         | 463      |
+|    total_timesteps      | 7.54e+05 |
+| train/                  |          |
+|    approx_kl            | 0.034    |
+|    clip_fraction        | 0.158    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.297   |
+|    explained_variance   | 0.699    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 2.27     |
+|    n_updates            | 450      |
+|    policy_gradient_loss | -0.0277  |
+|    value_loss           | 11       |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000760000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000770000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16.4     |
+|    ep_rew_mean          | -20.4    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 47       |
+|    time_elapsed         | 472      |
+|    total_timesteps      | 7.7e+05  |
+| train/                  |          |
+|    approx_kl            | 0.0304   |
+|    clip_fraction        | 0.101    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.257   |
+|    explained_variance   | 0.443    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 79.4     |
+|    n_updates            | 460      |
+|    policy_gradient_loss | -0.019   |
+|    value_loss           | 15.6     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000780000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.3     |
+|    ep_rew_mean          | -16.3    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 48       |
+|    time_elapsed         | 482      |
+|    total_timesteps      | 7.86e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0138   |
+|    clip_fraction        | 0.0489   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.197   |
+|    explained_variance   | -13.2    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 179      |
+|    n_updates            | 470      |
+|    policy_gradient_loss | -0.00946 |
+|    value_loss           | 299      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000790000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000800000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.5     |
+|    ep_rew_mean          | -15.5    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 49       |
+|    time_elapsed         | 493      |
+|    total_timesteps      | 8.03e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0313   |
+|    clip_fraction        | 0.0289   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.134   |
+|    explained_variance   | -3.42    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 138      |
+|    n_updates            | 480      |
+|    policy_gradient_loss | -0.00927 |
+|    value_loss           | 140      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000810000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.3     |
+|    ep_rew_mean          | -15.3    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 50       |
+|    time_elapsed         | 503      |
+|    total_timesteps      | 8.19e+05 |
+| train/                  |          |
+|    approx_kl            | 0.00255  |
+|    clip_fraction        | 0.0213   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.145   |
+|    explained_variance   | 0.944    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.19     |
+|    n_updates            | 490      |
+|    policy_gradient_loss | -0.00384 |
+|    value_loss           | 0.495    |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000820000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000830000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.2     |
+|    ep_rew_mean          | -15.2    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 51       |
+|    time_elapsed         | 513      |
+|    total_timesteps      | 8.36e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0445   |
+|    clip_fraction        | 0.076    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.163   |
+|    explained_variance   | 0.98     |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.187    |
+|    n_updates            | 500      |
+|    policy_gradient_loss | -0.00787 |
+|    value_loss           | 0.273    |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000840000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000850000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 20.8     |
+|    ep_rew_mean          | -67.4    |
+| time/                   |          |
+|    fps                  | 1.62e+03 |
+|    iterations           | 52       |
+|    time_elapsed         | 524      |
+|    total_timesteps      | 8.52e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0276   |
+|    clip_fraction        | 0.11     |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.22    |
+|    explained_variance   | 0.652    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.243    |
+|    n_updates            | 510      |
+|    policy_gradient_loss | -0.0187  |
+|    value_loss           | 6.03     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000860000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17.6     |
+|    ep_rew_mean          | -39.4    |
+| time/                   |          |
+|    fps                  | 1.62e+03 |
+|    iterations           | 53       |
+|    time_elapsed         | 534      |
+|    total_timesteps      | 8.68e+05 |
+| train/                  |          |
+|    approx_kl            | 0.00471  |
+|    clip_fraction        | 0.0637   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.205   |
+|    explained_variance   | -126     |
+|    learning_rate        | 0.0003   |
+|    loss                 | 900      |
+|    n_updates            | 520      |
+|    policy_gradient_loss | -0.0184  |
+|    value_loss           | 1.76e+03 |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000870000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000880000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.3     |
+|    ep_rew_mean          | -16.3    |
+| time/                   |          |
+|    fps                  | 1.62e+03 |
+|    iterations           | 54       |
+|    time_elapsed         | 544      |
+|    total_timesteps      | 8.85e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0242   |
+|    clip_fraction        | 0.0792   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.163   |
+|    explained_variance   | -4.26    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 427      |
+|    n_updates            | 530      |
+|    policy_gradient_loss | -0.0213  |
+|    value_loss           | 1.13e+03 |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000890000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000900000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.8     |
+|    ep_rew_mean          | -15.8    |
+| time/                   |          |
+|    fps                  | 1.62e+03 |
+|    iterations           | 55       |
+|    time_elapsed         | 555      |
+|    total_timesteps      | 9.01e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0417   |
+|    clip_fraction        | 0.0616   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.182   |
+|    explained_variance   | 0.221    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 59.9     |
+|    n_updates            | 540      |
+|    policy_gradient_loss | -0.0133  |
+|    value_loss           | 92.9     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000910000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 19.1     |
+|    ep_rew_mean          | -45.9    |
+| time/                   |          |
+|    fps                  | 1.62e+03 |
+|    iterations           | 56       |
+|    time_elapsed         | 565      |
+|    total_timesteps      | 9.18e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0441   |
+|    clip_fraction        | 0.105    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.269   |
+|    explained_variance   | 0.641    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 42.5     |
+|    n_updates            | 550      |
+|    policy_gradient_loss | 0.00168  |
+|    value_loss           | 11.6     |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000920000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000930000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17.3     |
+|    ep_rew_mean          | -29.2    |
+| time/                   |          |
+|    fps                  | 1.62e+03 |
+|    iterations           | 57       |
+|    time_elapsed         | 575      |
+|    total_timesteps      | 9.34e+05 |
+| train/                  |          |
+|    approx_kl            | 0.00348  |
+|    clip_fraction        | 0.0462   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.252   |
+|    explained_variance   | -65.5    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 555      |
+|    n_updates            | 560      |
+|    policy_gradient_loss | -0.0141  |
+|    value_loss           | 1.18e+03 |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000940000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000950000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16       |
+|    ep_rew_mean          | -18      |
+| time/                   |          |
+|    fps                  | 1.62e+03 |
+|    iterations           | 58       |
+|    time_elapsed         | 585      |
+|    total_timesteps      | 9.5e+05  |
+| train/                  |          |
+|    approx_kl            | 0.0147   |
+|    clip_fraction        | 0.0722   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.219   |
+|    explained_variance   | -4.31    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 307      |
+|    n_updates            | 570      |
+|    policy_gradient_loss | -0.0169  |
+|    value_loss           | 765      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000960000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.7     |
+|    ep_rew_mean          | -15.7    |
+| time/                   |          |
+|    fps                  | 1.62e+03 |
+|    iterations           | 59       |
+|    time_elapsed         | 596      |
+|    total_timesteps      | 9.67e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0408   |
+|    clip_fraction        | 0.0362   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.177   |
+|    explained_variance   | -0.146   |
+|    learning_rate        | 0.0003   |
+|    loss                 | 48.7     |
+|    n_updates            | 580      |
+|    policy_gradient_loss | -0.00909 |
+|    value_loss           | 118      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000970000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000980000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16.4     |
+|    ep_rew_mean          | -23.3    |
+| time/                   |          |
+|    fps                  | 1.62e+03 |
+|    iterations           | 60       |
+|    time_elapsed         | 606      |
+|    total_timesteps      | 9.83e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0452   |
+|    clip_fraction        | 0.102    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.191   |
+|    explained_variance   | 0.888    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.167    |
+|    n_updates            | 590      |
+|    policy_gradient_loss | -0.00997 |
+|    value_loss           | 0.491    |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000990000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16.5     |
+|    ep_rew_mean          | -23.4    |
+| time/                   |          |
+|    fps                  | 1.62e+03 |
+|    iterations           | 61       |
+|    time_elapsed         | 616      |
+|    total_timesteps      | 9.99e+05 |
+| train/                  |          |
+|    approx_kl            | 0.00232  |
+|    clip_fraction        | 0.038    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.172   |
+|    explained_variance   | -34.1    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 354      |
+|    n_updates            | 600      |
+|    policy_gradient_loss | -0.0113  |
+|    value_loss           | 650      |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000001000000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000001010000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.4     |
+|    ep_rew_mean          | -15.4    |
+| time/                   |          |
+|    fps                  | 1.62e+03 |
+|    iterations           | 62       |
+|    time_elapsed         | 626      |
+|    total_timesteps      | 1.02e+06 |
+| train/                  |          |
+|    approx_kl            | 0.0167   |
+|    clip_fraction        | 0.0357   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.143   |
+|    explained_variance   | -3.97    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 296      |
+|    n_updates            | 610      |
+|    policy_gradient_loss | -0.0137  |
+|    value_loss           | 413      |
+--------------------------------------

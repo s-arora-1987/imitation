@@ -1,0 +1,94 @@
+{
+  "artifacts": [],
+  "command": "train",
+  "experiment": {
+    "base_dir": "/home/katy/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.0",
+      "sacred==0.8.2"
+    ],
+    "mainfile": "train_adversarial.py",
+    "name": "train_adversarial",
+    "repositories": [
+      {
+        "commit": "740f4eefd6eb6aa04e5fee68151336dc1861615d",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "train_adversarial.py",
+        "_sources/train_adversarial_2b715ef7f6c57199109874d322d133c7.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/katy/imitation/src/imitation/scripts/train_adversarial.py\", line 223, in train\n    trainer.train(total_timesteps, callback)\n",
+    "  File \"/home/katy/imitation/src/imitation/algorithms/adversarial.py\", line 327, in train\n    self.train_disc()\n",
+    "  File \"/home/katy/imitation/src/imitation/algorithms/adversarial.py\", line 233, in train_disc\n    gen_samples=gen_samples, expert_samples=expert_samples\n",
+    "  File \"/home/katy/imitation/src/imitation/algorithms/adversarial.py\", line 420, in _make_disc_train_batch\n    obs_th, acts_th\n",
+    "  File \"/home/katy/stable-baselines3/stable_baselines3/common/policies.py\", line 622, in evaluate_actions\n    log_prob = distribution.log_prob(actions)\n",
+    "  File \"/home/katy/stable-baselines3/stable_baselines3/common/distributions.py\", line 279, in log_prob\n    return self.distribution.log_prob(actions)\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/torch/distributions/categorical.py\", line 117, in log_prob\n    self._validate_sample(value)\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/torch/distributions/distribution.py\", line 277, in _validate_sample\n    raise ValueError('The value argument must be within the support')\n",
+    "ValueError: The value argument must be within the support\n"
+  ],
+  "heartbeat": "2021-09-06T21:42:00.745858",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "gpus": {
+      "driver_version": "470.57.02",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 1070",
+          "persistence_mode": false,
+          "total_memory": 8116
+        }
+      ]
+    },
+    "hostname": "katy-desktop",
+    "os": [
+      "Linux",
+      "Linux-5.4.0-81-generic-x86_64-with-debian-buster-sid"
+    ],
+    "python_version": "3.7.10"
+  },
+  "meta": {
+    "command": "train",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2021-09-06T21:41:54.335762",
+  "status": "FAILED",
+  "stop_time": "2021-09-06T21:42:00.746672"
+}

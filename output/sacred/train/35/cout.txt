@@ -1,0 +1,4 @@
+INFO - train_adversarial - Running command 'train'
+INFO - train_adversarial - Started run with ID "35"
+INFO - root - Logging to output/train_adversarial/CliffWalking-v0/20210726_165544_f40873
+Logging to output/train_adversarial/CliffWalking-v0/20210726_165544_f40873

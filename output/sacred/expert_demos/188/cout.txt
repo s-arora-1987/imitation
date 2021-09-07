@@ -1,0 +1,1508 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "188"
+Logging to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/rl
+Using cuda device
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000010000
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 1.12e+03  |
+|    ep_rew_mean     | -1.15e+04 |
+| time/              |           |
+|    fps             | 9.1e+03   |
+|    iterations      | 1         |
+|    time_elapsed    | 1         |
+|    total_timesteps | 1.64e+04  |
+----------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000020000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000030000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 2.74e+03  |
+|    iterations           | 2         |
+|    time_elapsed         | 11        |
+|    total_timesteps      | 3.28e+04  |
+| train/                  |           |
+|    approx_kl            | 0.0172    |
+|    clip_fraction        | 0.253     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.37     |
+|    explained_variance   | -2.34e+05 |
+|    learning_rate        | 0.0003    |
+|    loss                 | 1.3e+04   |
+|    n_updates            | 10        |
+|    policy_gradient_loss | -0.0357   |
+|    value_loss           | 3.27e+04  |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000040000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 2.19e+03  |
+|    iterations           | 3         |
+|    time_elapsed         | 22        |
+|    total_timesteps      | 4.92e+04  |
+| train/                  |           |
+|    approx_kl            | 0.0129    |
+|    clip_fraction        | 0.224     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.33     |
+|    explained_variance   | -5.29e+06 |
+|    learning_rate        | 0.0003    |
+|    loss                 | 1.91e+03  |
+|    n_updates            | 20        |
+|    policy_gradient_loss | -0.0289   |
+|    value_loss           | 7.12e+03  |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000050000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000060000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.99e+03  |
+|    iterations           | 4         |
+|    time_elapsed         | 32        |
+|    total_timesteps      | 6.55e+04  |
+| train/                  |           |
+|    approx_kl            | 0.0128    |
+|    clip_fraction        | 0.161     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.29     |
+|    explained_variance   | -3.6e+05  |
+|    learning_rate        | 0.0003    |
+|    loss                 | 440       |
+|    n_updates            | 30        |
+|    policy_gradient_loss | -0.0195   |
+|    value_loss           | 1.77e+03  |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000070000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000080000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.89e+03  |
+|    iterations           | 5         |
+|    time_elapsed         | 43        |
+|    total_timesteps      | 8.19e+04  |
+| train/                  |           |
+|    approx_kl            | 0.0141    |
+|    clip_fraction        | 0.167     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.22     |
+|    explained_variance   | -15.6     |
+|    learning_rate        | 0.0003    |
+|    loss                 | 394       |
+|    n_updates            | 40        |
+|    policy_gradient_loss | -0.0182   |
+|    value_loss           | 439       |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000090000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.82e+03  |
+|    iterations           | 6         |
+|    time_elapsed         | 53        |
+|    total_timesteps      | 9.83e+04  |
+| train/                  |           |
+|    approx_kl            | 0.0194    |
+|    clip_fraction        | 0.228     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.13     |
+|    explained_variance   | -13.2     |
+|    learning_rate        | 0.0003    |
+|    loss                 | 13        |
+|    n_updates            | 50        |
+|    policy_gradient_loss | -0.0133   |
+|    value_loss           | 111       |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000100000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000110000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.8e+03   |
+|    iterations           | 7         |
+|    time_elapsed         | 63        |
+|    total_timesteps      | 1.15e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0322    |
+|    clip_fraction        | 0.169     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.08     |
+|    explained_variance   | -0.0102   |
+|    learning_rate        | 0.0003    |
+|    loss                 | -0.0111   |
+|    n_updates            | 60        |
+|    policy_gradient_loss | -0.0116   |
+|    value_loss           | 0.296     |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000120000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000130000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.78e+03  |
+|    iterations           | 8         |
+|    time_elapsed         | 73        |
+|    total_timesteps      | 1.31e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0055    |
+|    clip_fraction        | 0.0739    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.05     |
+|    explained_variance   | -91.2     |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.0172    |
+|    n_updates            | 70        |
+|    policy_gradient_loss | -0.00196  |
+|    value_loss           | 0.121     |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000140000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.76e+03  |
+|    iterations           | 9         |
+|    time_elapsed         | 83        |
+|    total_timesteps      | 1.47e+05  |
+| train/                  |           |
+|    approx_kl            | 0.00679   |
+|    clip_fraction        | 0.0605    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.07     |
+|    explained_variance   | -181      |
+|    learning_rate        | 0.0003    |
+|    loss                 | -5.85e-05 |
+|    n_updates            | 80        |
+|    policy_gradient_loss | -0.00159  |
+|    value_loss           | 0.0625    |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000150000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000160000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.75e+03  |
+|    iterations           | 10        |
+|    time_elapsed         | 93        |
+|    total_timesteps      | 1.64e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0103    |
+|    clip_fraction        | 0.11      |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.1      |
+|    explained_variance   | -84.5     |
+|    learning_rate        | 0.0003    |
+|    loss                 | -0.0272   |
+|    n_updates            | 90        |
+|    policy_gradient_loss | -0.00316  |
+|    value_loss           | 0.0386    |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000170000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000180000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.74e+03  |
+|    iterations           | 11        |
+|    time_elapsed         | 103       |
+|    total_timesteps      | 1.8e+05   |
+| train/                  |           |
+|    approx_kl            | 0.0401    |
+|    clip_fraction        | 0.0946    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.18     |
+|    explained_variance   | -32.2     |
+|    learning_rate        | 0.0003    |
+|    loss                 | -0.0155   |
+|    n_updates            | 100       |
+|    policy_gradient_loss | -0.00313  |
+|    value_loss           | 0.0242    |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000190000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.72e+03  |
+|    iterations           | 12        |
+|    time_elapsed         | 113       |
+|    total_timesteps      | 1.97e+05  |
+| train/                  |           |
+|    approx_kl            | 0.00721   |
+|    clip_fraction        | 0.0897    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.16     |
+|    explained_variance   | -0.437    |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.00749   |
+|    n_updates            | 110       |
+|    policy_gradient_loss | -0.00246  |
+|    value_loss           | 0.029     |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000200000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000210000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.72e+03  |
+|    iterations           | 13        |
+|    time_elapsed         | 123       |
+|    total_timesteps      | 2.13e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0563    |
+|    clip_fraction        | 0.215     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.24     |
+|    explained_variance   | -2.47     |
+|    learning_rate        | 0.0003    |
+|    loss                 | -0.0297   |
+|    n_updates            | 120       |
+|    policy_gradient_loss | -0.0132   |
+|    value_loss           | 0.0122    |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000220000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.71e+03  |
+|    iterations           | 14        |
+|    time_elapsed         | 133       |
+|    total_timesteps      | 2.29e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0146    |
+|    clip_fraction        | 0.121     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.19     |
+|    explained_variance   | -0.309    |
+|    learning_rate        | 0.0003    |
+|    loss                 | -0.006    |
+|    n_updates            | 130       |
+|    policy_gradient_loss | -0.00882  |
+|    value_loss           | 0.00893   |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000230000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000240000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.70e+03  |
+|    iterations           | 15        |
+|    time_elapsed         | 144       |
+|    total_timesteps      | 2.46e+05  |
+| train/                  |           |
+|    approx_kl            | 0.00884   |
+|    clip_fraction        | 0.1       |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.17     |
+|    explained_variance   | -637      |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.19      |
+|    n_updates            | 140       |
+|    policy_gradient_loss | -0.00432  |
+|    value_loss           | 10.3      |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000250000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000260000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.7e+03   |
+|    iterations           | 16        |
+|    time_elapsed         | 154       |
+|    total_timesteps      | 2.62e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0577    |
+|    clip_fraction        | 0.222     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.2      |
+|    explained_variance   | -0.888    |
+|    learning_rate        | 0.0003    |
+|    loss                 | -0.0505   |
+|    n_updates            | 150       |
+|    policy_gradient_loss | -0.012    |
+|    value_loss           | 0.00535   |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000270000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.69e+03  |
+|    iterations           | 17        |
+|    time_elapsed         | 164       |
+|    total_timesteps      | 2.79e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0118    |
+|    clip_fraction        | 0.0875    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.23     |
+|    explained_variance   | -5.38e+05 |
+|    learning_rate        | 0.0003    |
+|    loss                 | 4.3       |
+|    n_updates            | 160       |
+|    policy_gradient_loss | -0.00294  |
+|    value_loss           | 43        |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000280000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000290000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.69e+03  |
+|    iterations           | 18        |
+|    time_elapsed         | 174       |
+|    total_timesteps      | 2.95e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0222    |
+|    clip_fraction        | 0.165     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.24     |
+|    explained_variance   | -904      |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.049     |
+|    n_updates            | 170       |
+|    policy_gradient_loss | -0.00686  |
+|    value_loss           | 10.3      |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000300000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000310000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.68e+03  |
+|    iterations           | 19        |
+|    time_elapsed         | 184       |
+|    total_timesteps      | 3.11e+05  |
+| train/                  |           |
+|    approx_kl            | 0.029     |
+|    clip_fraction        | 0.27      |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.17     |
+|    explained_variance   | -1.01     |
+|    learning_rate        | 0.0003    |
+|    loss                 | -0.0156   |
+|    n_updates            | 180       |
+|    policy_gradient_loss | -0.0119   |
+|    value_loss           | 0.00209   |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000320000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.68e+03  |
+|    iterations           | 20        |
+|    time_elapsed         | 195       |
+|    total_timesteps      | 3.28e+05  |
+| train/                  |           |
+|    approx_kl            | 0.00808   |
+|    clip_fraction        | 0.145     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.16     |
+|    explained_variance   | -27.9     |
+|    learning_rate        | 0.0003    |
+|    loss                 | -0.0169   |
+|    n_updates            | 190       |
+|    policy_gradient_loss | -0.00463  |
+|    value_loss           | 0.00105   |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000330000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000340000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.68e+03  |
+|    iterations           | 21        |
+|    time_elapsed         | 205       |
+|    total_timesteps      | 3.44e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0095    |
+|    clip_fraction        | 0.0852    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.18     |
+|    explained_variance   | -96.1     |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.00603   |
+|    n_updates            | 200       |
+|    policy_gradient_loss | -0.00182  |
+|    value_loss           | 0.000653  |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000350000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000360000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.68e+03  |
+|    iterations           | 22        |
+|    time_elapsed         | 215       |
+|    total_timesteps      | 3.6e+05   |
+| train/                  |           |
+|    approx_kl            | 0.00709   |
+|    clip_fraction        | 0.105     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.15     |
+|    explained_variance   | -93.5     |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.0113    |
+|    n_updates            | 210       |
+|    policy_gradient_loss | -0.0022   |
+|    value_loss           | 0.000448  |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000370000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.67e+03  |
+|    iterations           | 23        |
+|    time_elapsed         | 225       |
+|    total_timesteps      | 3.77e+05  |
+| train/                  |           |
+|    approx_kl            | 0.00679   |
+|    clip_fraction        | 0.0937    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.17     |
+|    explained_variance   | -57.4     |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.0113    |
+|    n_updates            | 220       |
+|    policy_gradient_loss | -0.00229  |
+|    value_loss           | 0.000295  |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000380000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000390000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.67e+03  |
+|    iterations           | 24        |
+|    time_elapsed         | 234       |
+|    total_timesteps      | 3.93e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0117    |
+|    clip_fraction        | 0.0993    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.14     |
+|    explained_variance   | -31.4     |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.0312    |
+|    n_updates            | 230       |
+|    policy_gradient_loss | -0.00294  |
+|    value_loss           | 0.000216  |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000400000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.67e+03  |
+|    iterations           | 25        |
+|    time_elapsed         | 244       |
+|    total_timesteps      | 4.1e+05   |
+| train/                  |           |
+|    approx_kl            | 0.0126    |
+|    clip_fraction        | 0.11      |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.16     |
+|    explained_variance   | -106      |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.00435   |
+|    n_updates            | 240       |
+|    policy_gradient_loss | -0.00194  |
+|    value_loss           | 0.000145  |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000410000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000420000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.67e+03  |
+|    iterations           | 26        |
+|    time_elapsed         | 254       |
+|    total_timesteps      | 4.26e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0208    |
+|    clip_fraction        | 0.0924    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.18     |
+|    explained_variance   | -20       |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.0243    |
+|    n_updates            | 250       |
+|    policy_gradient_loss | -0.00388  |
+|    value_loss           | 0.000103  |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000430000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000440000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.67e+03  |
+|    iterations           | 27        |
+|    time_elapsed         | 264       |
+|    total_timesteps      | 4.42e+05  |
+| train/                  |           |
+|    approx_kl            | 0.00963   |
+|    clip_fraction        | 0.0691    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.19     |
+|    explained_variance   | -27.3     |
+|    learning_rate        | 0.0003    |
+|    loss                 | -0.00574  |
+|    n_updates            | 260       |
+|    policy_gradient_loss | -0.00314  |
+|    value_loss           | 7.23e-05  |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000450000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.82e+03  |
+|    ep_rew_mean          | -1.66e+04 |
+| time/                   |           |
+|    fps                  | 1.67e+03  |
+|    iterations           | 28        |
+|    time_elapsed         | 275       |
+|    total_timesteps      | 4.59e+05  |
+| train/                  |           |
+|    approx_kl            | 0.00978   |
+|    clip_fraction        | 0.0997    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.17     |
+|    explained_variance   | -2.78e+05 |
+|    learning_rate        | 0.0003    |
+|    loss                 | -0.0165   |
+|    n_updates            | 270       |
+|    policy_gradient_loss | -0.00346  |
+|    value_loss           | 5.18      |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000460000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000470000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 2.25e+04  |
+|    ep_rew_mean          | -3.84e+04 |
+| time/                   |           |
+|    fps                  | 1.66e+03  |
+|    iterations           | 29        |
+|    time_elapsed         | 285       |
+|    total_timesteps      | 4.75e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0292    |
+|    clip_fraction        | 0.26      |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.15     |
+|    explained_variance   | -7.67e+04 |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.046     |
+|    n_updates            | 280       |
+|    policy_gradient_loss | -0.0115   |
+|    value_loss           | 5.18      |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000480000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000490000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.08e+04  |
+|    ep_rew_mean          | -1.6e+04  |
+| time/                   |           |
+|    fps                  | 1.66e+03  |
+|    iterations           | 30        |
+|    time_elapsed         | 296       |
+|    total_timesteps      | 4.92e+05  |
+| train/                  |           |
+|    approx_kl            | 0.0147    |
+|    clip_fraction        | 0.133     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.14     |
+|    explained_variance   | -6.11e+04 |
+|    learning_rate        | 0.0003    |
+|    loss                 | 3.19      |
+|    n_updates            | 290       |
+|    policy_gradient_loss | -0.0019   |
+|    value_loss           | 31.8      |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000500000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 337       |
+|    ep_rew_mean          | -354      |
+| time/                   |           |
+|    fps                  | 1.66e+03  |
+|    iterations           | 31        |
+|    time_elapsed         | 306       |
+|    total_timesteps      | 5.08e+05  |
+| train/                  |           |
+|    approx_kl            | 0.00342   |
+|    clip_fraction        | 0.0303    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.13     |
+|    explained_variance   | -1.17e+04 |
+|    learning_rate        | 0.0003    |
+|    loss                 | 132       |
+|    n_updates            | 300       |
+|    policy_gradient_loss | -0.00811  |
+|    value_loss           | 171       |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000510000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000520000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 125      |
+|    ep_rew_mean          | -137     |
+| time/                   |          |
+|    fps                  | 1.66e+03 |
+|    iterations           | 32       |
+|    time_elapsed         | 316      |
+|    total_timesteps      | 5.24e+05 |
+| train/                  |          |
+|    approx_kl            | 0.00697  |
+|    clip_fraction        | 0.083    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.11    |
+|    explained_variance   | -34.6    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 226      |
+|    n_updates            | 310      |
+|    policy_gradient_loss | -0.0164  |
+|    value_loss           | 290      |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000530000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000540000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 69.6     |
+|    ep_rew_mean          | -81.5    |
+| time/                   |          |
+|    fps                  | 1.66e+03 |
+|    iterations           | 33       |
+|    time_elapsed         | 326      |
+|    total_timesteps      | 5.41e+05 |
+| train/                  |          |
+|    approx_kl            | 0.00935  |
+|    clip_fraction        | 0.134    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.08    |
+|    explained_variance   | -7.04    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 144      |
+|    n_updates            | 320      |
+|    policy_gradient_loss | -0.0221  |
+|    value_loss           | 364      |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000550000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 49.1     |
+|    ep_rew_mean          | -56.1    |
+| time/                   |          |
+|    fps                  | 1.66e+03 |
+|    iterations           | 34       |
+|    time_elapsed         | 336      |
+|    total_timesteps      | 5.57e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0171   |
+|    clip_fraction        | 0.208    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.04    |
+|    explained_variance   | -1.72    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 177      |
+|    n_updates            | 330      |
+|    policy_gradient_loss | -0.0277  |
+|    value_loss           | 353      |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000560000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000570000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 34       |
+|    ep_rew_mean          | -36.9    |
+| time/                   |          |
+|    fps                  | 1.66e+03 |
+|    iterations           | 35       |
+|    time_elapsed         | 346      |
+|    total_timesteps      | 5.73e+05 |
+| train/                  |          |
+|    approx_kl            | 0.014    |
+|    clip_fraction        | 0.24     |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.958   |
+|    explained_variance   | 0.0894   |
+|    learning_rate        | 0.0003   |
+|    loss                 | 99.5     |
+|    n_updates            | 340      |
+|    policy_gradient_loss | -0.0318  |
+|    value_loss           | 216      |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000580000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 27.6     |
+|    ep_rew_mean          | -27.6    |
+| time/                   |          |
+|    fps                  | 1.65e+03 |
+|    iterations           | 36       |
+|    time_elapsed         | 356      |
+|    total_timesteps      | 5.9e+05  |
+| train/                  |          |
+|    approx_kl            | 0.0247   |
+|    clip_fraction        | 0.291    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.838   |
+|    explained_variance   | 0.588    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 43.2     |
+|    n_updates            | 350      |
+|    policy_gradient_loss | -0.0361  |
+|    value_loss           | 100      |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000590000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000600000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 21.3     |
+|    ep_rew_mean          | -21.3    |
+| time/                   |          |
+|    fps                  | 1.65e+03 |
+|    iterations           | 37       |
+|    time_elapsed         | 366      |
+|    total_timesteps      | 6.06e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0586   |
+|    clip_fraction        | 0.338    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.664   |
+|    explained_variance   | 0.765    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 14.2     |
+|    n_updates            | 360      |
+|    policy_gradient_loss | -0.0395  |
+|    value_loss           | 29.9     |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000610000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000620000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 19.5     |
+|    ep_rew_mean          | -19.5    |
+| time/                   |          |
+|    fps                  | 1.65e+03 |
+|    iterations           | 38       |
+|    time_elapsed         | 376      |
+|    total_timesteps      | 6.23e+05 |
+| train/                  |          |
+|    approx_kl            | 0.019    |
+|    clip_fraction        | 0.234    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.5     |
+|    explained_variance   | 0.816    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 2.73     |
+|    n_updates            | 370      |
+|    policy_gradient_loss | -0.0266  |
+|    value_loss           | 10       |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000630000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 18.6     |
+|    ep_rew_mean          | -18.6    |
+| time/                   |          |
+|    fps                  | 1.65e+03 |
+|    iterations           | 39       |
+|    time_elapsed         | 387      |
+|    total_timesteps      | 6.39e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0122   |
+|    clip_fraction        | 0.128    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.407   |
+|    explained_variance   | 0.899    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 1.06     |
+|    n_updates            | 380      |
+|    policy_gradient_loss | -0.0206  |
+|    value_loss           | 3.32     |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000640000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000650000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 18.3     |
+|    ep_rew_mean          | -18.3    |
+| time/                   |          |
+|    fps                  | 1.65e+03 |
+|    iterations           | 40       |
+|    time_elapsed         | 397      |
+|    total_timesteps      | 6.55e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0117   |
+|    clip_fraction        | 0.106    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.333   |
+|    explained_variance   | 0.945    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.69     |
+|    n_updates            | 390      |
+|    policy_gradient_loss | -0.0197  |
+|    value_loss           | 1.45     |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000660000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000670000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17.6     |
+|    ep_rew_mean          | -17.6    |
+| time/                   |          |
+|    fps                  | 1.65e+03 |
+|    iterations           | 41       |
+|    time_elapsed         | 407      |
+|    total_timesteps      | 6.72e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0127   |
+|    clip_fraction        | 0.08     |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.252   |
+|    explained_variance   | 0.964    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.514    |
+|    n_updates            | 400      |
+|    policy_gradient_loss | -0.0169  |
+|    value_loss           | 0.879    |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000680000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17.3     |
+|    ep_rew_mean          | -17.3    |
+| time/                   |          |
+|    fps                  | 1.65e+03 |
+|    iterations           | 42       |
+|    time_elapsed         | 418      |
+|    total_timesteps      | 6.88e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0282   |
+|    clip_fraction        | 0.0435   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.175   |
+|    explained_variance   | 0.98     |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.221    |
+|    n_updates            | 410      |
+|    policy_gradient_loss | -0.0129  |
+|    value_loss           | 0.454    |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000690000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000700000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17.1     |
+|    ep_rew_mean          | -17.1    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 43       |
+|    time_elapsed         | 428      |
+|    total_timesteps      | 7.05e+05 |
+| train/                  |          |
+|    approx_kl            | 0.00996  |
+|    clip_fraction        | 0.0506   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.154   |
+|    explained_variance   | 0.992    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0754   |
+|    n_updates            | 420      |
+|    policy_gradient_loss | -0.00612 |
+|    value_loss           | 0.157    |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000710000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000720000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17.1     |
+|    ep_rew_mean          | -17.1    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 44       |
+|    time_elapsed         | 438      |
+|    total_timesteps      | 7.21e+05 |
+| train/                  |          |
+|    approx_kl            | 0.013    |
+|    clip_fraction        | 0.0506   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.147   |
+|    explained_variance   | 0.966    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.00942  |
+|    n_updates            | 430      |
+|    policy_gradient_loss | -0.00724 |
+|    value_loss           | 0.719    |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000730000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17       |
+|    ep_rew_mean          | -17      |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 45       |
+|    time_elapsed         | 448      |
+|    total_timesteps      | 7.37e+05 |
+| train/                  |          |
+|    approx_kl            | 0.016    |
+|    clip_fraction        | 0.0928   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.153   |
+|    explained_variance   | 0.996    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0365   |
+|    n_updates            | 440      |
+|    policy_gradient_loss | -0.0125  |
+|    value_loss           | 0.0752   |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000740000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000750000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16.5     |
+|    ep_rew_mean          | -16.5    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 46       |
+|    time_elapsed         | 459      |
+|    total_timesteps      | 7.54e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0288   |
+|    clip_fraction        | 0.0995   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.14    |
+|    explained_variance   | 0.994    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0303   |
+|    n_updates            | 450      |
+|    policy_gradient_loss | -0.0173  |
+|    value_loss           | 0.117    |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000760000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000770000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16.4     |
+|    ep_rew_mean          | -16.4    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 47       |
+|    time_elapsed         | 469      |
+|    total_timesteps      | 7.7e+05  |
+| train/                  |          |
+|    approx_kl            | 0.031    |
+|    clip_fraction        | 0.137    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.142   |
+|    explained_variance   | 0.993    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0616   |
+|    n_updates            | 460      |
+|    policy_gradient_loss | -0.0226  |
+|    value_loss           | 0.141    |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000780000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16.1     |
+|    ep_rew_mean          | -16.1    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 48       |
+|    time_elapsed         | 479      |
+|    total_timesteps      | 7.86e+05 |
+| train/                  |          |
+|    approx_kl            | 0.065    |
+|    clip_fraction        | 0.194    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.205   |
+|    explained_variance   | 0.434    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0936   |
+|    n_updates            | 470      |
+|    policy_gradient_loss | -0.0251  |
+|    value_loss           | 11.3     |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000790000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000800000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 17.3     |
+|    ep_rew_mean          | -29.2    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 49       |
+|    time_elapsed         | 489      |
+|    total_timesteps      | 8.03e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0169   |
+|    clip_fraction        | 0.125    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.177   |
+|    explained_variance   | -2.11    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 26.5     |
+|    n_updates            | 480      |
+|    policy_gradient_loss | -0.016   |
+|    value_loss           | 61.2     |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000810000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.7     |
+|    ep_rew_mean          | -16.7    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 50       |
+|    time_elapsed         | 499      |
+|    total_timesteps      | 8.19e+05 |
+| train/                  |          |
+|    approx_kl            | 0.00778  |
+|    clip_fraction        | 0.0405   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.155   |
+|    explained_variance   | -21.2    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 55.9     |
+|    n_updates            | 490      |
+|    policy_gradient_loss | -0.01    |
+|    value_loss           | 393      |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000820000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000830000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.3     |
+|    ep_rew_mean          | -15.3    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 51       |
+|    time_elapsed         | 509      |
+|    total_timesteps      | 8.36e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0428   |
+|    clip_fraction        | 0.0602   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.0854  |
+|    explained_variance   | -1.92    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 1.03     |
+|    n_updates            | 500      |
+|    policy_gradient_loss | -0.0131  |
+|    value_loss           | 123      |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000840000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000850000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16       |
+|    ep_rew_mean          | -16      |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 52       |
+|    time_elapsed         | 519      |
+|    total_timesteps      | 8.52e+05 |
+| train/                  |          |
+|    approx_kl            | 0.137    |
+|    clip_fraction        | 0.246    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.183   |
+|    explained_variance   | 0.942    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.00601  |
+|    n_updates            | 510      |
+|    policy_gradient_loss | -0.0295  |
+|    value_loss           | 0.172    |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000860000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.4     |
+|    ep_rew_mean          | -16.4    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 53       |
+|    time_elapsed         | 530      |
+|    total_timesteps      | 8.68e+05 |
+| train/                  |          |
+|    approx_kl            | 0.038    |
+|    clip_fraction        | 0.132    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.183   |
+|    explained_variance   | -1.61    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 91       |
+|    n_updates            | 520      |
+|    policy_gradient_loss | -0.0152  |
+|    value_loss           | 54       |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000870000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000880000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.1     |
+|    ep_rew_mean          | -15.1    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 54       |
+|    time_elapsed         | 540      |
+|    total_timesteps      | 8.85e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0193   |
+|    clip_fraction        | 0.0611   |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.127   |
+|    explained_variance   | -3.7     |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.213    |
+|    n_updates            | 530      |
+|    policy_gradient_loss | -0.0103  |
+|    value_loss           | 80.6     |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000890000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000900000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.7     |
+|    ep_rew_mean          | -15.7    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 55       |
+|    time_elapsed         | 550      |
+|    total_timesteps      | 9.01e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0421   |
+|    clip_fraction        | 0.128    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.143   |
+|    explained_variance   | -1.15    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0177   |
+|    n_updates            | 540      |
+|    policy_gradient_loss | 0.00994  |
+|    value_loss           | 37.7     |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000910000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 15.1     |
+|    ep_rew_mean          | -15.1    |
+| time/                   |          |
+|    fps                  | 1.64e+03 |
+|    iterations           | 56       |
+|    time_elapsed         | 561      |
+|    total_timesteps      | 9.18e+05 |
+| train/                  |          |
+|    approx_kl            | 0.021    |
+|    clip_fraction        | 0.132    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.143   |
+|    explained_variance   | -0.835   |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.355    |
+|    n_updates            | 550      |
+|    policy_gradient_loss | -0.0167  |
+|    value_loss           | 32.5     |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000920000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000930000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 16       |
+|    ep_rew_mean          | -72.4    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 57       |
+|    time_elapsed         | 571      |
+|    total_timesteps      | 9.34e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0949   |
+|    clip_fraction        | 0.127    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.136   |
+|    explained_variance   | 0.306    |
+|    learning_rate        | 0.0003   |
+|    loss                 | -0.00179 |
+|    n_updates            | 560      |
+|    policy_gradient_loss | -0.0175  |
+|    value_loss           | 10.8     |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000940000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000950000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 14.9     |
+|    ep_rew_mean          | -47.6    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 58       |
+|    time_elapsed         | 581      |
+|    total_timesteps      | 9.5e+05  |
+| train/                  |          |
+|    approx_kl            | 0.0121   |
+|    clip_fraction        | 0.145    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.225   |
+|    explained_variance   | -76.3    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 424      |
+|    n_updates            | 570      |
+|    policy_gradient_loss | -0.0383  |
+|    value_loss           | 1.06e+03 |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000960000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 14.4     |
+|    ep_rew_mean          | -17.4    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 59       |
+|    time_elapsed         | 591      |
+|    total_timesteps      | 9.67e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0187   |
+|    clip_fraction        | 0.154    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.161   |
+|    explained_variance   | -0.898   |
+|    learning_rate        | 0.0003   |
+|    loss                 | 257      |
+|    n_updates            | 580      |
+|    policy_gradient_loss | -0.0519  |
+|    value_loss           | 542      |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000970000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000980000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 14.4     |
+|    ep_rew_mean          | -17.4    |
+| time/                   |          |
+|    fps                  | 1.63e+03 |
+|    iterations           | 60       |
+|    time_elapsed         | 601      |
+|    total_timesteps      | 9.83e+05 |
+| train/                  |          |
+|    approx_kl            | 1.83     |
+|    clip_fraction        | 0.478    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.313   |
+|    explained_variance   | 0.0853   |
+|    learning_rate        | 0.0003   |
+|    loss                 | 649      |
+|    n_updates            | 590      |
+|    policy_gradient_loss | -0.031   |
+|    value_loss           | 47.4     |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000000990000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 14.4      |
+|    ep_rew_mean          | -17.4     |
+| time/                   |           |
+|    fps                  | 1.63e+03  |
+|    iterations           | 61        |
+|    time_elapsed         | 611       |
+|    total_timesteps      | 9.99e+05  |
+| train/                  |           |
+|    approx_kl            | 0.00232   |
+|    clip_fraction        | 0.00756   |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -0.0541   |
+|    explained_variance   | -291      |
+|    learning_rate        | 0.0003    |
+|    loss                 | 3.05      |
+|    n_updates            | 600       |
+|    policy_gradient_loss | -0.000886 |
+|    value_loss           | 61.5      |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000001000000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210906_162951_15300c/policies/000001010000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 14.4      |
+|    ep_rew_mean          | -17.4     |
+| time/                   |           |
+|    fps                  | 1.63e+03  |
+|    iterations           | 62        |
+|    time_elapsed         | 621       |
+|    total_timesteps      | 1.02e+06  |
+| train/                  |           |
+|    approx_kl            | 0.000454  |
+|    clip_fraction        | 0.011     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -0.0712   |
+|    explained_variance   | -0.444    |
+|    learning_rate        | 0.0003    |
+|    loss                 | 0.0288    |
+|    n_updates            | 610       |
+|    policy_gradient_loss | -0.000195 |
+|    value_loss           | 2.77      |
+---------------------------------------
+Process ForkServerProcess-7:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Process ForkServerProcess-3:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Process ForkServerProcess-8:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Process ForkServerProcess-6:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Process ForkServerProcess-2:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 251, in recv
+    return _ForkingPickler.loads(buf.getbuffer())
+KeyboardInterrupt
+Process ForkServerProcess-1:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 26, in _worker
+    observation, reward, done, info = env.step(data)
+  File "/home/katy/imitation/src/imitation/data/wrappers.py", line 122, in step
+    obs, rew, done, info = self.env.step(action)
+KeyboardInterrupt
+Process ForkServerProcess-4:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Process ForkServerProcess-5:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt

@@ -1,0 +1,97 @@
+{
+  "artifacts": [],
+  "command": "rollouts_and_policy",
+  "experiment": {
+    "base_dir": "/home/katy/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.0",
+      "sacred==0.8.2"
+    ],
+    "mainfile": "expert_demos.py",
+    "name": "expert_demos",
+    "repositories": [
+      {
+        "commit": "740f4eefd6eb6aa04e5fee68151336dc1861615d",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "expert_demos.py",
+        "_sources/expert_demos_e2f7241f598641af9c7acdb7fd2e8395.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/katy/imitation/src/imitation/scripts/expert_demos.py\", line 158, in rollouts_and_policy\n    policy = util.init_rl(venv, verbose=1, **init_rl_kwargs)\n",
+    "  File \"/home/katy/imitation/src/imitation/util/util.py\", line 143, in init_rl\n    policy_class, env, **all_kwargs\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/stable_baselines3/ppo/ppo.py\", line 120, in __init__\n    self._setup_model()\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/stable_baselines3/ppo/ppo.py\", line 123, in _setup_model\n    super(PPO, self)._setup_model()\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/stable_baselines3/common/on_policy_algorithm.py\", line 119, in _setup_model\n    **self.policy_kwargs  # pytype:disable=not-instantiable\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/stable_baselines3/common/policies.py\", line 411, in __init__\n    self.features_extractor = features_extractor_class(self.observation_space, **self.features_extractor_kwargs)\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/stable_baselines3/common/torch_layers.py\", line 43, in __init__\n    super(FlattenExtractor, self).__init__(observation_space, get_flattened_obs_dim(observation_space))\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/stable_baselines3/common/torch_layers.py\", line 22, in __init__\n    assert features_dim > 0\n",
+    "AssertionError\n"
+  ],
+  "heartbeat": "2021-07-18T17:22:01.812806",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "gpus": {
+      "driver_version": "465.27",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 1070",
+          "persistence_mode": false,
+          "total_memory": 8116
+        }
+      ]
+    },
+    "hostname": "katy-desktop",
+    "os": [
+      "Linux",
+      "Linux-5.4.0-77-generic-x86_64-with-debian-buster-sid"
+    ],
+    "python_version": "3.7.10"
+  },
+  "meta": {
+    "command": "rollouts_and_policy",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "boxSpace_cliff_walker",
+        "log_dir=quickstart/rl/cliff_walker/"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2021-07-18T17:21:58.784618",
+  "status": "FAILED",
+  "stop_time": "2021-07-18T17:22:01.814096"
+}

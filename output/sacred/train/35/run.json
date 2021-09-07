@@ -1,0 +1,91 @@
+{
+  "artifacts": [],
+  "command": "train",
+  "experiment": {
+    "base_dir": "/home/katy/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.0",
+      "sacred==0.8.2"
+    ],
+    "mainfile": "train_adversarial.py",
+    "name": "train_adversarial",
+    "repositories": [
+      {
+        "commit": "740f4eefd6eb6aa04e5fee68151336dc1861615d",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "train_adversarial.py",
+        "_sources/train_adversarial_ba559c7538599bb13fc6bb7bb6494b53.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/katy/imitation/src/imitation/scripts/train_adversarial.py\", line 223, in train\n    trainer.train(total_timesteps, callback)\n",
+    "  File \"/home/katy/imitation/src/imitation/algorithms/adversarial.py\", line 327, in train\n    self.train_disc()\n",
+    "  File \"/home/katy/imitation/src/imitation/algorithms/adversarial.py\", line 233, in train_disc\n    gen_samples=gen_samples, expert_samples=expert_samples\n",
+    "  File \"/home/katy/imitation/src/imitation/algorithms/adversarial.py\", line 403, in _make_disc_train_batch\n    obs = np.concatenate([expert_samples[\"obs\"], gen_samples[\"obs\"]])\n",
+    "  File \"<__array_function__ internals>\", line 6, in concatenate\n",
+    "ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)\n"
+  ],
+  "heartbeat": "2021-07-26T20:56:01.493509",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "gpus": {
+      "driver_version": "470.57.02",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 1070",
+          "persistence_mode": false,
+          "total_memory": 8116
+        }
+      ]
+    },
+    "hostname": "katy-desktop",
+    "os": [
+      "Linux",
+      "Linux-5.4.0-80-generic-x86_64-with-debian-buster-sid"
+    ],
+    "python_version": "3.7.10"
+  },
+  "meta": {
+    "command": "train",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2021-07-26T20:55:45.016854",
+  "status": "FAILED",
+  "stop_time": "2021-07-26T20:56:01.499110"
+}

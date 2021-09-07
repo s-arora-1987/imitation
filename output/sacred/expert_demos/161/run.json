@@ -1,0 +1,95 @@
+{
+  "artifacts": [],
+  "command": "rollouts_and_policy",
+  "experiment": {
+    "base_dir": "/home/katy/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.0",
+      "sacred==0.8.2"
+    ],
+    "mainfile": "expert_demos.py",
+    "name": "expert_demos",
+    "repositories": [
+      {
+        "commit": "740f4eefd6eb6aa04e5fee68151336dc1861615d",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "expert_demos.py",
+        "_sources/expert_demos_56cea6d119944a6bc2f84222333e1917.py"
+      ]
+    ]
+  },
+  "heartbeat": "2021-09-05T21:47:48.730751",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "gpus": {
+      "driver_version": "470.57.02",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 1070",
+          "persistence_mode": false,
+          "total_memory": 8116
+        }
+      ]
+    },
+    "hostname": "katy-desktop",
+    "os": [
+      "Linux",
+      "Linux-5.4.0-81-generic-x86_64-with-debian-buster-sid"
+    ],
+    "python_version": "3.7.10"
+  },
+  "meta": {
+    "command": "rollouts_and_policy",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": {
+    "len_max": 5,
+    "len_mean": 3.1578947368421053,
+    "len_min": 3,
+    "len_std": 0.4099411033525587,
+    "monitor_return_max": 1.25,
+    "monitor_return_mean": 0.7167587894736841,
+    "monitor_return_min": 0.631579,
+    "monitor_return_std": 0.1184878718034765,
+    "n_traj": 57,
+    "return_max": 1.25,
+    "return_mean": 0.716759002770083,
+    "return_min": 0.631578947368421,
+    "return_std": 0.11848785596923128
+  },
+  "start_time": "2021-09-05T21:47:05.435826",
+  "status": "COMPLETED",
+  "stop_time": "2021-09-05T21:47:46.729470"
+}

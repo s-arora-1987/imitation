@@ -1,0 +1,165 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "97"
+Logging to output/expert_demos/imitationNM_SortingOnions-v0/20210813_171935_b2bd65/rl
+Using cuda device
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210813_171935_b2bd65/policies/000000010000
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1.17     |
+|    ep_rew_mean     | 0.0478   |
+| time/              |          |
+|    fps             | 7.52e+03 |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 1.64e+04 |
+---------------------------------
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210813_171935_b2bd65/policies/000000020000
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210813_171935_b2bd65/policies/000000030000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 1.34     |
+|    ep_rew_mean          | 0.0939   |
+| time/                   |          |
+|    fps                  | 2.72e+03 |
+|    iterations           | 2        |
+|    time_elapsed         | 12       |
+|    total_timesteps      | 3.28e+04 |
+| train/                  |          |
+|    approx_kl            | 0.0999   |
+|    clip_fraction        | 0.947    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.83    |
+|    explained_variance   | -8.37    |
+|    learning_rate        | 0.0003   |
+|    loss                 | -0.107   |
+|    n_updates            | 10       |
+|    policy_gradient_loss | -0.123   |
+|    value_loss           | 0.0164   |
+--------------------------------------
+det_policy_as_dict_only_discr_sp 
+  {0: 2, 1: 0, 2: 4, 3: 5, 4: 2, 5: 0, 6: 3, 7: 2, 8: 2, 9: 0, 10: 0, 11: 0, 12: 2, 13: 2, 14: 0, 15: 2, 16: 2, 17: 2, 18: 0, 19: 2, 20: 2, 21: 0, 22: 0, 23: 2, 24: 2, 25: 2, 26: 2}
+INFO - root - Rollout stats: {'n_traj': 644, 'return_min': 0.8881118881118881, 'return_mean': 0.9191243539069628, 'return_std': 0.09739752018943294, 'return_max': 1.4755244755244754, 'len_min': 3, 'len_mean': 3.1055900621118013, 'len_std': 0.3316153663592599, 'len_max': 5}
+INFO - root - Dumped demonstrations to output/expert_demos/imitationNM_SortingOnions-v0/20210813_171935_b2bd65/rollouts/final.pkl.
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210813_171935_b2bd65/policies/final
+det_policy_as_dict_only_discr_space 
+  {0: 2, 1: 0, 2: 4, 3: 5, 4: 2, 5: 0, 6: 3, 7: 2, 8: 2, 9: 0, 10: 0, 11: 0, 12: 2, 13: 2, 14: 0, 15: 2, 16: 2, 17: 2, 18: 0, 19: 2, 20: 2, 21: 0, 22: 0, 23: 2, 24: 2, 25: 2, 26: 2}
+here1
+here2
+here3
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -bad, gripper -eye, LS -unavailable 
+PlaceOnConveyor
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -bad, gripper -eye, LS -unavailable 
+PlaceOnConveyor
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -bad, gripper -eye, LS -unavailable 
+PlaceOnConveyor
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -bad, gripper -eye, LS -unavailable 
+PlaceOnConveyor
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -bad, gripper -eye, LS -unavailable 
+PlaceOnConveyor
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -bad, gripper -eye, LS -unavailable 
+PlaceOnConveyor
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -bad, gripper -eye, LS -unavailable 
+PlaceOnConveyor
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -bad, gripper -eye, LS -unavailable 
+PlaceOnConveyor
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -bad, gripper -eye, LS -unavailable 
+PlaceOnConveyor
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -bad, gripper -eye, LS -unavailable 
+PlaceOnConveyor
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -bad, gripper -eye, LS -unavailable 
+PlaceOnConveyor
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking
+
+ onion -eye, pred -bad, gripper -eye, LS -unavailable 
+PlaceOnConveyor
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable 
+Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable 
+InspectAfterPicking

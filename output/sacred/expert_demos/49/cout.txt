@@ -1,0 +1,41 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "49"
+Logging to quickstart/rl/cliff_walker/rl
+Using cuda device
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000010000
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 746       |
+|    ep_rew_mean     | -8.04e+03 |
+| time/              |           |
+|    fps             | 8.54e+03  |
+|    iterations      | 1         |
+|    time_elapsed    | 1         |
+|    total_timesteps | 1.64e+04  |
+----------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000020000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000030000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.19e+03  |
+|    ep_rew_mean          | -1.05e+04 |
+| time/                   |           |
+|    fps                  | 2.67e+03  |
+|    iterations           | 2         |
+|    time_elapsed         | 12        |
+|    total_timesteps      | 3.28e+04  |
+| train/                  |           |
+|    approx_kl            | 0.0203    |
+|    clip_fraction        | 0.243     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.37     |
+|    explained_variance   | -3.96e+05 |
+|    learning_rate        | 0.0003    |
+|    loss                 | 1.78e+04  |
+|    n_updates            | 10        |
+|    policy_gradient_loss | -0.0355   |
+|    value_loss           | 3.59e+04  |
+---------------------------------------
+INFO - root - Rollout stats: {'n_traj': 8, 'return_min': -142612.0, 'return_mean': -60056.0, 'return_std': 45133.45297005316, 'return_max': -7758.0, 'len_min': 3501, 'len_mean': 25096.625, 'len_std': 18813.339994120528, 'len_max': 60541}
+INFO - root - Dumped demonstrations to quickstart/rl/cliff_walker/rollouts/final.pkl.
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/final

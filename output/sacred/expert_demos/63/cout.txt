@@ -1,0 +1,85 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "63"
+Logging to output/expert_demos/CliffWalking-v0/20210801_130751_eba032/rl
+Using cuda device
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210801_130751_eba032/policies/000000010000
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 478       |
+|    ep_rew_mean     | -3.87e+03 |
+| time/              |           |
+|    fps             | 6.49e+03  |
+|    iterations      | 1         |
+|    time_elapsed    | 2         |
+|    total_timesteps | 1.64e+04  |
+----------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210801_130751_eba032/policies/000000020000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210801_130751_eba032/policies/000000030000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 478       |
+|    ep_rew_mean          | -3.87e+03 |
+| time/                   |           |
+|    fps                  | 2.17e+03  |
+|    iterations           | 2         |
+|    time_elapsed         | 15        |
+|    total_timesteps      | 3.28e+04  |
+| train/                  |           |
+|    approx_kl            | 0.018     |
+|    clip_fraction        | 0.264     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.37     |
+|    explained_variance   | -3.23e+05 |
+|    learning_rate        | 0.0003    |
+|    loss                 | 1.38e+04  |
+|    n_updates            | 10        |
+|    policy_gradient_loss | -0.0364   |
+|    value_loss           | 3.61e+04  |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210801_130751_eba032/policies/000000040000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 478       |
+|    ep_rew_mean          | -3.87e+03 |
+| time/                   |           |
+|    fps                  | 1.8e+03   |
+|    iterations           | 3         |
+|    time_elapsed         | 27        |
+|    total_timesteps      | 4.92e+04  |
+| train/                  |           |
+|    approx_kl            | 0.0189    |
+|    clip_fraction        | 0.264     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.33     |
+|    explained_variance   | -1.7e+07  |
+|    learning_rate        | 0.0003    |
+|    loss                 | 6.59e+03  |
+|    n_updates            | 20        |
+|    policy_gradient_loss | -0.0334   |
+|    value_loss           | 1.08e+04  |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210801_130751_eba032/policies/000000050000
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210801_130751_eba032/policies/000000060000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 478       |
+|    ep_rew_mean          | -3.87e+03 |
+| time/                   |           |
+|    fps                  | 1.64e+03  |
+|    iterations           | 4         |
+|    time_elapsed         | 39        |
+|    total_timesteps      | 6.55e+04  |
+| train/                  |           |
+|    approx_kl            | 0.0112    |
+|    clip_fraction        | 0.198     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.27     |
+|    explained_variance   | -1.73e+09 |
+|    learning_rate        | 0.0003    |
+|    loss                 | 892       |
+|    n_updates            | 30        |
+|    policy_gradient_loss | -0.0231   |
+|    value_loss           | 2.19e+03  |
+---------------------------------------
+det_policy_as_dict_only_discr_sp 
+  {0: 0, 1: 3, 2: 3, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0, 20: 0, 21: 0, 22: 0, 23: 0, 24: 0, 25: 0, 26: 0, 27: 0, 28: 0, 29: 0, 30: 0, 31: 0, 32: 0, 33: 0, 34: 0, 35: 0, 36: 0, 37: 0, 38: 0, 39: 0, 40: 0, 41: 0, 42: 0, 43: 0, 44: 0, 45: 0, 46: 0, 47: 0}

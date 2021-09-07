@@ -1,0 +1,96 @@
+{
+  "artifacts": [],
+  "command": "train",
+  "experiment": {
+    "base_dir": "/home/katy/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.0",
+      "sacred==0.8.2"
+    ],
+    "mainfile": "train_adversarial.py",
+    "name": "train_adversarial",
+    "repositories": [
+      {
+        "commit": "740f4eefd6eb6aa04e5fee68151336dc1861615d",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "train_adversarial.py",
+        "_sources/train_adversarial_72afd55a5c5798dc573e05a2c95e64ba.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/katy/imitation/src/imitation/scripts/train_adversarial.py\", line 215, in train\n    trainer.train(total_timesteps, callback)\n",
+    "  File \"/home/katy/imitation/src/imitation/algorithms/adversarial.py\", line 326, in train\n    self.train_disc()\n",
+    "  File \"/home/katy/imitation/src/imitation/algorithms/adversarial.py\", line 232, in train_disc\n    gen_samples=gen_samples, expert_samples=expert_samples\n",
+    "  File \"/home/katy/imitation/src/imitation/algorithms/adversarial.py\", line 410, in _make_disc_train_batch\n    obs = self.venv_norm_obs.normalize_obs(obs)\n",
+    "  File \"/home/katy/stable-baselines3/stable_baselines3/common/vec_env/base_vec_env.py\", line 297, in __getattr__\n    return self.getattr_recursive(name)\n",
+    "  File \"/home/katy/stable-baselines3/stable_baselines3/common/vec_env/base_vec_env.py\", line 322, in getattr_recursive\n    attr = getattr(self.venv, name)\n",
+    "AttributeError: 'SubprocVecEnv' object has no attribute 'normalize_obs'\n"
+  ],
+  "heartbeat": "2021-07-19T21:05:38.787825",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "gpus": {
+      "driver_version": "465.27",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 1070",
+          "persistence_mode": false,
+          "total_memory": 8116
+        }
+      ]
+    },
+    "hostname": "katy-desktop",
+    "os": [
+      "Linux",
+      "Linux-5.4.0-77-generic-x86_64-with-debian-buster-sid"
+    ],
+    "python_version": "3.7.10"
+  },
+  "meta": {
+    "command": "train",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "airl",
+        "cliff_walker",
+        "rollout_path=quickstart/rl/cliff_walker/rollouts/final.pkl"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2021-07-19T21:05:32.730998",
+  "status": "FAILED",
+  "stop_time": "2021-07-19T21:05:38.789212"
+}

@@ -1,0 +1,45 @@
+{
+  "algorithm": "airl",
+  "algorithm_kwargs": {
+    "airl": {},
+    "gail": {},
+    "shared": {
+      "expert_batch_size": 1024,
+      "gen_replay_buffer_capacity": 2048,
+      "n_disc_updates_per_round": 4,
+      "normalize_obs": false,
+      "normalize_reward": false
+    }
+  },
+  "checkpoint_interval": 0,
+  "data_dir": "data/",
+  "discrim_net_kwargs": {
+    "airl": {},
+    "gail": {},
+    "shared": {}
+  },
+  "env_name": "imitationNM/SortingOnions-v0",
+  "gen_batch_size": 2048,
+  "init_rl_kwargs": {
+    "batch_size": 64,
+    "ent_coef": 0.0,
+    "learning_rate": 0.0003,
+    "n_epochs": 10,
+    "n_steps": 256,
+    "policy_class": {
+      "py/type": "imitation.policies.base.FeedForward32Policy"
+    }
+  },
+  "init_tensorboard": true,
+  "log_dir": "output/train_adversarial/imitationNM_SortingOnions-v0/20210906_123242_03f285",
+  "log_root": "output/train_adversarial",
+  "max_episode_steps": null,
+  "n_episodes_eval": 50,
+  "n_expert_demos": null,
+  "num_vec": 8,
+  "parallel": true,
+  "rollout_hint": "sorting_onions",
+  "rollout_path": "/home/katy/imitation/output/expert_demos/imitationNM_SortingOnions-v0/20210906_121342_09d9b0/rollouts/final.pkl",
+  "seed": 435196985,
+  "total_timesteps": 5000.0
+}

@@ -1,0 +1,30 @@
+{
+  "env_name": "imitation/BoxSpaceCliffWalker-v0",
+  "init_rl_kwargs": {
+    "batch_size": 64,
+    "ent_coef": 0.0,
+    "learning_rate": 0.0003,
+    "n_epochs": 10
+  },
+  "init_tensorboard": true,
+  "log_dir": "quickstart/rl/cliff_walker/",
+  "log_root": "output/expert_demos",
+  "max_episode_steps": null,
+  "n_episodes_eval": 50,
+  "normalize": true,
+  "normalize_kwargs": {},
+  "num_vec": 8,
+  "parallel": true,
+  "policy_path": null,
+  "policy_save_final": true,
+  "policy_save_interval": 10000,
+  "policy_type": "ppo",
+  "reward_path": null,
+  "reward_type": null,
+  "rollout_save_final": true,
+  "rollout_save_n_episodes": null,
+  "rollout_save_n_timesteps": 2000,
+  "rollout_save_path": "quickstart/rl/cliff_walker/rollout.pkl",
+  "seed": 245316589,
+  "total_timesteps": 1000000
+}

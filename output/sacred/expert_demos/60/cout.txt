@@ -1,0 +1,15 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "60"
+Logging to output/expert_demos/CliffWalking-v0/20210801_115905_677d46/rl
+Using cuda device
+INFO - root - Saved policy to output/expert_demos/CliffWalking-v0/20210801_115905_677d46/policies/000000010000
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 388       |
+|    ep_rew_mean     | -3.36e+03 |
+| time/              |           |
+|    fps             | 6.44e+03  |
+|    iterations      | 1         |
+|    time_elapsed    | 2         |
+|    total_timesteps | 1.64e+04  |
+----------------------------------

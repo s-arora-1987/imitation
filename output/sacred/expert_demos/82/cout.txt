@@ -1,0 +1,158 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "82"
+Logging to output/expert_demos/imitationNM_SortingOnions-v0/20210813_155959_25a814/rl
+Using cuda device
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210813_155959_25a814/policies/000000010000
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1.22     |
+|    ep_rew_mean     | 0.0661   |
+| time/              |          |
+|    fps             | 7.52e+03 |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 1.64e+04 |
+---------------------------------
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210813_155959_25a814/policies/000000020000
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210813_155959_25a814/policies/000000030000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 1.49     |
+|    ep_rew_mean          | 0.149    |
+| time/                   |          |
+|    fps                  | 2.67e+03 |
+|    iterations           | 2        |
+|    time_elapsed         | 12       |
+|    total_timesteps      | 3.28e+04 |
+| train/                  |          |
+|    approx_kl            | 0.15     |
+|    clip_fraction        | 0.876    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.79    |
+|    explained_variance   | -5       |
+|    learning_rate        | 0.0003   |
+|    loss                 | -0.115   |
+|    n_updates            | 10       |
+|    policy_gradient_loss | -0.125   |
+|    value_loss           | 0.0155   |
+--------------------------------------
+Process ForkServerProcess-3:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Process ForkServerProcess-8:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Process ForkServerProcess-2:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Process ForkServerProcess-5:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Process ForkServerProcess-6:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Process ForkServerProcess-1:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Process ForkServerProcess-4:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Process ForkServerProcess-7:
+Traceback (most recent call last):
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/katy/stable-baselines3/stable_baselines3/common/vec_env/subproc_vec_env.py", line 24, in _worker
+    cmd, data = remote.recv()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt

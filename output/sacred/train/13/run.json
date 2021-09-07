@@ -1,0 +1,94 @@
+{
+  "artifacts": [],
+  "command": "train",
+  "experiment": {
+    "base_dir": "/home/katy/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.0",
+      "sacred==0.8.2"
+    ],
+    "mainfile": "train_adversarial.py",
+    "name": "train_adversarial",
+    "repositories": [
+      {
+        "commit": "740f4eefd6eb6aa04e5fee68151336dc1861615d",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "train_adversarial.py",
+        "_sources/train_adversarial_7e5232266bd6795c31cac7212ed3c207.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/katy/imitation/src/imitation/scripts/train_adversarial.py\", line 208, in train\n    **final_algorithm_kwargs,\n",
+    "  File \"/home/katy/imitation/src/imitation/algorithms/adversarial.py\", line 509, in __init__\n    venv, gen_algo, discrim, expert_data, expert_batch_size, **kwargs\n",
+    "  File \"/home/katy/imitation/src/imitation/algorithms/adversarial.py\", line 179, in __init__\n    self.venv_wrapped, norm_obs=False, norm_reward=normalize_reward\n",
+    "  File \"/home/katy/stable-baselines3/stable_baselines3/common/vec_env/vec_normalize.py\", line 43, in __init__\n    ), \"VecNormalize only support `gym.spaces.Box` and `gym.spaces.Dict` observation spaces\"\n",
+    "AssertionError: VecNormalize only support `gym.spaces.Box` and `gym.spaces.Dict` observation spaces\n"
+  ],
+  "heartbeat": "2021-07-19T20:49:24.304226",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "gpus": {
+      "driver_version": "465.27",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 1070",
+          "persistence_mode": false,
+          "total_memory": 8116
+        }
+      ]
+    },
+    "hostname": "katy-desktop",
+    "os": [
+      "Linux",
+      "Linux-5.4.0-77-generic-x86_64-with-debian-buster-sid"
+    ],
+    "python_version": "3.7.10"
+  },
+  "meta": {
+    "command": "train",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "airl",
+        "cliff_walker",
+        "rollout_path=quickstart/rl/cliff_walker/rollouts/final.pkl"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2021-07-19T20:49:19.453972",
+  "status": "FAILED",
+  "stop_time": "2021-07-19T20:49:24.305478"
+}

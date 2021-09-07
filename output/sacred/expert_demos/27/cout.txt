@@ -1,0 +1,15 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "27"
+Logging to quickstart/rl/mountain_car/rl
+Using cuda device
+INFO - root - Saved policy to quickstart/rl/mountain_car/policies/000000010000
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 200      |
+|    ep_rew_mean     | -200     |
+| time/              |          |
+|    fps             | 6.99e+03 |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 1.64e+04 |
+---------------------------------

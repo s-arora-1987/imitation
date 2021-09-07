@@ -1,0 +1,4 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "19"
+Logging to quickstart/rl/cliff_walker/rl
+Using cuda device

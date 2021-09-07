@@ -1,0 +1,6 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "123"
+Logging to output/expert_demos/imitationNM_SortingOnions-v0/20210817_144237_baa4ef/rl
+Using cuda device
+det_policy_as_dict_only_discr_space 
+  {0: 0, 1: 0, 2: 3, 3: 5, 4: 2, 5: 1, 6: 2, 7: 1, 8: 2, 9: 3, 10: 0, 11: 5, 12: 1, 13: 5, 14: 5, 15: 3, 16: 3, 17: 4, 18: 4, 19: 4, 20: 0, 21: 6, 22: 5, 23: 0, 24: 6, 25: 2, 26: 4, 27: 0}

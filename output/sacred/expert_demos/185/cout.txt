@@ -1,0 +1,20 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "185"
+Logging to output/expert_demos/Pendulum-v0/20210906_153512_5eac3c/rl
+Using cuda device
+INFO - root - Saved policy to output/expert_demos/Pendulum-v0/20210906_153512_5eac3c/policies/000000010000
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1        |
+|    ep_rew_mean     | -3.04    |
+| time/              |          |
+|    fps             | 6.59e+03 |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 1.64e+04 |
+---------------------------------
+INFO - root - Rollout stats: {'n_traj': 2000, 'return_min': -9.933345543012106, 'return_mean': -3.1901475589278445, 'return_std': 2.944051313062943, 'return_max': -0.0009385087387916763, 'len_min': 1, 'len_mean': 1.0, 'len_std': 0.0, 'len_max': 1}
+INFO - root - Dumped demonstrations to output/expert_demos/Pendulum-v0/20210906_153512_5eac3c/rollouts/final.pkl.
+INFO - root - Saved policy to output/expert_demos/Pendulum-v0/20210906_153512_5eac3c/policies/final
+INFO - expert_demos - Result: {'n_traj': 56, 'return_min': -9.702706363566753, 'return_mean': -3.1611362405750576, 'return_std': 3.1870062877837055, 'return_max': -0.005730809691557445, 'len_min': 1, 'len_mean': 1.0, 'len_std': 0.0, 'len_max': 1, 'monitor_return_min': -9.702706, 'monitor_return_mean': -3.161136214285714, 'monitor_return_std': 3.1870063156977784, 'monitor_return_max': -0.005731}
+INFO - expert_demos - Completed after 0:00:14

@@ -1,0 +1,156 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "3"
+Logging to quickstart/rl/rl
+Using cuda device
+INFO - root - Saved policy to quickstart/rl/policies/000000010000
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 23.6     |
+|    ep_rew_mean     | 23.6     |
+| time/              |          |
+|    fps             | 7.33e+03 |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 1.64e+04 |
+---------------------------------
+INFO - root - Saved policy to quickstart/rl/policies/000000020000
+INFO - root - Saved policy to quickstart/rl/policies/000000030000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 34.7     |
+|    ep_rew_mean          | 34.7     |
+| time/                   |          |
+|    fps                  | 2.61e+03 |
+|    iterations           | 2        |
+|    time_elapsed         | 12       |
+|    total_timesteps      | 3.28e+04 |
+| train/                  |          |
+|    approx_kl            | 0.0153   |
+|    clip_fraction        | 0.3      |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.679   |
+|    explained_variance   | -1.13    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0278   |
+|    n_updates            | 10       |
+|    policy_gradient_loss | -0.0266  |
+|    value_loss           | 0.197    |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/policies/000000040000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 52.2     |
+|    ep_rew_mean          | 52.2     |
+| time/                   |          |
+|    fps                  | 2.18e+03 |
+|    iterations           | 3        |
+|    time_elapsed         | 22       |
+|    total_timesteps      | 4.92e+04 |
+| train/                  |          |
+|    approx_kl            | 0.0169   |
+|    clip_fraction        | 0.331    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.639   |
+|    explained_variance   | -2.2     |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0435   |
+|    n_updates            | 20       |
+|    policy_gradient_loss | -0.0431  |
+|    value_loss           | 0.255    |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/policies/000000050000
+INFO - root - Saved policy to quickstart/rl/policies/000000060000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 100      |
+|    ep_rew_mean          | 100      |
+| time/                   |          |
+|    fps                  | 2e+03    |
+|    iterations           | 4        |
+|    time_elapsed         | 32       |
+|    total_timesteps      | 6.55e+04 |
+| train/                  |          |
+|    approx_kl            | 0.0205   |
+|    clip_fraction        | 0.261    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.59    |
+|    explained_variance   | -1.16    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.105    |
+|    n_updates            | 30       |
+|    policy_gradient_loss | -0.0349  |
+|    value_loss           | 0.318    |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/policies/000000070000
+INFO - root - Saved policy to quickstart/rl/policies/000000080000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 163      |
+|    ep_rew_mean          | 163      |
+| time/                   |          |
+|    fps                  | 1.89e+03 |
+|    iterations           | 5        |
+|    time_elapsed         | 43       |
+|    total_timesteps      | 8.19e+04 |
+| train/                  |          |
+|    approx_kl            | 0.0306   |
+|    clip_fraction        | 0.263    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.532   |
+|    explained_variance   | -0.72    |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0908   |
+|    n_updates            | 40       |
+|    policy_gradient_loss | -0.0263  |
+|    value_loss           | 0.206    |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/policies/000000090000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 195      |
+|    ep_rew_mean          | 195      |
+| time/                   |          |
+|    fps                  | 1.84e+03 |
+|    iterations           | 6        |
+|    time_elapsed         | 53       |
+|    total_timesteps      | 9.83e+04 |
+| train/                  |          |
+|    approx_kl            | 0.0206   |
+|    clip_fraction        | 0.195    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.519   |
+|    explained_variance   | -0.227   |
+|    learning_rate        | 0.0003   |
+|    loss                 | 0.0206   |
+|    n_updates            | 50       |
+|    policy_gradient_loss | -0.0114  |
+|    value_loss           | 0.0409   |
+--------------------------------------
+INFO - root - Saved policy to quickstart/rl/policies/000000100000
+INFO - root - Saved policy to quickstart/rl/policies/000000110000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 255      |
+|    ep_rew_mean          | 255      |
+| time/                   |          |
+|    fps                  | 1.79e+03 |
+|    iterations           | 7        |
+|    time_elapsed         | 64       |
+|    total_timesteps      | 1.15e+05 |
+| train/                  |          |
+|    approx_kl            | 0.0112   |
+|    clip_fraction        | 0.119    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -0.511   |
+|    explained_variance   | 0.576    |
+|    learning_rate        | 0.0003   |
+|    loss                 | -0.0224  |
+|    n_updates            | 60       |
+|    policy_gradient_loss | -0.00397 |
+|    value_loss           | 0.00763  |
+--------------------------------------
+INFO - root - Rollout stats: {'n_traj': 13, 'return_min': 193.0, 'return_mean': 386.2307692307692, 'return_std': 97.30139839785198, 'return_max': 500.0, 'len_min': 193, 'len_mean': 386.2307692307692, 'len_std': 97.30139839785198, 'len_max': 500}
+INFO - root - Dumped demonstrations to quickstart/rl/rollouts/final.pkl.
+INFO - root - Saved policy to quickstart/rl/policies/final
+INFO - expert_demos - Result: {'n_traj': 57, 'return_min': 4.7985706079360675, 'return_mean': 10.557125339043298, 'return_std': 3.2090108905221943, 'return_max': 17.065672302263973, 'len_min': 144, 'len_mean': 312.140350877193, 'len_std': 94.66328853556753, 'len_max': 500, 'monitor_return_min': 144.0, 'monitor_return_mean': 312.140350877193, 'monitor_return_std': 94.66328853556753, 'monitor_return_max': 500.0}
+INFO - expert_demos - Completed after 0:01:18

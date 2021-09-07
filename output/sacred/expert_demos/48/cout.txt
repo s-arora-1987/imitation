@@ -1,0 +1,38 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "48"
+Logging to quickstart/rl/cliff_walker/rl
+Using cuda device
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000010000
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 918       |
+|    ep_rew_mean     | -9.41e+03 |
+| time/              |           |
+|    fps             | 8.83e+03  |
+|    iterations      | 1         |
+|    time_elapsed    | 1         |
+|    total_timesteps | 1.64e+04  |
+----------------------------------
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000020000
+INFO - root - Saved policy to quickstart/rl/cliff_walker/policies/000000030000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 1.56e+03  |
+|    ep_rew_mean          | -1.3e+04  |
+| time/                   |           |
+|    fps                  | 2.68e+03  |
+|    iterations           | 2         |
+|    time_elapsed         | 12        |
+|    total_timesteps      | 3.28e+04  |
+| train/                  |           |
+|    approx_kl            | 0.0152    |
+|    clip_fraction        | 0.249     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.37     |
+|    explained_variance   | -3.34e+05 |
+|    learning_rate        | 0.0003    |
+|    loss                 | 1.02e+04  |
+|    n_updates            | 10        |
+|    policy_gradient_loss | -0.0352   |
+|    value_loss           | 3.26e+04  |
+---------------------------------------

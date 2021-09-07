@@ -1,0 +1,4 @@
+INFO - train_adversarial - Running command 'train'
+INFO - train_adversarial - Started run with ID "34"
+INFO - root - Logging to output/train_adversarial/CartPole-v1/20210726_164447_284e73
+Logging to output/train_adversarial/CartPole-v1/20210726_164447_284e73

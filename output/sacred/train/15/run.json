@@ -1,0 +1,98 @@
+{
+  "artifacts": [],
+  "command": "train",
+  "experiment": {
+    "base_dir": "/home/katy/imitation/src/imitation/scripts/config",
+    "dependencies": [
+      "imitation==0.2.0",
+      "numpy==1.21.0",
+      "sacred==0.8.2"
+    ],
+    "mainfile": "train_adversarial.py",
+    "name": "train_adversarial",
+    "repositories": [
+      {
+        "commit": "740f4eefd6eb6aa04e5fee68151336dc1861615d",
+        "dirty": true,
+        "url": "http://github.com/HumanCompatibleAI/imitation"
+      }
+    ],
+    "sources": [
+      [
+        "train_adversarial.py",
+        "_sources/train_adversarial_72afd55a5c5798dc573e05a2c95e64ba.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/katy/miniconda3/envs/HumanCompatibleAI/lib/python3.7/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"/home/katy/imitation/src/imitation/scripts/train_adversarial.py\", line 215, in train\n    trainer.train(total_timesteps, callback)\n",
+    "  File \"/home/katy/imitation/src/imitation/algorithms/adversarial.py\", line 324, in train\n    self.train_gen(self.gen_batch_size)\n",
+    "  File \"/home/katy/imitation/src/imitation/algorithms/adversarial.py\", line 294, in train_gen\n    gen_samples = self.venv_buffering.pop_transitions()\n",
+    "  File \"/home/katy/imitation/src/imitation/data/wrappers.py\", line 95, in pop_transitions\n    transitions = rollout.flatten_trajectories_with_rew(self._trajectories)\n",
+    "  File \"/home/katy/imitation/src/imitation/data/rollout.py\", line 410, in flatten_trajectories_with_rew\n    return types.TransitionsWithRew(**dataclasses.asdict(transitions), rews=rews)\n",
+    "  File \"<string>\", line 9, in __init__\n",
+    "  File \"/home/katy/imitation/src/imitation/data/types.py\", line 257, in __post_init__\n    _rews_validation(self.rews, self.acts)\n",
+    "  File \"/home/katy/imitation/src/imitation/data/types.py\", line 76, in _rews_validation\n    raise ValueError(f\"rewards dtype {rews.dtype} not a float\")\n",
+    "ValueError: rewards dtype int64 not a float\n"
+  ],
+  "heartbeat": "2021-07-19T21:04:48.555622",
+  "host": {
+    "ENV": {},
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "gpus": {
+      "driver_version": "465.27",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce GTX 1070",
+          "persistence_mode": false,
+          "total_memory": 8116
+        }
+      ]
+    },
+    "hostname": "katy-desktop",
+    "os": [
+      "Linux",
+      "Linux-5.4.0-77-generic-x86_64-with-debian-buster-sid"
+    ],
+    "python_version": "3.7.10"
+  },
+  "meta": {
+    "command": "train",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "airl",
+        "cliff_walker",
+        "rollout_path=quickstart/rl/cliff_walker/rollouts/final.pkl"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2021-07-19T21:04:42.398424",
+  "status": "FAILED",
+  "stop_time": "2021-07-19T21:04:48.557043"
+}

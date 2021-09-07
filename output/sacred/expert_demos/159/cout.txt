@@ -1,0 +1,83 @@
+INFO - expert_demos - Running command 'rollouts_and_policy'
+INFO - expert_demos - Started run with ID "159"
+Logging to output/expert_demos/imitationNM_SortingOnions-v0/20210905_174031_584289/rl
+Using cuda device
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210905_174031_584289/policies/000000010000
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1.38     |
+|    ep_rew_mean     | 0.0703   |
+| time/              |          |
+|    fps             | 7.48e+03 |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 1.64e+04 |
+---------------------------------
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210905_174031_584289/policies/000000020000
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210905_174031_584289/policies/000000030000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 1.56     |
+|    ep_rew_mean          | 0.126    |
+| time/                   |          |
+|    fps                  | 2.71e+03 |
+|    iterations           | 2        |
+|    time_elapsed         | 12       |
+|    total_timesteps      | 3.28e+04 |
+| train/                  |          |
+|    approx_kl            | 0.0727   |
+|    clip_fraction        | 0.737    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.86    |
+|    explained_variance   | -0.804   |
+|    learning_rate        | 0.0003   |
+|    loss                 | -0.123   |
+|    n_updates            | 10       |
+|    policy_gradient_loss | -0.117   |
+|    value_loss           | 0.0162   |
+--------------------------------------
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210905_174031_584289/policies/000000040000
+---------------------------------------
+| rollout/                |           |
+|    ep_len_mean          | 2.01      |
+|    ep_rew_mean          | 0.257     |
+| time/                   |           |
+|    fps                  | 2.28e+03  |
+|    iterations           | 3         |
+|    time_elapsed         | 21        |
+|    total_timesteps      | 4.92e+04  |
+| train/                  |           |
+|    approx_kl            | 0.132     |
+|    clip_fraction        | 0.964     |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -1.51     |
+|    explained_variance   | -1.68e+03 |
+|    learning_rate        | 0.0003    |
+|    loss                 | -0.148    |
+|    n_updates            | 20        |
+|    policy_gradient_loss | -0.158    |
+|    value_loss           | 0.0249    |
+---------------------------------------
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210905_174031_584289/policies/000000050000
+INFO - root - Saved policy to output/expert_demos/imitationNM_SortingOnions-v0/20210905_174031_584289/policies/000000060000
+--------------------------------------
+| rollout/                |          |
+|    ep_len_mean          | 2.4      |
+|    ep_rew_mean          | 0.398    |
+| time/                   |          |
+|    fps                  | 2.08e+03 |
+|    iterations           | 4        |
+|    time_elapsed         | 31       |
+|    total_timesteps      | 6.55e+04 |
+| train/                  |          |
+|    approx_kl            | 0.105    |
+|    clip_fraction        | 0.946    |
+|    clip_range           | 0.2      |
+|    entropy_loss         | -1.15    |
+|    explained_variance   | -26.8    |
+|    learning_rate        | 0.0003   |
+|    loss                 | -0.129   |
+|    n_updates            | 30       |
+|    policy_gradient_loss | -0.159   |
+|    value_loss           | 0.0404   |
+--------------------------------------
