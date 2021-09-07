@@ -26,7 +26,7 @@ def rand_policy(venv):
 @pytest.fixture
 def trajs(venv, rand_policy):
     return rollout.generate_trajectories(
-        rand_policy, venv, sample_until=rollout.make_min_episodes(5)
+        rand_policy, venv, sample_until=rollout.min_episodes(5)
     )
 
 
@@ -77,7 +77,7 @@ def test_batch_reward_heatmaps(trajs, tmpdir, rand_policy):
 
     # Generate reward function and generator policy checkpoints.
     log_dir = tmpdir / "train_adversarial"
-    run = train_adversarial.train_adversarial_ex.run(
+    run = train_adversarial.train_ex.run(
         named_configs=["mountain_car", "fast"],
         config_updates=dict(
             rollout_path=rollout_path,

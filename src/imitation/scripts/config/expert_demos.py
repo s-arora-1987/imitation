@@ -1,7 +1,5 @@
 import os
-
 import sacred
-
 from imitation.scripts.config.common import DEFAULT_INIT_RL_KWARGS
 from imitation.util import util
 
@@ -10,11 +8,15 @@ expert_demos_ex = sacred.Experiment("expert_demos")
 
 @expert_demos_ex.config
 def expert_demos_defaults():
-    env_name = "CartPole-v1"  # The gym.Env name
-    total_timesteps = int(1e6)  # Number of training timesteps in model.learn()
+    # env_name = "CliffWalking-v0"
+    # total_timesteps = int(7.5e5)
+
+    env_name = "imitationNM/SortingOnions-v0"
+    total_timesteps = int(3e5) # int(5e4) 
+    normalize = False 
     num_vec = 8  # Number of environments in VecEnv
+
     parallel = True  # Use SubprocVecEnv (generally faster if num_vec>1)
-    normalize = True  # Use VecNormalize
     normalize_kwargs = dict()  # kwargs for `VecNormalize`
     max_episode_steps = None  # Set to positive int to limit episode horizons
     n_episodes_eval = 50  # Num of episodes for final ep reward mean evaluation
@@ -31,6 +33,8 @@ def expert_demos_defaults():
 
     policy_save_interval = 10000  # Num timesteps between saves (<=0 disables)
     policy_save_final = True  # If True, save after training is finished.
+
+    init_tensorboard = True  # If True, then write Tensorboard logs.
 
     log_root = os.path.join("output", "expert_demos")  # output directory
 
@@ -81,25 +85,20 @@ def cartpole():
 
 
 @expert_demos_ex.named_config
-def seals_cartpole():
-    env_name = "seals/CartPole-v0"
-    total_timesteps = int(1e6)
-
-
-@expert_demos_ex.named_config
 def half_cheetah():
     env_name = "HalfCheetah-v2"
     total_timesteps = int(5e6)  # does OK after 1e6, but continues improving
 
 
 @expert_demos_ex.named_config
-def seals_hopper():
-    env_name = "seals/Hopper-v0"
+def hopper():
+    # TODO(adam): upgrade to Hopper-v3?
+    env_name = "Hopper-v2"
 
 
 @expert_demos_ex.named_config
-def seals_humanoid():
-    env_name = "seals/Humanoid-v0"
+def humanoid():
+    env_name = "Humanoid-v2"
     init_rl_kwargs = dict(
         n_steps=2048,
     )  # batch size of 2048*8=16384 due to num_vec
@@ -112,13 +111,11 @@ def mountain_car():
 
 
 @expert_demos_ex.named_config
-def seals_mountain_car():
-    env_name = "seals/MountainCar-v0"
-
-
-@expert_demos_ex.named_config
 def pendulum():
     env_name = "Pendulum-v0"
+    total_timesteps = int(1e6)  # Number of training timesteps in model.learn()
+    num_vec = 8  # Number of environments in VecEnv
+    normalize = True  # Use VecNormalize
 
 
 @expert_demos_ex.named_config
@@ -127,18 +124,23 @@ def reacher():
 
 
 @expert_demos_ex.named_config
-def seals_swimmer():
-    env_name = "seals/Swimmer-v0"
+def swimmer():
+    env_name = "Swimmer-v2"
 
 
 @expert_demos_ex.named_config
-def seals_walker():
-    env_name = "seals/Walker2d-v0"
+def walker():
+    env_name = "Walker2d-v2"
+
+
+@expert_demos_ex.named_config
+def cliff_walker():
+    env_name = "CliffWalking-v0"
+    total_timesteps = int(1e6)
+    normalize = False
 
 
 # Custom env configs
-
-
 @expert_demos_ex.named_config
 def custom_ant():
     env_name = "imitation/CustomAnt-v0"
@@ -155,9 +157,7 @@ def disabled_ant():
 def two_d_maze():
     env_name = "imitation/TwoDMaze-v0"
 
-
 # Debug configs
-
 
 @expert_demos_ex.named_config
 def fast():

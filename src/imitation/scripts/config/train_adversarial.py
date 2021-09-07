@@ -1,46 +1,44 @@
 """Configuration for imitation.scripts.train_adversarial."""
 
 import os
-
 import sacred
 
 from imitation.policies import base
 from imitation.scripts.config.common import DEFAULT_INIT_RL_KWARGS
 from imitation.util import util
 
-train_adversarial_ex = sacred.Experiment("train_adversarial", interactive=True)
+train_ex = sacred.Experiment("train_adversarial", interactive=True)
 
-
-@train_adversarial_ex.config
+@train_ex.config
 def train_defaults():
-    env_name = "seals/CartPole-v0"  # environment to train on
-    total_timesteps = 1e6  # Num of environment transitions to sample
-    algorithm = "gail"  # Either "airl" or "gail"
 
-    n_expert_demos = None  # Num demos used. None uses every demo possible
-    n_episodes_eval = 50  # Num of episodes for final mean ground truth return
-
-    # Number of environments in VecEnv, must evenly divide gen_batch_size
-    num_vec = 8
-
-    # Use SubprocVecEnv rather than DummyVecEnv (generally faster if num_vec>1)
-    parallel = True
-    max_episode_steps = None  # Set to positive int to limit episode horizons
-
-    # Kwargs for initializing GAIL and AIRL
+    # changing default to discrete state discrete action env 
+    env_name = "imitationNM/SortingOnions-v0"
+    rollout_hint = "sorting_onions"
     algorithm_kwargs = dict(
         shared=dict(
-            expert_batch_size=1024,  # Number of expert samples per discriminator update
+            expert_batch_size=500,  # Number of expert samples per discriminator update
             # Number of discriminator updates after each round of generator updates
             n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
         ),
         airl={},
         gail={},
     )
+    total_timesteps = 7.5e5  # Num of environment transitions to sample
+
+    algorithm = "airl"  # Either "airl" or "gail"
+    n_expert_demos = None  # Num demos used. None uses every demo possible
+    n_episodes_eval = 50  # Num of episodes for final mean ground truth return
+    # Number of environments in VecEnv, must evenly divide gen_batch_size
+    num_vec = 8
+    # Use SubprocVecEnv rather than DummyVecEnv (generally faster if num_vec>1)
+    parallel = True
+    max_episode_steps = None  # Set to positive int to limit episode horizons
 
     # Kwargs for initializing {GAIL,AIRL}DiscrimNet
     discrim_net_kwargs = dict(shared={}, airl={}, gail={})
-
     # Modifies the __init__ arguments for the imitation policy
     init_rl_kwargs = dict(
         policy_class=base.FeedForward32Policy,
@@ -50,11 +48,12 @@ def train_defaults():
 
     log_root = os.path.join("output", "train_adversarial")  # output directory
     checkpoint_interval = 0  # Num epochs between checkpoints (<0 disables)
-    rollout_hint = None  # Used to generate default rollout_path
+    init_tensorboard = True  # If True, then write Tensorboard logs
+    
     data_dir = "data/"  # Default data directory
 
 
-@train_adversarial_ex.config
+@train_ex.config
 def aliases_default_gen_batch_size(algorithm_kwargs, gen_batch_size):
     # Setting generator buffer capacity and discriminator batch size to
     # the same number is equivalent to not using a replay buffer at all.
@@ -64,12 +63,12 @@ def aliases_default_gen_batch_size(algorithm_kwargs, gen_batch_size):
     algorithm_kwargs["shared"]["gen_replay_buffer_capacity"] = gen_batch_size
 
 
-@train_adversarial_ex.config
+@train_ex.config
 def calc_n_steps(num_vec, gen_batch_size):
     init_rl_kwargs = dict(n_steps=gen_batch_size // num_vec)
 
 
-@train_adversarial_ex.config
+@train_ex.config
 def paths(env_name, log_root, rollout_hint, data_dir):
     log_dir = os.path.join(
         log_root, env_name.replace("/", "_"), util.make_unique_timestamp()
@@ -80,21 +79,25 @@ def paths(env_name, log_root, rollout_hint, data_dir):
     # and attempt to load rollouts from `data/expert_models/`.
     if rollout_hint is None:
         rollout_hint = env_name.split("-")[0].lower()
+    # rollout_path = os.path.join(
+    #     data_dir, "expert_models", f"{rollout_hint}_0", "rollouts", "final.pkl"
+    # )
     rollout_path = os.path.join(
-        data_dir, "expert_models", f"{rollout_hint}_0", "rollouts", "final.pkl"
+        "/home/katy/imitation/output/expert_demos/imitationNM_SortingOnions-v0/20210906_121342_09d9b0/rollouts"
+        # "quickstart/rl", f"{rollout_hint}", "rollouts"
+        , "final.pkl"
     )
-
+    print("rollout_path - ",rollout_path)
 
 # Training algorithm named configs
 
-
-@train_adversarial_ex.named_config
+@train_ex.named_config
 def gail():
     """Quick alias for algorithm=gail"""
     algorithm = "gail"
 
 
-@train_adversarial_ex.named_config
+@train_ex.named_config
 def airl():
     """Quick alias for algorithm=airl"""
     algorithm = "airl"
@@ -115,151 +118,125 @@ ANT_SHARED_LOCALS = dict(
 # Classic RL Gym environment named configs
 
 
-@train_adversarial_ex.named_config
+@train_ex.named_config
 def acrobot():
     env_name = "Acrobot-v1"
-    algorithm_kwargs = {"shared": {"allow_variable_horizon": True}}
     rollout_hint = "acrobot"
 
 
-@train_adversarial_ex.named_config
+@train_ex.named_config
 def cartpole():
     env_name = "CartPole-v1"
     rollout_hint = "cartpole"
-    algorithm_kwargs = {"shared": {"allow_variable_horizon": True}}
-    discrim_net_kwargs = {"gail": {"normalize_images": False}}
+    discrim_net_kwargs = {"gail": {"scale": False}}
 
 
-@train_adversarial_ex.named_config
-def seals_cartpole():
-    total_timesteps = 1.4e6
-    env_name = "seals/CartPole-v0"
-    # seals and vanilla CartPole have the same expert trajectories.
-    rollout_hint = "cartpole"
-    discrim_net_kwargs = {"gail": {"normalize_images": False}}
-
-
-@train_adversarial_ex.named_config
+@train_ex.named_config
 def mountain_car():
     env_name = "MountainCar-v0"
-    algorithm_kwargs = {"shared": {"allow_variable_horizon": True}}
     rollout_hint = "mountain_car"
 
 
-@train_adversarial_ex.named_config
-def seals_mountain_car():
-    env_name = "seals/MountainCar-v0"
-    rollout_hint = "mountain_car"  # TODO(shwang): Use seals/MountainCar-v0 rollouts.
-
-
-@train_adversarial_ex.named_config
+@train_ex.named_config
 def pendulum():
     env_name = "Pendulum-v0"
     rollout_hint = "pendulum"
+    total_timesteps = 1e6  # Num of environment transitions to sample
+    # Kwargs for initializing GAIL and AIRL
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=1024,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+        ),
+        airl={},
+        gail={},
+    )
 
+@train_ex.named_config
+def cliff_walker():
+    env_name = "CliffWalking-v0"
+    rollout_hint = "cliff_walker"
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=1024,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    total_timesteps = 7.5e5  # Num of environment transitions to sample
 
 # Standard MuJoCo Gym environment named configs
 
 
-@train_adversarial_ex.named_config
-def seals_ant():
+@train_ex.named_config
+def ant():
     locals().update(**MUJOCO_SHARED_LOCALS)
     locals().update(**ANT_SHARED_LOCALS)
-    env_name = "seals/Ant-v0"
+    env_name = "Ant-v2"
     rollout_hint = "ant"
 
 
-HALF_CHEETAH_SHARED_LOCALS = dict(
-    env_name="HalfCheetah-v2",
-    rollout_hint="half_cheetah",
-    gen_batch_size=16384,
-    init_rl_kwargs=dict(
-        batch_size=1024,
-    ),
-    algorithm_kwargs=dict(
-        shared=dict(
-            # Number of discriminator updates after each round of generator updates
-            n_disc_updates_per_round=16,
-            # Equivalent to no replay buffer if batch size is the same
-            gen_replay_buffer_capacity=16384,
-            expert_batch_size=8192,
-        ),
-        airl=dict(
-            reward_net_kwargs=dict(
-                reward_hid_sizes=(32,),
-                potential_hid_sizes=(32,),
-            ),
-        ),
-    ),
-)
-
-
-@train_adversarial_ex.named_config
-def half_cheetah_gail():
-    # TODO(shwang): Update experiment scripts to use different total_timesteps
-    # for GAIL and AIRL
+@train_ex.named_config
+def half_cheetah():
     locals().update(**MUJOCO_SHARED_LOCALS)
-    locals().update(**HALF_CHEETAH_SHARED_LOCALS)
-    algorithm = "gail"
-    total_timesteps = 8e6
+    env_name = "HalfCheetah-v2"
+    rollout_hint = "half_cheetah"
+    total_timesteps = 2e6
 
 
-@train_adversarial_ex.named_config
-def half_cheetah_airl():
+@train_ex.named_config
+def hopper():
     locals().update(**MUJOCO_SHARED_LOCALS)
-    locals().update(**HALF_CHEETAH_SHARED_LOCALS)
-    algorithm = "airl"
-    total_timesteps = 5e6
-
-
-@train_adversarial_ex.named_config
-def seals_hopper():
-    locals().update(**MUJOCO_SHARED_LOCALS)
-    env_name = "seals/Hopper-v0"
+    # TODO(adam): upgrade to Hopper-v3?
+    env_name = "Hopper-v2"
     rollout_hint = "hopper"
 
 
-@train_adversarial_ex.named_config
-def seals_humanoid():
+@train_ex.named_config
+def humanoid():
     locals().update(**MUJOCO_SHARED_LOCALS)
-    env_name = "seals/Humanoid-v0"
+    env_name = "Humanoid-v2"
     rollout_hint = "humanoid"
     total_timesteps = 4e6
 
 
-@train_adversarial_ex.named_config
+@train_ex.named_config
 def reacher():
     env_name = "Reacher-v2"
-    algorithm_kwargs = {"shared": {"allow_variable_horizon": True}}
     rollout_hint = "reacher"
 
 
-@train_adversarial_ex.named_config
-def seals_swimmer():
+@train_ex.named_config
+def swimmer():
     locals().update(**MUJOCO_SHARED_LOCALS)
-    env_name = "seals/Swimmer-v0"
+    env_name = "Swimmer-v2"
     rollout_hint = "swimmer"
     total_timesteps = 2e6
 
 
-@train_adversarial_ex.named_config
-def seals_walker():
+@train_ex.named_config
+def walker():
     locals().update(**MUJOCO_SHARED_LOCALS)
-    env_name = "seals/Walker2d-v0"
+    env_name = "Walker2d-v2"
     rollout_hint = "walker"
 
 
 # Custom Gym environment named configs
 
 
-@train_adversarial_ex.named_config
+@train_ex.named_config
 def two_d_maze():
     locals().update(**MUJOCO_SHARED_LOCALS)
     env_name = "imitation/TwoDMaze-v0"
     rollout_hint = "two_d_maze"
 
 
-@train_adversarial_ex.named_config
+@train_ex.named_config
 def custom_ant():
     locals().update(**MUJOCO_SHARED_LOCALS)
     # Watch out -- ANT_SHARED_LOCALS could erroneously erase nested dict keys from
@@ -270,7 +247,7 @@ def custom_ant():
     rollout_hint = "custom_ant"
 
 
-@train_adversarial_ex.named_config
+@train_ex.named_config
 def disabled_ant():
     locals().update(**MUJOCO_SHARED_LOCALS)
     locals().update(**ANT_SHARED_LOCALS)
@@ -281,7 +258,7 @@ def disabled_ant():
 # Debug configs
 
 
-@train_adversarial_ex.named_config
+@train_ex.named_config
 def fast():
     """Minimize the amount of computation.
 

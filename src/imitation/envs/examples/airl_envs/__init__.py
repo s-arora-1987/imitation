@@ -27,6 +27,8 @@ _register(
 )
 _register("imitation/TwoDMaze-v0", entry_point="twod_maze:TwoDMaze")
 
+_register("imitationNM/SortingOnions-v0", entry_point="sorting_onions_env:SortingOnions") 
+
 _point_maze_register()
 
 # A modified ant which flips over less and learns faster via TRPO

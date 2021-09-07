@@ -1,0 +1,84 @@
+
+ onion -conv, pred -unknown, gripper -conv, LS -empty
+action:Pick
+
+ onion -home, pred -unknown, gripper -home, LS -empty
+action:Pick
+
+ onion -eye, pred -bad, gripper -eye, LS -unavailable
+action:Pick
+
+ onion -bin, pred -unknown, gripper -bin, LS -unavailable
+action:Pick
+
+ onion -conv, pred -unknown, gripper -bin, LS -unavailable
+action:Pick
+
+ onion -home, pred -unknown, gripper -home, LS -unavailable
+action:InspectAfterPicking
+
+ onion -eye, pred -good, gripper -eye, LS -unavailable
+action:PlaceInBin
+
+ onion -placedconv, pred -unknown, gripper -conv, LS -unavailable
+action:Pick
+
+ onion -conv, pred -bad, gripper -conv, LS -notempty
+action:Pick
+
+ onion -home, pred -bad, gripper -home, LS -notempty
+action:Pick
+
+ onion -bin, pred -unknown, gripper -bin, LS -notempty
+action:Pick
+
+ onion -conv, pred -bad, gripper -bin, LS -notempty
+action:Pick
+
+ onion -bin, pred -unknown, gripper -bin, LS -empty
+action:Pick
+
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+action:Pick
+
+ onion -conv, pred -unknown, gripper -bin, LS -empty
+action:Pick
+
+ onion -conv, pred -good, gripper -conv, LS -empty
+action:Pick
+
+ onion -conv, pred -good, gripper -eye, LS -empty
+action:Pick
+
+ onion -conv, pred -good, gripper -bin, LS -empty
+action:Pick
+
+ onion -conv, pred -good, gripper -home, LS -empty
+action:Pick
+
+ onion -conv, pred -unknown, gripper -eye, LS -empty
+action:Pick
+
+ onion -conv, pred -unknown, gripper -home, LS -empty
+action:Pick
+
+ onion -home, pred -good, gripper -home, LS -empty
+action:Pick
+
+ onion -conv, pred -bad, gripper -eye, LS -notempty
+action:Pick
+
+ onion -conv, pred -bad, gripper -home, LS -notempty
+action:Pick
+
+ onion -conv, pred -unknown, gripper -eye, LS -unavailable
+action:Pick
+
+ onion -conv, pred -unknown, gripper -home, LS -unavailable
+action:Pick
+
+ onion -placedconv, pred -unknown, gripper -home, LS -unavailable
+action:Pick
+
+ onion -home, pred -good, gripper -bin, LS -notempty
+action:Pick

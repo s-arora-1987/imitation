@@ -6,11 +6,10 @@ from typing import Callable, Dict, Hashable, List, Optional, Sequence, Union
 import numpy as np
 from stable_baselines3.common.base_class import BaseAlgorithm
 from stable_baselines3.common.policies import BasePolicy
-from stable_baselines3.common.utils import check_for_correct_spaces
 from stable_baselines3.common.vec_env import VecEnv
 
 from imitation.data import types
-
+import gym
 
 def unwrap_traj(traj: types.TrajectoryWithRew) -> types.TrajectoryWithRew:
     """Uses `RolloutInfoWrapper`-captured `obs` and `rews` to replace fields.
@@ -28,7 +27,7 @@ def unwrap_traj(traj: types.TrajectoryWithRew) -> types.TrajectoryWithRew:
       A copy of `traj` with replaced `obs` and `rews` fields.
     """
     ep_info = traj.infos[-1]["rollout"]
-    res = dataclasses.replace(traj, obs=ep_info["obs"], rews=ep_info["rews"])
+    res = dataclasses.replace(traj, obs=ep_info["obs"], rews=ep_info["rews"].astype(np.float64))
     assert len(res.obs) == len(res.acts) + 1
     assert len(res.rews) == len(res.acts)
     return res
@@ -63,9 +62,7 @@ class TrajectoryAccumulator:
         """
         self.partial_trajectories[key].append(step_dict)
 
-    def finish_trajectory(
-        self, key: Hashable, terminal: bool
-    ) -> types.TrajectoryWithRew:
+    def finish_trajectory(self, key: Hashable = None) -> types.TrajectoryWithRew:
         """Complete the trajectory labelled with `key`.
 
         Args:
@@ -85,7 +82,8 @@ class TrajectoryAccumulator:
             key: np.stack(arr_list, axis=0)
             for key, arr_list in out_dict_unstacked.items()
         }
-        traj = types.TrajectoryWithRew(**out_dict_stacked, terminal=terminal)
+
+        traj = types.TrajectoryWithRew(**out_dict_stacked)
         assert traj.rews.shape[0] == traj.acts.shape[0] == traj.obs.shape[0] - 1
         return traj
 
@@ -126,9 +124,8 @@ class TrajectoryAccumulator:
         zip_iter = enumerate(zip(acts, obs, rews, dones, infos))
         for env_idx, (act, ob, rew, done, info) in zip_iter:
             if done:
-                # When dones[i] from VecEnv.step() is True, obs[i] is the first
-                # observation following reset() of the ith VecEnv, and
-                # infos[i]["terminal_observation"] is the actual final observation.
+                # actual obs is inaccurate, so we use the one inserted into step info
+                # by stable baselines wrapper
                 real_ob = info["terminal_observation"]
             else:
                 real_ob = ob
@@ -146,18 +143,17 @@ class TrajectoryAccumulator:
             )
             if done:
                 # finish env_idx-th trajectory
-                new_traj = self.finish_trajectory(env_idx, terminal=True)
+                new_traj = self.finish_trajectory(env_idx)
                 trajs.append(new_traj)
-                # When done[i] from VecEnv.step() is True, obs[i] is the first
-                # observation following reset() of the ith VecEnv.
                 self.add_step(dict(obs=ob), env_idx)
+
         return trajs
 
 
 GenTrajTerminationFn = Callable[[Sequence[types.TrajectoryWithRew]], bool]
 
 
-def make_min_episodes(n: int) -> GenTrajTerminationFn:
+def min_episodes(n: int) -> GenTrajTerminationFn:
     """Terminate after collecting n episodes of data.
 
     Arguments:
@@ -171,7 +167,7 @@ def make_min_episodes(n: int) -> GenTrajTerminationFn:
     return lambda trajectories: len(trajectories) >= n
 
 
-def make_min_timesteps(n: int) -> GenTrajTerminationFn:
+def min_timesteps(n: int) -> GenTrajTerminationFn:
     """Terminate at the first episode after collecting n timesteps of data.
 
     Arguments:
@@ -191,59 +187,39 @@ def make_min_timesteps(n: int) -> GenTrajTerminationFn:
 
 
 def make_sample_until(
-    min_timesteps: Optional[int],
-    min_episodes: Optional[int],
+    n_timesteps: Optional[int],
+    n_episodes: Optional[int],
 ) -> GenTrajTerminationFn:
-    """Returns a termination condition sampling for a number of timesteps and episodes.
+    """Returns a termination condition sampling until n_timesteps or n_episodes.
 
     Arguments:
-        min_timesteps: Sampling will not stop until there are at least this many
-            timesteps.
-        min_episodes: Sampling will not stop until there are at least this many
-            episodes.
+      n_timesteps: Minimum number of timesteps to sample.
+      n_episodes: Number of episodes to sample.
 
     Returns:
-        A termination condition.
+      A termination condition.
 
     Raises:
-        ValueError if neither of n_timesteps and n_episodes are set, or if either are
-            non-positive.
+      ValueError if both or neither of n_timesteps and n_episodes are set,
+      or if either are non-positive.
     """
-    if min_timesteps is None and min_episodes is None:
-        raise ValueError(
-            "At least one of min_timesteps and min_episodes needs to be non-None"
-        )
-
-    conditions = []
-    if min_timesteps is not None:
-        if min_timesteps <= 0:
-            raise ValueError(
-                f"min_timesteps={min_timesteps} if provided must be positive"
-            )
-        conditions.append(make_min_timesteps(min_timesteps))
-
-    if min_episodes is not None:
-        if min_episodes <= 0:
-            raise ValueError(
-                f"min_episodes={min_episodes} if provided must be positive"
-            )
-        conditions.append(make_min_episodes(min_episodes))
-
-    def sample_until(trajs: Sequence[types.TrajectoryWithRew]) -> bool:
-        for cond in conditions:
-            if not cond(trajs):
-                return False
-        return True
-
-    return sample_until
-
+    if n_timesteps is not None and n_episodes is not None:
+        raise ValueError("n_timesteps and n_episodes were both set")
+    elif n_timesteps is not None:
+        assert n_timesteps > 0
+        return min_timesteps(n_timesteps)
+    elif n_episodes is not None:
+        assert n_episodes > 0
+        return min_episodes(n_episodes)
+    else:
+        raise ValueError("Set at least one of n_timesteps and n_episodes")
 
 def generate_trajectories(
     policy,
     venv: VecEnv,
     sample_until: GenTrajTerminationFn,
     *,
-    deterministic_policy: bool = False,
+    deterministic_policy: bool = True, #False,
     rng: np.random.RandomState = np.random,
 ) -> Sequence[types.TrajectoryWithRew]:
     """Generate trajectory dictionaries from a policy and an environment.
@@ -267,8 +243,7 @@ def generate_trajectories(
     """
     get_action = policy.predict
     if isinstance(policy, BaseAlgorithm):
-        # check that the observation and action spaces of policy and environment match
-        check_for_correct_spaces(venv, policy.observation_space, policy.action_space)
+        policy.set_env(venv)
 
     # Collect rollout tuples.
     trajectories = []
@@ -301,14 +276,16 @@ def generate_trajectories(
         # by just making it never done.
         dones &= active
 
+        # print("rews.dtype ",rews.dtype)
+        rews = rews.astype(np.float64)
         new_trajs = trajectories_accum.add_steps_and_auto_finish(
             acts, obs, rews, dones, infos
         )
         trajectories.extend(new_trajs)
 
         if sample_until(trajectories):
-            # Termination condition has been reached. Mark as inactive any environments
-            # where a trajectory was completed this timestep.
+            # break 
+            # print("rollout.generate_trajectories: sample_until(trajectories) has been reached.")
             active &= ~dones
 
     # Note that we just drop partial trajectories. This is not ideal for some
@@ -337,6 +314,152 @@ def generate_trajectories(
     return trajectories
 
 
+def generate_trajectories_sortingMDP(
+    policy,
+    venv: VecEnv,
+    sample_until: GenTrajTerminationFn,
+    *,
+    deterministic_policy: bool = True, #False,
+    rng: np.random.RandomState = np.random,
+) -> Sequence[types.TrajectoryWithRew]:
+    """Generate trajectory dictionaries from a policy and an environment.
+
+    Args:
+      policy (BasePolicy or BaseAlgorithm): A stable_baselines3 policy or algorithm
+          trained on the gym environment.
+      venv: The vectorized environments to interact with.
+      sample_until: A function determining the termination condition.
+          It takes a sequence of trajectories, and returns a bool.
+          Most users will want to use one of `min_episodes` or `min_timesteps`.
+      deterministic_policy: If True, asks policy to deterministically return
+          action. Note the trajectories might still be non-deterministic if the
+          environment has non-determinism!
+      rng: used for shuffling trajectories.
+
+    Returns:
+      Sequence of trajectories, satisfying `sample_until`. Additional trajectories
+      may be collected to avoid biasing process towards short episodes; the user
+      should truncate if required.
+    """
+    get_action = policy.predict
+    if isinstance(policy, BaseAlgorithm):
+        policy.set_env(venv)
+
+    # store state action pair in a dictionary
+    if isinstance(venv.observation_space, gym.spaces.Discrete):
+        det_policy_as_dict_only_discr_sp = {}
+        statesList = [[ 0, 2, 0, 0],\
+            [ 3, 2, 3, 0],\
+            [ 1, 0, 1, 2],\
+            [ 2, 2, 2, 2],\
+            [ 0, 2, 2, 2],\
+            [ 3, 2, 3, 2],\
+            [ 1, 1, 1, 2],\
+            [ 4, 2, 0, 2],\
+            [ 0, 0, 0, 1],\
+            [ 3, 0, 3, 1],\
+            [ 2, 2, 2, 1],\
+            [ 0, 0, 2, 1],\
+            [ 2, 2, 2, 0],\
+            [0, 2, 0, 2],\
+            [0, 2, 2, 0],\
+            [0,1,0,0],[0,1,1,0],[0,1,2,0],[0,1,3,0],[0,2,1,0],[0,2,3,0],\
+            [3,1,3,0],[0,0,1,1],[0,0,3,1],\
+            [0,2,1,2],[0,2,3,2],\
+            [-1,-1,-1,-1],[-2,-2,-2,-2]] # sink state, terminal state
+
+        ol_map = ['conv','eye','bin','home','placedconv']
+        pr_map = ['bad', 'good','unknown']
+        el_map = ['conv','eye','bin','home']
+        ls_map = ['empty','notempty','unavailable']
+        actionList = np.array(['InspectAfterPicking','InspectWithoutPicking',\
+        'Pick','PlaceOnConveyor','PlaceInBin','ClaimNewOnion',\
+        'ClaimNextInList'])
+
+        size_statespace = venv.observation_space.n
+        pol_str = ""
+        for obs in range(size_statespace):
+            ol, pr, el, ls = statesList[obs][0], statesList[obs][1], statesList[obs][2], statesList[obs][3]
+            ss = " onion -"+ol_map[ol]+", pred -"+pr_map[pr]+", gripper -"+el_map[el]+", LS -"+ls_map[ls]
+            acts, _ = get_action(obs, deterministic=True)
+            aa = "action:"+actionList[acts]
+            pol_str += "\n"+ss+"\n"+aa+"\n"
+            det_policy_as_dict_only_discr_sp[obs] = acts
+
+        print("det_policy_as_dict_only_discr_sp \n ",det_policy_as_dict_only_discr_sp)
+        with open('./learned_policy_sorting.txt', 'w') as writer:
+            writer.write(pol_str)
+
+    # Collect rollout tuples.
+    trajectories = []
+    # accumulator for incomplete trajectories
+    trajectories_accum = TrajectoryAccumulator()
+    obs = venv.reset()
+    for env_idx, ob in enumerate(obs):
+        # Seed with first obs only. Inside loop, we'll only add second obs from
+        # each (s,a,r,s') tuple, under the same "obs" key again. That way we still
+        # get all observations, but they're not duplicated into "next obs" and
+        # "previous obs" (this matters for, e.g., Atari, where observations are
+        # really big).
+        trajectories_accum.add_step(dict(obs=ob), env_idx)
+
+    # Now, we sample until `sample_until(trajectories)` is true.
+    # If we just stopped then this would introduce a bias towards shorter episodes,
+    # since longer episodes are more likely to still be active, i.e. in the process
+    # of being sampled from. To avoid this, we continue sampling until all epsiodes
+    # are complete.
+    #
+    # To start with, all environments are active.
+    active = np.ones(venv.num_envs, dtype=bool)
+    while np.any(active):
+        acts, _ = get_action(obs, deterministic=deterministic_policy)
+        obs, rews, dones, infos = venv.step(acts)
+
+        # If an environment is inactive, i.e. the episode completed for that
+        # environment after `sample_until(trajectories)` was true, then we do
+        # *not* want to add any subsequent trajectories from it. We avoid this
+        # by just making it never done.
+        dones &= active
+
+        # print("rews.dtype ",rews.dtype)
+        rews = rews.astype(np.float64)
+        new_trajs = trajectories_accum.add_steps_and_auto_finish(
+            acts, obs, rews, dones, infos
+        )
+        trajectories.extend(new_trajs)
+
+        if sample_until(trajectories):
+            # break 
+            # print("rollout.generate_trajectories: Termination condition has been reached.")
+            # # Termination condition has been reached. Mark as inactive any environments
+            # # where a trajectory was completed this timestep.
+            active &= ~dones
+
+    # Note that we just drop partial trajectories. This is not ideal for some
+    # algos; e.g. BC can probably benefit from partial trajectories, too.
+
+    # Each trajectory is sampled i.i.d.; however, shorter episodes are added to
+    # `trajectories` sooner. Shuffle to avoid bias in order. This is important
+    # when callees end up truncating the number of trajectories or transitions.
+    # It is also cheap, since we're just shuffling pointers.
+    rng.shuffle(trajectories)
+
+    # Sanity checks.
+    for trajectory in trajectories:
+        n_steps = len(trajectory.acts)
+        # extra 1 for the end
+        exp_obs = (n_steps + 1,) + venv.observation_space.shape
+        real_obs = trajectory.obs.shape
+        assert real_obs == exp_obs, f"expected shape {exp_obs}, got {real_obs}"
+        exp_act = (n_steps,) + venv.action_space.shape
+        real_act = trajectory.acts.shape
+        assert real_act == exp_act, f"expected shape {exp_act}, got {real_act}"
+        exp_rew = (n_steps,)
+        real_rew = trajectory.rews.shape
+        assert real_rew == exp_rew, f"expected shape {exp_rew}, got {real_rew}"
+
+    return trajectories, det_policy_as_dict_only_discr_sp.values()
+
 def rollout_stats(trajectories: Sequence[types.TrajectoryWithRew]) -> Dict[str, float]:
     """Calculates various stats for a sequence of trajectories.
 
@@ -360,20 +483,10 @@ def rollout_stats(trajectories: Sequence[types.TrajectoryWithRew]) -> Dict[str, 
         "len": np.asarray([len(t.rews) for t in trajectories]),
     }
 
-    monitor_ep_returns = []
-    for t in trajectories:
-        if t.infos is not None:
-            ep_return = t.infos[-1].get("episode", {}).get("r")
-            if ep_return is not None:
-                monitor_ep_returns.append(ep_return)
-    if monitor_ep_returns:
-        # Note monitor_ep_returns[i] may be from a different episode than ep_return[i]
-        # since we skip episodes with None infos. This is OK as we only return summary
-        # statistics, but you cannot e.g. compute the correlation between ep_return and
-        # monitor_ep_returns.
+    infos_peek = trajectories[0].infos
+    if infos_peek is not None and "episode" in infos_peek[-1]:
+        monitor_ep_returns = [t.infos[-1]["episode"]["r"] for t in trajectories]
         traj_descriptors["monitor_return"] = np.asarray(monitor_ep_returns)
-        # monitor_return_len may be < n_traj when infos is sometimes missing
-        out_stats["monitor_return_len"] = len(traj_descriptors["monitor_return"])
 
     stat_names = ["min", "mean", "std", "max"]
     for desc_name, desc_vals in traj_descriptors.items():
@@ -419,7 +532,7 @@ def flatten_trajectories(
         parts["next_obs"].append(obs[1:])
 
         dones = np.zeros(len(traj.acts), dtype=bool)
-        dones[-1] = traj.terminal
+        dones[-1] = True
         parts["dones"].append(dones)
 
         if traj.infos is None:
@@ -440,7 +553,7 @@ def flatten_trajectories_with_rew(
     trajectories: Sequence[types.TrajectoryWithRew],
 ) -> types.TransitionsWithRew:
     transitions = flatten_trajectories(trajectories)
-    rews = np.concatenate([traj.rews for traj in trajectories])
+    rews = np.concatenate([traj.rews for traj in trajectories]).astype(np.float64)
     return types.TransitionsWithRew(**dataclasses.asdict(transitions), rews=rews)
 
 
@@ -464,7 +577,7 @@ def generate_transitions(
       `truncate` is provided as we collect data until the end of each episode.
     """
     traj = generate_trajectories(
-        policy, venv, sample_until=make_min_timesteps(n_timesteps), **kwargs
+        policy, venv, sample_until=min_timesteps(n_timesteps), **kwargs
     )
     transitions = flatten_trajectories_with_rew(traj)
     if truncate and n_timesteps is not None:
@@ -480,7 +593,7 @@ def rollout_and_save(
     venv: VecEnv,
     sample_until: GenTrajTerminationFn,
     *,
-    unwrap: bool = True,
+    unwrap: bool = False,
     exclude_infos: bool = True,
     verbose: bool = True,
     **kwargs,
@@ -512,25 +625,3 @@ def rollout_and_save(
         logging.info(f"Rollout stats: {stats}")
 
     types.save(path, trajs)
-
-
-def compute_returns(rewards: np.ndarray, gamma: float) -> float:
-    """Calculate the discounted returns from an array of undiscounted rewards.
-
-    Args:
-        rewards: array of rewards, from the current time step (first)
-            to the last timestep (last).
-        gamma: the discount factor used for calculating returns.
-
-    Returns:
-        The discounted returns (the first reward is undiscounted,
-        i.e. we start at gamma^0)
-    """
-    # We want to calculate sum_{t = 0}^T gamma^t r_t, which can be
-    # interpreted as the polynomial sum_{t = 0}^T r_t x^t
-    # evaluated at x=gamma.
-    # Compared to first computing all the powers of gamma, then
-    # multiplying with the rewards and then summing, this method
-    # should require fewer computations and potentially be more
-    # numerically stable.
-    return np.polynomial.polynomial.polyval(gamma, rewards)

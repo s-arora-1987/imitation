@@ -12,12 +12,10 @@ import numpy as np
 import torch as th
 import torch.utils.data as th_data
 import tqdm.autonotebook as tqdm
-from stable_baselines3.common import policies, utils, vec_env
+from stable_baselines3.common import logger, policies, utils
 
-from imitation.algorithms import base as algo_base
-from imitation.data import rollout, types
-from imitation.policies import base as policy_base
-from imitation.util import logger
+from imitation.data import types
+from imitation.policies import base
 
 
 def reconstruct_policy(
@@ -55,19 +53,6 @@ class ConstantLRSchedule:
         return self.lr
 
 
-class _NoopTqdm:
-    """Dummy replacement for tqdm.tqdm() when we don't want a progress bar visible."""
-
-    def close(self):
-        pass
-
-    def set_description(self, s):
-        pass
-
-    def update(self, n):
-        pass
-
-
 class EpochOrBatchIteratorWithProgress:
     def __init__(
         self,
@@ -76,7 +61,6 @@ class EpochOrBatchIteratorWithProgress:
         n_batches: Optional[int] = None,
         on_epoch_end: Optional[Callable[[], None]] = None,
         on_batch_end: Optional[Callable[[], None]] = None,
-        progress_bar_visible: bool = True,
     ):
         """Wraps DataLoader so that all BC batches can be processed in a one for-loop.
 
@@ -92,7 +76,6 @@ class EpochOrBatchIteratorWithProgress:
                 end of every epoch.
             on_batch_end: A callback function without parameters to be called at the
                 end of every batch.
-            progress_bar_visible: If True, then show a tqdm progress bar.
         """
         if n_epochs is not None and n_batches is None:
             self.use_epochs = True
@@ -108,7 +91,6 @@ class EpochOrBatchIteratorWithProgress:
         self.n_batches = n_batches
         self.on_epoch_end = on_epoch_end
         self.on_batch_end = on_batch_end
-        self.progress_bar_visible = progress_bar_visible
 
     def __iter__(self) -> Iterable[Tuple[dict, dict]]:
         """Yields batches while updating tqdm display to display progress."""
@@ -117,15 +99,12 @@ class EpochOrBatchIteratorWithProgress:
         epoch_num = 0
         batch_num = 0
         batch_suffix = epoch_suffix = ""
-        if self.progress_bar_visible:
-            if self.use_epochs:
-                display = tqdm.tqdm(total=self.n_epochs)
-                epoch_suffix = f"/{self.n_epochs}"
-            else:  # Use batches.
-                display = tqdm.tqdm(total=self.n_batches)
-                batch_suffix = f"/{self.n_batches}"
-        else:
-            display = _NoopTqdm()
+        if self.use_epochs:
+            display = tqdm.tqdm(total=self.n_epochs)
+            epoch_suffix = f"/{self.n_epochs}"
+        else:  # Use batches.
+            display = tqdm.tqdm(total=self.n_batches)
+            batch_suffix = f"/{self.n_batches}"
 
         def update_desc():
             display.set_description(
@@ -172,7 +151,7 @@ class EpochOrBatchIteratorWithProgress:
                         return
 
 
-class BC(algo_base.BaseImitationAlgorithm):
+class BC:
 
     DEFAULT_BATCH_SIZE: int = 32
     """Default batch size for DataLoader automatically constructed from Transitions.
@@ -187,7 +166,7 @@ class BC(algo_base.BaseImitationAlgorithm):
         observation_space: gym.Space,
         action_space: gym.Space,
         *,
-        policy_class: Type[policies.BasePolicy] = policy_base.FeedForward32Policy,
+        policy_class: Type[policies.BasePolicy] = base.FeedForward32Policy,
         policy_kwargs: Optional[Mapping[str, Any]] = None,
         expert_data: Union[Iterable[Mapping], types.TransitionsMinimal, None] = None,
         optimizer_cls: Type[th.optim.Optimizer] = th.optim.Adam,
@@ -195,7 +174,6 @@ class BC(algo_base.BaseImitationAlgorithm):
         ent_weight: float = 1e-3,
         l2_weight: float = 0.0,
         device: Union[str, th.device] = "auto",
-        custom_logger: Optional[logger.HierarchicalLogger] = None,
     ):
         """Behavioral cloning (BC).
 
@@ -216,25 +194,19 @@ class BC(algo_base.BaseImitationAlgorithm):
             ent_weight: scaling applied to the policy's entropy regularization.
             l2_weight: scaling applied to the policy's L2 regularization.
             device: name/identity of device to place policy on.
-            custom_logger: Where to log to; if None (default), creates a new logger.
         """
-        super().__init__(custom_logger=custom_logger)
-
         if optimizer_kwargs:
             if "weight_decay" in optimizer_kwargs:
                 raise ValueError("Use the parameter l2_weight instead of weight_decay.")
-        self.tensorboard_step = 0
 
         self.action_space = action_space
         self.observation_space = observation_space
         self.policy_class = policy_class
         self.device = device = utils.get_device(device)
-        # Learning rate should be set via optimizer_kwargs, so hardcode lr here
-        # to force an error if self.policy.optimizer is used by mistake.
         self.policy_kwargs = dict(
             observation_space=self.observation_space,
             action_space=self.action_space,
-            lr_schedule=ConstantLRSchedule(th.finfo(th.float32).max),
+            lr_schedule=ConstantLRSchedule(),
         )
         self.policy_kwargs.update(policy_kwargs or {})
         self.device = utils.get_device(device)
@@ -243,10 +215,7 @@ class BC(algo_base.BaseImitationAlgorithm):
             self.device
         )  # pytype: disable=not-instantiable
         optimizer_kwargs = optimizer_kwargs or {}
-        self.optimizer = optimizer_cls(
-            self.policy.parameters(),
-            **optimizer_kwargs,
-        )
+        self.optimizer = optimizer_cls(self.policy.parameters(), **optimizer_kwargs)
 
         self.expert_data_loader: Optional[Iterable[Mapping]] = None
         self.ent_weight = ent_weight
@@ -337,11 +306,7 @@ class BC(algo_base.BaseImitationAlgorithm):
         n_batches: Optional[int] = None,
         on_epoch_end: Callable[[], None] = None,
         on_batch_end: Callable[[], None] = None,
-        log_interval: int = 500,
-        log_rollouts_venv: Optional[vec_env.VecEnv] = None,
-        log_rollouts_n_episodes: int = 5,
-        progress_bar: bool = True,
-        reset_tensorboard: bool = False,
+        log_interval: int = 100,
     ):
         """Train with supervised learning for some number of epochs.
 
@@ -358,17 +323,6 @@ class BC(algo_base.BaseImitationAlgorithm):
             on_batch_end: Optional callback with no parameters to run at the end of each
                 batch.
             log_interval: Log stats after every log_interval batches.
-            log_rollouts_venv: If not None, then this VecEnv (whose observation and
-                actions spaces must match `self.observation_space` and
-                `self.action_space`) is used to generate rollout stats, including
-                average return and average episode length. If None, then no rollouts
-                are generated.
-            log_rollouts_n_episodes: Number of rollouts to generate when calculating
-                rollout stats. Non-positive number disables rollouts.
-            progress_bar: If True, then show a progress bar during training.
-            reset_tensorboard: If True, then start plotting to Tensorboard from x=0
-                even if `.train()` logged to Tensorboard previously. Has no practical
-                effect if `.train()` is being called for the first time.
         """
         it = EpochOrBatchIteratorWithProgress(
             self.expert_data_loader,
@@ -376,11 +330,7 @@ class BC(algo_base.BaseImitationAlgorithm):
             n_batches=n_batches,
             on_epoch_end=on_epoch_end,
             on_batch_end=on_batch_end,
-            progress_bar_visible=progress_bar,
         )
-
-        if reset_tensorboard:
-            self.tensorboard_step = 0
 
         batch_num = 0
         for batch, stats_dict_it in it:
@@ -393,27 +343,11 @@ class BC(algo_base.BaseImitationAlgorithm):
             if batch_num % log_interval == 0:
                 for stats in [stats_dict_it, stats_dict_loss]:
                     for k, v in stats.items():
-                        self.logger.record(f"bc/{k}", v)
-                # TODO(shwang): Maybe instead use a callback that can be shared between
-                #   all algorithms' `.train()` for generating rollout stats.
-                #   EvalCallback could be a good fit:
-                #   https://stable-baselines3.readthedocs.io/en/master/guide/callbacks.html#evalcallback
-                if log_rollouts_venv is not None and log_rollouts_n_episodes > 0:
-                    trajs = rollout.generate_trajectories(
-                        self.policy,
-                        log_rollouts_venv,
-                        rollout.make_min_episodes(log_rollouts_n_episodes),
-                    )
-                    stats = rollout.rollout_stats(trajs)
-                    self.logger.record("batch_size", len(batch["obs"]))
-                    for k, v in stats.items():
-                        if "return" in k and "monitor" not in k:
-                            self.logger.record("rollout/" + k, v)
-                self.logger.dump(self.tensorboard_step)
+                        logger.record(k, v)
+                logger.dump(batch_num)
             batch_num += 1
-            self.tensorboard_step += 1
 
-    def save_policy(self, policy_path: types.AnyPath) -> None:
+    def save_policy(self, policy_path: str) -> None:
         """Save policy to a path. Can be reloaded by `.reconstruct_policy()`.
 
         Args:

@@ -1,0 +1,79 @@
+current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:PlaceOnConveyor
+new obs 26
+dones [ True  True  True  True  True  True  True  True][-1, -1, -1, -1]
+ sink state 
+current obs: 
+26 [-1, -1, -1, -1]
+ sink state 
+ action:ClaimNewOnion
+new obs 13
+dones [False False False False False False False False]current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:PlaceOnConveyor
+new obs 26
+dones [ True  True  True  True  True  True  True  True][-1, -1, -1, -1]
+ sink state 
+current obs: 
+26 [-1, -1, -1, -1]
+ sink state 
+ action:ClaimNewOnion
+new obs 13
+dones [False False False False False False False False]current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:PlaceOnConveyor
+new obs 26
+dones [ True  True  True  True  True  True  True  True][-1, -1, -1, -1]
+ sink state 
+current obs: 
+26 [-1, -1, -1, -1]
+ sink state 
+ action:ClaimNewOnion
+new obs 13
+dones [False False False False False False False False]current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:PlaceOnConveyor
+new obs 26
+dones [ True  True  True  True  True  True  True  True][-1, -1, -1, -1]
+ sink state 
+current obs: 
+26 [-1, -1, -1, -1]
+ sink state 
+ action:ClaimNewOnion
+new obs 13
+dones [False False False False False False False False]current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:PlaceOnConveyor
+new obs 26
+dones [ True  True  True  True  True  True  True  True][-1, -1, -1, -1]
+ sink state 
+current obs: 
+26 [-1, -1, -1, -1]
+ sink state 
+ action:ClaimNewOnion
+new obs 13
+dones [False False False False False False False False]current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:PlaceOnConveyor
+new obs 26
+dones [ True  True  True  True  True  True  True  True][-1, -1, -1, -1]
+ sink state 
+current obs: 
+26 [-1, -1, -1, -1]
+ sink state 
+ action:ClaimNewOnion
+new obs 13
+dones [False False False False False False False False]current obs: 
+13 [0, 2, 0, 2]
+ onion -conv, pred -unknown, gripper -conv, LS -unavailable
+ action:PlaceOnConveyor
+new obs 26
+dones [ True  True  True  True  True  True  True  True][-1, -1, -1, -1]
+ sink state 

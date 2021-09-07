@@ -1,24 +1,24 @@
 import dataclasses
-import functools
 import logging
 import os
 from typing import Callable, Dict, Iterable, Mapping, Optional, Type, Union
 
+import gym
 import numpy as np
 import torch as th
 import torch.utils.data as th_data
 import torch.utils.tensorboard as thboard
 import tqdm
-from stable_baselines3.common import on_policy_algorithm, vec_env
+from stable_baselines3.common import on_policy_algorithm, preprocessing, vec_env
+from gym import spaces
 
-from imitation.algorithms import base
-from imitation.data import buffer, rollout, types, wrappers
+from imitation.data import buffer, types, wrappers
 from imitation.rewards import common as rew_common
 from imitation.rewards import discrim_nets, reward_nets
 from imitation.util import logger, reward_wrapper, util
 
 
-class AdversarialTrainer(base.BaseImitationAlgorithm):
+class AdversarialTrainer:
     """Base class for adversarial imitation learning algorithms like GAIL and AIRL."""
 
     venv: vec_env.VecEnv
@@ -35,14 +35,11 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
     If `debug_use_ground_truth=True` was passed into the initializer then
     `self.venv_train` is the same as `self.venv`."""
 
-    discrim_net: discrim_nets.DiscrimNet
-    """The discriminator network."""
-
     def __init__(
         self,
         venv: vec_env.VecEnv,
         gen_algo: on_policy_algorithm.OnPolicyAlgorithm,
-        discrim_net: discrim_nets.DiscrimNet,
+        discrim: discrim_nets.DiscrimNet,
         expert_data: Union[Iterable[Mapping], types.Transitions],
         expert_batch_size: int,
         n_disc_updates_per_round: int = 2,
@@ -53,11 +50,9 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
         disc_opt_cls: Type[th.optim.Optimizer] = th.optim.Adam,
         disc_opt_kwargs: Optional[Mapping] = None,
         gen_replay_buffer_capacity: Optional[int] = None,
-        custom_logger: Optional[logger.HierarchicalLogger] = None,
         init_tensorboard: bool = False,
         init_tensorboard_graph: bool = False,
         debug_use_ground_truth: bool = False,
-        allow_variable_horizon: bool = False,
     ):
         """Builds AdversarialTrainer.
 
@@ -66,8 +61,7 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
             gen_algo: The generator RL algorithm that is trained to maximize
                 discriminator confusion. The generator batch size
                 `self.gen_batch_size` is inferred from `gen_algo.n_steps`.
-                Environment and logger will be set to `venv` and `custom_logger`.
-            discrim_net: The discriminator network. This will be moved to the same
+            discrim: The discriminator network. This will be moved to the same
                 device as `gen_algo`.
             expert_data: Either a `torch.utils.data.DataLoader`-like object or an
                 instance of `Transitions` which is automatically converted into a
@@ -99,7 +93,6 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
 
                 By default this is equal to `self.gen_batch_size`, meaning that we
                 sample only from the most recent batch of generator samples.
-            custom_logger: Where to log to; if None (default), creates a new logger.
             init_tensorboard: If True, makes various discriminator
                 TensorBoard summaries.
             init_tensorboard_graph: If both this and `init_tensorboard` are True,
@@ -109,19 +102,11 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
                 This disables the reward wrapping that would normally replace
                 the environment reward with the learned reward. This is useful for
                 sanity checking that the policy training is functional.
-            allow_variable_horizon: If False (default), algorithm will raise an
-                exception if it detects trajectories of different length during
-                training. If True, overrides this safety check. WARNING: variable
-                horizon episodes leak information about the reward via termination
-                condition, and can seriously confound evaluation. Read
-                https://imitation.readthedocs.io/en/latest/guide/variable_horizon.html
-                before overriding this.
         """
-        super().__init__(
-            custom_logger=custom_logger,
-            allow_variable_horizon=allow_variable_horizon,
-        )
 
+        assert (
+            logger.is_configured()
+        ), "Requires call to imitation.util.logger.configure"
         self._global_step = 0
         self._disc_step = 0
         self.n_disc_updates_per_round = n_disc_updates_per_round
@@ -155,13 +140,13 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
         self._log_dir = log_dir
 
         # Create graph for optimising/recording stats on discriminator
-        self.discrim_net = discrim_net.to(self.gen_algo.device)
+        self.discrim = discrim.to(self.gen_algo.device)
         self._disc_opt_cls = disc_opt_cls
         self._disc_opt_kwargs = disc_opt_kwargs or {}
         self._init_tensorboard = init_tensorboard
         self._init_tensorboard_graph = init_tensorboard_graph
         self._disc_opt = self._disc_opt_cls(
-            self.discrim_net.parameters(), **self._disc_opt_kwargs
+            self.discrim.parameters(), **self._disc_opt_kwargs
         )
 
         if self._init_tensorboard:
@@ -171,11 +156,16 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
             self._summary_writer = thboard.SummaryWriter(summary_dir)
 
         self.venv_buffering = wrappers.BufferingWrapper(self.venv)
-        self.venv_norm_obs = vec_env.VecNormalize(
-            self.venv_buffering,
-            norm_reward=False,
-            norm_obs=normalize_obs,
-        )
+
+        self.normalize_obs = normalize_obs
+        if self.normalize_obs:
+            self.venv_norm_obs = vec_env.VecNormalize(
+                self.venv_buffering,
+                norm_reward=False,
+                norm_obs=normalize_obs,
+            )
+        else:
+            self.venv_norm_obs = self.venv_buffering
 
         if debug_use_ground_truth:
             # Would use an identity reward fn here, but RewardFns can't see rewards.
@@ -183,15 +173,18 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
             self.gen_callback = None
         else:
             self.venv_wrapped = reward_wrapper.RewardVecEnvWrapper(
-                self.venv_norm_obs, self.discrim_net.predict_reward_train
+                self.venv_norm_obs, self.discrim.predict_reward_train
             )
             self.gen_callback = self.venv_wrapped.make_log_callback()
-        self.venv_train = vec_env.VecNormalize(
-            self.venv_wrapped, norm_obs=False, norm_reward=normalize_reward
-        )
+        
+        if normalize_reward:
+            self.venv_train = vec_env.VecNormalize(
+                self.venv_wrapped, norm_obs=False, norm_reward=normalize_reward
+            )
+        else:
+            self.venv_train = self.venv_wrapped
 
         self.gen_algo.set_env(self.venv_train)
-        self.gen_algo.set_logger(self.logger)
 
         if gen_replay_buffer_capacity is None:
             gen_replay_buffer_capacity = self.gen_batch_size
@@ -231,7 +224,7 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
         Returns:
            dict: Statistics for discriminator (e.g. loss, accuracy).
         """
-        with self.logger.accumulate_means("disc"):
+        with logger.accumulate_means("disc"):
             # optionally write TB summaries for collected ops
             write_summaries = self._init_tensorboard and self._global_step % 20 == 0
 
@@ -239,14 +232,14 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
             batch = self._make_disc_train_batch(
                 gen_samples=gen_samples, expert_samples=expert_samples
             )
-            disc_logits = self.discrim_net.logits_gen_is_high(
+            disc_logits = self.discrim.logits_gen_is_high(
                 batch["state"],
                 batch["action"],
                 batch["next_state"],
                 batch["done"],
                 batch["log_policy_act_prob"],
             )
-            loss = self.discrim_net.disc_loss(disc_logits, batch["labels_gen_is_one"])
+            loss = self.discrim.disc_loss(disc_logits, batch["labels_gen_is_one"])
 
             # do gradient step
             self._disc_opt.zero_grad()
@@ -257,14 +250,12 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
             # compute/write stats and TensorBoard data
             with th.no_grad():
                 train_stats = rew_common.compute_train_stats(
-                    disc_logits,
-                    batch["labels_gen_is_one"],
-                    loss,
+                    disc_logits, batch["labels_gen_is_one"], loss
                 )
-            self.logger.record("global_step", self._global_step)
+            logger.record("global_step", self._global_step)
             for k, v in train_stats.items():
-                self.logger.record(k, v)
-            self.logger.dump(self._disc_step)
+                logger.record(k, v)
+            logger.dump(self._disc_step)
             if write_summaries:
                 self._summary_writer.add_histogram("disc_logits", disc_logits.detach())
 
@@ -292,7 +283,7 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
         if learn_kwargs is None:
             learn_kwargs = {}
 
-        with self.logger.accumulate_means("gen"):
+        with logger.accumulate_means("gen"):
             self.gen_algo.learn(
                 total_timesteps=total_timesteps,
                 reset_num_timesteps=False,
@@ -301,9 +292,7 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
             )
             self._global_step += 1
 
-        gen_trajs = self.venv_buffering.pop_trajectories()
-        self._check_fixed_horizon(gen_trajs)
-        gen_samples = rollout.flatten_trajectories_with_rew(gen_trajs)
+        gen_samples = self.venv_buffering.pop_transitions()
         self._gen_replay_buffer.store(gen_samples)
 
     def train(
@@ -338,10 +327,22 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
                 self.train_disc()
             if callback:
                 callback(r)
-            self.logger.dump(self._global_step)
+            logger.dump(self._global_step)
 
-    def _torchify_array(self, ndarray: np.ndarray) -> th.Tensor:
-        return th.as_tensor(ndarray, device=self.discrim_net.device())
+    def _torchify_array(self, ndarray: np.ndarray, **kwargs) -> th.Tensor:
+        return th.as_tensor(ndarray, device=self.discrim.device(), **kwargs)
+
+    def _torchify_with_space(
+        self, ndarray: np.ndarray, space: gym.Space, **kwargs
+    ) -> th.Tensor:
+        tensor = th.as_tensor(ndarray, device=self.discrim.device(), **kwargs)
+        preprocessed = preprocessing.preprocess_obs(
+            tensor,
+            space,
+            # TODO(sam): can I remove "scale" kwarg in DiscrimNet etc.?
+            normalize_images=self.discrim.scale,
+        )
+        return preprocessed
 
     def _make_disc_train_batch(
         self,
@@ -352,8 +353,8 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
         """Build and return training batch for the next discriminator update.
 
         Args:
-          gen_samples: Same as in `train_disc`.
-          expert_samples: Same as in `train_disc`.
+          gen_samples: Same as in `train_disc_step`.
+          expert_samples: Same as in `train_disc_step`.
         """
         if expert_samples is None:
             expert_samples = self._next_expert_batch()
@@ -407,8 +408,9 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
             [np.zeros(n_expert, dtype=int), np.ones(n_gen, dtype=int)]
         )
         # Policy and reward network were trained on normalized observations.
-        obs = self.venv_norm_obs.normalize_obs(obs)
-        next_obs = self.venv_norm_obs.normalize_obs(next_obs)
+        if self.normalize_obs:
+            obs = self.venv_norm_obs.normalize_obs(obs)
+            next_obs = self.venv_norm_obs.normalize_obs(next_obs)
 
         # Calculate generator-policy log probabilities.
         with th.no_grad():
@@ -422,19 +424,11 @@ class AdversarialTrainer(base.BaseImitationAlgorithm):
         assert len(log_act_prob) == n_samples
         log_act_prob = log_act_prob.reshape((n_samples,))
 
-        torchify_with_space_defaults = functools.partial(
-            util.torchify_with_space,
-            normalize_images=self.discrim_net.normalize_images,
-            device=self.discrim_net.device(),
-        )
         batch_dict = {
-            "state": torchify_with_space_defaults(
-                obs, self.discrim_net.observation_space
-            ),
-            "action": torchify_with_space_defaults(acts, self.discrim_net.action_space),
-            "next_state": torchify_with_space_defaults(
-                next_obs,
-                self.discrim_net.observation_space,
+            "state": self._torchify_with_space(obs, self.discrim.observation_space),
+            "action": self._torchify_with_space(acts, self.discrim.action_space),
+            "next_state": self._torchify_with_space(
+                next_obs, self.discrim.observation_space
             ),
             "done": self._torchify_array(dones),
             "labels_gen_is_one": self._torchify_array(labels_gen_is_one),
@@ -477,8 +471,6 @@ class GAIL(AdversarialTrainer):
 
 
 class AIRL(AdversarialTrainer):
-    """The AIRL reward network, used by the imitation policy."""
-
     def __init__(
         self,
         venv: vec_env.VecEnv,
@@ -512,8 +504,8 @@ class AIRL(AdversarialTrainer):
         reward_network = reward_net_cls(
             action_space=venv.action_space,
             observation_space=venv.observation_space,
-            # pytype is afraid that we'll directly call RewardNet(),
-            # which is an abstract class, hence the disable.
+            # pytype is afraid that we'll directly call RewardNet() which is an abstract
+            # class, hence the disable.
             **reward_net_kwargs,  # pytype: disable=not-instantiable
         )
 

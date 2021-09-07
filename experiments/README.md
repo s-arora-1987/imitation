@@ -1,15 +1,6 @@
-Experiment scripts are compatible with Linux and macOS.
+Experiment scripts are only compatible with Linux.
 
-## (macOS only) macOS compatibility setup
-
-macOS to install some GNU-compatible binaries before all experiments scripts will work.
-
-```
-brew install gdate gnu-getopt
-```
-
-
-## Setup
+### Setup
 
 Phase 1 requires [AWS CLI](https://aws.amazon.com/cli/) because it downloads data from AWS S3.
 

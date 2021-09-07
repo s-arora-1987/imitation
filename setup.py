@@ -5,7 +5,8 @@ import src.imitation  # pytype: disable=import-error
 TESTS_REQUIRE = [
     "seals>=0.1.1",
     "black",
-    "coverage",
+    # remove pin once https://github.com/nedbat/coveragepy/issues/881 fixed
+    "coverage==4.5.4",
     "codecov",
     "codespell",
     "flake8",
@@ -15,8 +16,6 @@ TESTS_REQUIRE = [
     "flake8-isort",
     "ipykernel",
     "jupyter",
-    # remove pin once https://github.com/jupyter/jupyter_client/issues/637 fixed
-    "jupyter-client<7.0",
     "pytest",
     "pytest-cov",
     "pytest-notebook",
@@ -50,13 +49,15 @@ setup(
     package_dir={"": "src"},
     package_data={"imitation": ["py.typed", "envs/examples/airl_envs/assets/*.xml"]},
     install_requires=[
+        "awscli",
+        "cloudpickle>=0.5.5",
         "gym[classic_control]",
         "matplotlib",
         "numpy>=1.15",
         "torch>=1.4.0",
         "tqdm",
         "scikit-learn>=0.21.2",
-        "stable-baselines3>=1.1.0",
+        "stable-baselines3~=0.10.0",
         "sacred~=0.8.1",
         "tensorboard>=1.14",
     ],
@@ -65,7 +66,6 @@ setup(
         # recommended packages for development
         "dev": [
             "autopep8",
-            "awscli",
             "ntfy[slack]",
             "ipdb",
             "isort~=5.0",
@@ -74,6 +74,10 @@ setup(
             # for convenience
             *TESTS_REQUIRE,
             *DOCS_REQUIRE,
+        ],
+        "jax": [
+            "jax~=0.2.8",
+            "jaxlib~=0.1.59",
         ],
         "test": TESTS_REQUIRE,
         "docs": DOCS_REQUIRE,

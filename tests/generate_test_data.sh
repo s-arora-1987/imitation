@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# This script regenerates tests/testdata.
+# This script regenerates tests/data.
 set -e
 
-# Regenerate tests/testdata/expert_models (for various tests).
+# Regenerate tests/data/expert_models (for various tests).
 experiments/train_experts.sh -r
