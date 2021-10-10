@@ -158,8 +158,8 @@ def rollouts_and_policy(
     policy = util.init_rl(venv, verbose=1, **init_rl_kwargs)
     ##############################
     # only for debugging environment
-    # trajs = rollout.generate_trajectories_sortingMDP(policy, venv, eval_sample_until)
-    # exit(0)
+    trajs = rollout.generate_trajectories_patrolMDP(policy, venv, eval_sample_until)
+    exit(0)
     ##############################
 
     policy.learn(total_timesteps, callback=callback)
@@ -172,14 +172,12 @@ def rollouts_and_policy(
         output_dir = os.path.join(policy_dir, "final")
         serialize.save_stable_model(output_dir, policy, vec_normalize)
 
-    print("learning finished")
-
     # Final evaluation of expert policy.
-    # trajs = rollout.generate_trajectories(policy, venv, eval_sample_until)
-    trajs, policy_acts = rollout.generate_trajectories_sortingMDP(policy, venv, eval_sample_until)
-    with open('./expert_policy.txt', 'w') as writer:
-        for a in policy_acts:
-            writer.write(str(a))
+    trajs = rollout.generate_trajectories(policy, venv, eval_sample_until)
+    # trajs, policy_acts = rollout.generate_trajectories_sortingMDP(policy, venv, eval_sample_until)
+    # with open('./expert_policy_recent_run.txt', 'w') as writer:
+    #     for a in policy_acts:
+    #         writer.write(str(a)+"\n")
     
     stats = rollout.rollout_stats(trajs)
 
@@ -231,12 +229,10 @@ def rollouts_from_policy(
     policy = serialize.load_policy(policy_type, policy_path, venv)
     rollout.rollout_and_save(rollout_save_path, policy, venv, sample_until)
 
-
 def main_console():
     observer = FileStorageObserver(osp.join("output", "sacred", "expert_demos"))
     expert_demos_ex.observers.append(observer)
     expert_demos_ex.run_commandline()
-
 
 if __name__ == "__main__":  # pragma: no cover
     main_console()

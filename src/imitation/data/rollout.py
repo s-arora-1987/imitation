@@ -314,6 +314,148 @@ def generate_trajectories(
     return trajectories
 
 
+def generate_trajectories_patrolMDP(
+    policy,
+    venv: VecEnv,
+    sample_until: GenTrajTerminationFn,
+    *,
+    deterministic_policy: bool = True, #False,
+    rng: np.random.RandomState = np.random,
+) -> Sequence[types.TrajectoryWithRew]:
+    """Generate trajectory dictionaries from a policy and an environment.
+
+    Args:
+      policy (BasePolicy or BaseAlgorithm): A stable_baselines3 policy or algorithm
+          trained on the gym environment.
+      venv: The vectorized environments to interact with.
+      sample_until: A function determining the termination condition.
+          It takes a sequence of trajectories, and returns a bool.
+          Most users will want to use one of `min_episodes` or `min_timesteps`.
+      deterministic_policy: If True, asks policy to deterministically return
+          action. Note the trajectories might still be non-deterministic if the
+          environment has non-determinism!
+      rng: used for shuffling trajectories.
+
+    Returns:
+      Sequence of trajectories, satisfying `sample_until`. Additional trajectories
+      may be collected to avoid biasing process towards short episodes; the user
+      should truncate if required.
+    """
+    get_action = policy.predict
+    if isinstance(policy, BaseAlgorithm):
+        policy.set_env(venv)
+
+    # store state action pair in a dictionary
+    det_policy_as_dict_only_discr_sp = {}
+    stateList = []
+    mappatrol = np.array( [[0, 1, 1, 1, 1, 1, 1, 1, 1], 
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 1, 1, 1, 1, 1, 1, 1, 1]])
+    nz = np.nonzero(mappatrol == 1)
+    for o in range(4):
+        for c, ind in enumerate(nz[0]):
+            s = array( [nz[0][c], nz[1][c], o] )
+            stateList.append( PatrolState( s ) )
+    actionList = ['PatrolActionMoveForward', 'PatrolActionTurnLeft', 
+    'PatrolActionTurnRight', 'PatrolActionStop']
+    
+    size_statespace = venv.observation_space.n
+    pol_str = ""
+    for obs in range(size_statespace):
+        ss = "state:"+str(statesList[obs])
+        acts, _ = get_action(obs, deterministic=True)
+        aa = "action:"+actionList[acts]
+        pol_str += "\n"+ss+" "+aa+"\n"
+        det_policy_as_dict_only_discr_sp[obs] = acts
+
+        print("det_policy_as_dict_only_discr_sp \n ",det_policy_as_dict_only_discr_sp)
+        with open('./learned_policy_patrolling.txt', 'w') as writer:
+            writer.write(pol_str)
+
+    # Collect rollout tuples.
+    trajectories = []
+    # accumulator for incomplete trajectories
+    trajectories_accum = TrajectoryAccumulator()
+    obs = venv.reset()
+    for env_idx, ob in enumerate(obs):
+        # Seed with first obs only. Inside loop, we'll only add second obs from
+        # each (s,a,r,s') tuple, under the same "obs" key again. That way we still
+        # get all observations, but they're not duplicated into "next obs" and
+        # "previous obs" (this matters for, e.g., Atari, where observations are
+        # really big).
+        trajectories_accum.add_step(dict(obs=ob), env_idx)
+
+    # Now, we sample until `sample_until(trajectories)` is true. 
+    # If we just stopped then this would introduce a bias towards shorter episodes,
+    # since longer episodes are more likely to still be active, i.e. in the process
+    # of being sampled from. To avoid this, we continue sampling until all epsiodes
+    # are complete. 
+    # 
+    # To start with, all environments are active. 
+    active = np.ones(venv.num_envs, dtype=bool)
+    while np.any(active):
+        acts, _ = get_action(obs, deterministic=deterministic_policy)
+        obs, rews, dones, infos = venv.step(acts)
+
+        # If an environment is inactive, i.e. the episode completed for that
+        # environment after `sample_until(trajectories)` was true, then we do
+        # *not* want to add any subsequent trajectories from it. We avoid this
+        # by just making it never done.
+        dones &= active
+
+        # print("rews.dtype ",rews.dtype)
+        rews = rews.astype(np.float64)
+        new_trajs = trajectories_accum.add_steps_and_auto_finish(
+            acts, obs, rews, dones, infos
+        )
+        trajectories.extend(new_trajs)
+
+        if sample_until(trajectories):
+            # break 
+            # print("rollout.generate_trajectories: Termination condition has been reached.")
+            # # Termination condition has been reached. Mark as inactive any environments
+            # # where a trajectory was completed this timestep.
+            active &= ~dones
+
+    # Note that we just drop partial trajectories. This is not ideal for some
+    # algos; e.g. BC can probably benefit from partial trajectories, too.
+
+    # Each trajectory is sampled i.i.d.; however, shorter episodes are added to
+    # `trajectories` sooner. Shuffle to avoid bias in order. This is important
+    # when callees end up truncating the number of trajectories or transitions.
+    # It is also cheap, since we're just shuffling pointers.
+    rng.shuffle(trajectories)
+
+    # Sanity checks.
+    for trajectory in trajectories:
+        n_steps = len(trajectory.acts)
+        # extra 1 for the end
+        exp_obs = (n_steps + 1,) + venv.observation_space.shape
+        real_obs = trajectory.obs.shape
+        assert real_obs == exp_obs, f"expected shape {exp_obs}, got {real_obs}"
+        exp_act = (n_steps,) + venv.action_space.shape
+        real_act = trajectory.acts.shape
+        assert real_act == exp_act, f"expected shape {exp_act}, got {real_act}"
+        exp_rew = (n_steps,)
+        real_rew = trajectory.rews.shape
+        assert real_rew == exp_rew, f"expected shape {exp_rew}, got {real_rew}"
+
+    return trajectories, det_policy_as_dict_only_discr_sp.values()
+
 def generate_trajectories_sortingMDP(
     policy,
     venv: VecEnv,
@@ -544,10 +686,85 @@ def flatten_trajectories(
     cat_parts = {
         key: np.concatenate(part_list, axis=0) for key, part_list in parts.items()
     }
+
     lengths = set(map(len, cat_parts.values()))
     assert len(lengths) == 1, f"expected one length, got {lengths}"
     return types.Transitions(**cat_parts)
 
+
+def flatten_trajectories_insertNoise_sortingMDP(
+    trajectories: Sequence[types.Trajectory],
+) -> types.Transitions:
+    """Flatten a series of trajectory dictionaries into arrays.
+    Returns observations, actions, next observations, rewards.
+    Args:
+        trajectories: list of trajectories.
+    Returns:
+      The trajectories flattened into a single batch of Transitions.
+    """
+    keys = ["obs", "next_obs", "acts", "dones", "infos"]
+    parts = {key: [] for key in keys}
+    for traj in trajectories:
+        parts["acts"].append(traj.acts)
+
+        obs = traj.obs
+        parts["obs"].append(obs[:-1])
+        parts["next_obs"].append(obs[1:])
+
+        dones = np.zeros(len(traj.acts), dtype=bool)
+        dones[-1] = True
+        parts["dones"].append(dones)
+
+        if traj.infos is None:
+            infos = np.array([{}] * len(traj))
+        else:
+            infos = traj.infos
+        parts["infos"].append(infos)
+
+    cat_parts = {
+        key: np.concatenate(part_list, axis=0) for key, part_list in parts.items()
+    }
+
+    statesList = [[ 0, 2, 0, 0],\
+        [ 3, 2, 3, 0],\
+        [ 1, 0, 1, 2],\
+        [ 2, 2, 2, 2],\
+        [ 0, 2, 2, 2],\
+        [ 3, 2, 3, 2],\
+        [ 1, 1, 1, 2],\
+        [ 4, 2, 0, 2],\
+        [ 0, 0, 0, 1],\
+        [ 3, 0, 3, 1],\
+        [ 2, 2, 2, 1],\
+        [ 0, 0, 2, 1],\
+        [ 2, 2, 2, 0],\
+        [0, 2, 0, 2],\
+        [0, 2, 2, 0],\
+        [0,1,0,0],[0,1,1,0],[0,1,2,0],[0,1,3,0],[0,2,1,0],[0,2,3,0],\
+        [3,1,3,0],[0,0,1,1],[0,0,3,1],\
+        [0,2,1,2],[0,2,3,2],\
+        [-1,-1,-1,-1],[-2,-2,-2,-2]] # sink state, terminal state
+
+    actionList = np.array(['InspectAfterPicking','InspectWithoutPicking',\
+    'Pick','PlaceOnConveyor','PlaceInBin','ClaimNewOnion',\
+    'ClaimNextInList'])
+
+    import random
+    insertNoise = 0.2
+    for i in range(len(cat_parts['obs'])):
+        if random.random() < insertNoise:
+            state_arr = statesList[cat_parts['obs'][i]]
+            if state_arr[1]==0:
+                # if prediction is 0 
+                # replace prediction with 1
+                noised_state_arr = [state_arr[0], 1, state_arr[2], state_arr[3]]
+                cat_parts['obs'][i] = statesList.index(noised_state_arr)
+
+    print("flatten_trajectories_insertNoise_sortingMDP length cat_parts - ",len(cat_parts['obs']))
+    
+    lengths = set(map(len, cat_parts.values()))
+    assert len(lengths) == 1, f"expected one length, got {lengths}"
+    return types.Transitions(**cat_parts)
 
 def flatten_trajectories_with_rew(
     trajectories: Sequence[types.TrajectoryWithRew],

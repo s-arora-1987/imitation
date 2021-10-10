@@ -17,7 +17,7 @@ def train_defaults():
     rollout_hint = "sorting_onions"
     algorithm_kwargs = dict(
         shared=dict(
-            expert_batch_size=500,  # Number of expert samples per discriminator update
+            expert_batch_size=1024,  # Number of expert samples per discriminator update
             # Number of discriminator updates after each round of generator updates
             n_disc_updates_per_round=4,
             normalize_obs=False,
@@ -26,10 +26,10 @@ def train_defaults():
         airl={},
         gail={},
     )
-    total_timesteps = 7.5e5  # Num of environment transitions to sample
+    n_expert_demos = None  # Num demos used. None uses every demo possible
+    total_timesteps = 1e6  # Num of environment transitions to sample
 
     algorithm = "airl"  # Either "airl" or "gail"
-    n_expert_demos = None  # Num demos used. None uses every demo possible
     n_episodes_eval = 50  # Num of episodes for final mean ground truth return
     # Number of environments in VecEnv, must evenly divide gen_batch_size
     num_vec = 8
@@ -83,7 +83,7 @@ def paths(env_name, log_root, rollout_hint, data_dir):
     #     data_dir, "expert_models", f"{rollout_hint}_0", "rollouts", "final.pkl"
     # )
     rollout_path = os.path.join(
-        "/home/katy/imitation/output/expert_demos/imitationNM_SortingOnions-v0/20210906_121342_09d9b0/rollouts"
+        "/home/katy/imitation/output/expert_demos/imitationNM_SortingOnions-v0/expert_policy_successful_training/rollouts"
         # "quickstart/rl", f"{rollout_hint}", "rollouts"
         , "final.pkl"
     )
@@ -254,9 +254,203 @@ def disabled_ant():
     env_name = "imitation/DisabledAnt-v0"
     rollout_hint = "disabled_ant"
 
+@train_ex.named_config
+def sorting_onions1():
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=4,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    n_expert_demos = 2  # Num demos used. None uses every demo possible
+
+@train_ex.named_config
+def sorting_onions2():
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=4,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    n_expert_demos = 4  # Num demos used. None uses every demo possible
+
+@train_ex.named_config
+def sorting_onions3():
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=4,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    n_expert_demos = 6  # Num demos used. None uses every demo possible
+
+@train_ex.named_config
+def sorting_onions4():
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=4,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    n_expert_demos = 8  # Num demos used. None uses every demo possible
+
+@train_ex.named_config
+def sorting_onions5():
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=4,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    n_expert_demos = 10  # Num demos used. None uses every demo possible
+
+@train_ex.named_config
+def sorting_onions6():
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=4,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    n_expert_demos = 12  # Num demos used. None uses every demo possible
+
+
+@train_ex.named_config
+def sorting_onions7():
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=4,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    n_expert_demos = 14  # Num demos used. None uses every demo possible
+
+@train_ex.named_config
+def sorting_onions8():
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=4,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    n_expert_demos = 16  # Num demos used. None uses every demo possible
+
+@train_ex.named_config
+def sorting_onions9():
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=4,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    n_expert_demos = 18  # Num demos used. None uses every demo possible
+
+@train_ex.named_config
+def sorting_onions10():
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=4,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    n_expert_demos = 20  # Num demos used. None uses every demo possible
+
+@train_ex.named_config
+def sorting_onions11():
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=4,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    n_expert_demos = 22  # Num demos used. None uses every demo possible
+
+@train_ex.named_config
+def sorting_onions325():
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=4,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    n_expert_demos = 650  # Num demos used. None uses every demo possible
+
+@train_ex.named_config
+def sorting_onions512():
+    algorithm_kwargs = dict(
+        shared=dict(
+            expert_batch_size=512,  # Number of expert samples per discriminator update
+            # Number of discriminator updates after each round of generator updates
+            n_disc_updates_per_round=4,
+            normalize_obs=False,
+            normalize_reward=False,
+        ),
+        airl={},
+        gail={},
+    )
+    n_expert_demos = 650  # Num demos used. None uses every demo possible
 
 # Debug configs
-
 
 @train_ex.named_config
 def fast():

@@ -66,7 +66,7 @@ class SortingOnions(DiscreteEnv):
     def __init__(self):
 
         p_fail = 0.05 
-        params_pickinspectplace = [2.5, 2.15, 2, 2.5, 1, -0.5, -0.5, 2, -0.5, -0.5, 2] # [2,1,2,1,0.2,0.1,0,4,0,0,4] 
+        params_pickinspectplace = [2.5, 2, 2, 2.5, 1, -0.5, -0.5, 2, -0.5, -0.5, 2] # [2,1,2,1,0.2,0.1,0,4,0,0,4] 
         params = params_pickinspectplace 
         norm_weights_reward7 = [float(i)/sum(np.absolute(params)) for i in params] 
         reward_obj = sortingReward7(len(norm_weights_reward7)) 

@@ -11,8 +11,8 @@ def expert_demos_defaults():
     # env_name = "CliffWalking-v0"
     # total_timesteps = int(7.5e5)
 
-    env_name = "imitationNM/SortingOnions-v0"
-    total_timesteps = int(3e5) # int(5e4) 
+    env_name = "imitationNM/PatrolModel-v0"
+    total_timesteps = int(7.5e5) # int(5e4) 
     normalize = False 
     num_vec = 8  # Number of environments in VecEnv
 
@@ -46,7 +46,6 @@ def default_end_cond(rollout_save_n_timesteps, rollout_save_n_episodes):
     # without getting an error that `rollout_save_n_timesteps is not None`.
     if rollout_save_n_timesteps is None and rollout_save_n_episodes is None:
         rollout_save_n_timesteps = 2000  # Min timesteps saved per file, optional.
-
 
 @expert_demos_ex.config
 def logging(env_name, log_root):

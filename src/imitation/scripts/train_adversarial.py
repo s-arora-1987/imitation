@@ -60,6 +60,7 @@ def train(
     init_rl_kwargs: Mapping,
     algorithm_kwargs: Mapping[str, Mapping],
     discrim_net_kwargs: Mapping[str, Mapping],
+    session_number: int,
 ) -> dict:
     """Train an adversarial-network-based imitation learning algorithm.
 
@@ -126,6 +127,14 @@ def train(
         "monitor_return" key). "expert_stats" gives the return value of
         `rollout_stats()` on the expert demonstrations loaded from `rollout_path`.
     """
+    # print(env_name,total_timesteps)
+    # print(n_expert_demos)
+    # print(algorithm_kwargs['shared']['expert_batch_size'])
+    # filename="./lba_records_batchsize4_nexpertdemos"+str(session_number*2)+".txt"
+    filename="./lba_records_batchsize512_nexpertdemos3.txt"
+    # print(filename)
+    # exit(0)
+
     if gen_batch_size % num_vec != 0:
         raise ValueError(
             f"num_vec={num_vec} must evenly divide gen_batch_size={gen_batch_size}."
@@ -147,6 +156,7 @@ def train(
         raise ValueError(f"File at rollout_path={rollout_path} does not exist.")
 
     expert_trajs = types.load(rollout_path)
+    print("len(expert_trajs)=",len(expert_trajs))
     if n_expert_demos is not None:
         if not len(expert_trajs) >= n_expert_demos:
             raise ValueError(
@@ -154,8 +164,11 @@ def train(
                 f"{len(expert_trajs)} are available via {rollout_path}."
             )
         expert_trajs = expert_trajs[:n_expert_demos]
-    expert_transitions = rollout.flatten_trajectories(expert_trajs)
 
+    # expert_transitions = rollout.flatten_trajectories(expert_trajs)
+    expert_transitions = rollout.flatten_trajectories_insertNoise_sortingMDP(expert_trajs)
+    print("len(expert_transitions)=",len(expert_transitions))
+    
     total_timesteps = int(total_timesteps)
 
     logging.info("Logging to %s", log_dir)
@@ -235,19 +248,35 @@ def train(
     # trajs = rollout.generate_trajectories(
     #     trainer.gen_algo, trainer.venv_train, sample_until=sample_until_eval
     # )
-    trajs = rollout.generate_trajectories_sortingMDP(
+    trajs, policy_acts = rollout.generate_trajectories_sortingMDP(
         trainer.gen_algo, trainer.venv_train, sample_until=sample_until_eval
     )
+    # write learned policy
+    reader = open("./expert_policy_successful_training.txt", "r") 
+    policy_acts_expert = []
+    for act in reader: 
+        policy_acts_expert.append(int(act))
+
+    # compute LBA
+    matches=[]
+    for i, j in zip(policy_acts_expert, policy_acts):
+        matches.append(1 if i == j else 0)
+    LBA = sum(matches)/len(matches)
+    print("LBA:",LBA)  
+    appender = open(filename, "a")
+    appender.write(str(LBA)+"\n")
+    appender.close()
+
     results["expert_stats"] = rollout.rollout_stats(expert_trajs)
     results["imit_stats"] = rollout.rollout_stats(trajs)
+
     return results
 
 
 def main_console():
     observer = FileStorageObserver(osp.join("output", "sacred", "train"))
     train_ex.observers.append(observer)
-    train_ex.run_commandline()
-
+    train_ex.run_commandline()    
 
 if __name__ == "__main__":  # pragma: no cover
     main_console()
