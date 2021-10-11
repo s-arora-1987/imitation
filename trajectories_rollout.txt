@@ -1,0 +1,841 @@
+
+state:[16  6  0]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  6  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  6  1]
+action:PatrolActionTurnRight
+done:True
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:True
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 1]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 2]
+action:PatrolActionTurnLeft
+done:False
+state:[2 1 3]
+action:PatrolActionTurnLeft
+done:True
+state:[16  7  2]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  1]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:False
+state:[16  7  0]
+action:PatrolActionTurnRight
+done:False
+state:[16  7  1]
+action:PatrolActionTurnLeft
+done:True
+state:[12  1  1]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:False
+state:[12  1  1]
+action:PatrolActionTurnLeft
+done:False
+state:[12  1  0]
+action:PatrolActionTurnRight
+done:True
+state:[0 6 3]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:False
+state:[0 6 1]
+action:PatrolActionTurnLeft
+done:False
+state:[0 6 0]
+action:PatrolActionTurnRight
+done:True
+state:[5 1 3]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionMoveForward
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:False
+state:[6 1 0]
+action:PatrolActionTurnLeft
+done:False
+state:[6 1 3]
+action:PatrolActionTurnRight
+done:True

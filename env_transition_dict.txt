@@ -1,53 +1,993 @@
 
-P[s][a] for place actions(0, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(0, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(1, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(1, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(2, 3, [(1.0, 27, 0.1875, True)])
-P[s][a] for place actions(2, 4, [(1.0, 27, 0.1875, True)])
-P[s][a] for place actions(3, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(3, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(4, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(4, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(5, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(5, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(6, 3, [(1.0, 27, 0.1875, True)])
-P[s][a] for place actions(6, 4, [(1.0, 27, 0.1875, True)])
-P[s][a] for place actions(7, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(7, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(8, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(8, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(9, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(9, 4, [(1.0, 27, 0.1875, True)])
-P[s][a] for place actions(10, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(10, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(11, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(11, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(12, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(12, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(13, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(13, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(14, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(14, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(15, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(15, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(16, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(16, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(17, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(17, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(18, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(18, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(19, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(19, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(20, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(20, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(21, 3, [(1.0, 27, 0.1875, True)])
-P[s][a] for place actions(21, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(22, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(22, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(23, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(23, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(24, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(24, 4, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(25, 3, [(1.0, 26, 0.0, True)])
-P[s][a] for place actions(25, 4, [(1.0, 26, 0.0, True)])
+(PatrolState: [location=[0 1 0]], PatrolActionMoveForward)
+(PatrolState: [location=[0 1 0]], 0.0), (PatrolState: [location=[0 2 0]], 1.0), 
+(PatrolState: [location=[0 1 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 1 0]], 0.0), (PatrolState: [location=[0 1 1]], 1.0), 
+(PatrolState: [location=[0 1 0]], PatrolActionTurnRight)
+(PatrolState: [location=[0 1 0]], 0.0), (PatrolState: [location=[0 1 3]], 1.0), 
+(PatrolState: [location=[0 1 0]], PatrolActionStop)
+(PatrolState: [location=[0 1 0]], 1), 
+(PatrolState: [location=[0 2 0]], PatrolActionMoveForward)
+(PatrolState: [location=[0 2 0]], 0.0), (PatrolState: [location=[0 3 0]], 1.0), 
+(PatrolState: [location=[0 2 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 2 0]], 0.0), (PatrolState: [location=[0 2 1]], 1.0), 
+(PatrolState: [location=[0 2 0]], PatrolActionTurnRight)
+(PatrolState: [location=[0 2 0]], 0.0), (PatrolState: [location=[0 2 3]], 1.0), 
+(PatrolState: [location=[0 2 0]], PatrolActionStop)
+(PatrolState: [location=[0 2 0]], 1), 
+(PatrolState: [location=[0 3 0]], PatrolActionMoveForward)
+(PatrolState: [location=[0 3 0]], 0.0), (PatrolState: [location=[0 4 0]], 1.0), 
+(PatrolState: [location=[0 3 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 3 0]], 0.0), (PatrolState: [location=[0 3 1]], 1.0), 
+(PatrolState: [location=[0 3 0]], PatrolActionTurnRight)
+(PatrolState: [location=[0 3 0]], 0.0), (PatrolState: [location=[0 3 3]], 1.0), 
+(PatrolState: [location=[0 3 0]], PatrolActionStop)
+(PatrolState: [location=[0 3 0]], 1), 
+(PatrolState: [location=[0 4 0]], PatrolActionMoveForward)
+(PatrolState: [location=[0 4 0]], 0.0), (PatrolState: [location=[0 5 0]], 1.0), 
+(PatrolState: [location=[0 4 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 4 0]], 0.0), (PatrolState: [location=[0 4 1]], 1.0), 
+(PatrolState: [location=[0 4 0]], PatrolActionTurnRight)
+(PatrolState: [location=[0 4 0]], 0.0), (PatrolState: [location=[0 4 3]], 1.0), 
+(PatrolState: [location=[0 4 0]], PatrolActionStop)
+(PatrolState: [location=[0 4 0]], 1), 
+(PatrolState: [location=[0 5 0]], PatrolActionMoveForward)
+(PatrolState: [location=[0 5 0]], 0.0), (PatrolState: [location=[0 6 0]], 1.0), 
+(PatrolState: [location=[0 5 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 5 0]], 0.0), (PatrolState: [location=[0 5 1]], 1.0), 
+(PatrolState: [location=[0 5 0]], PatrolActionTurnRight)
+(PatrolState: [location=[0 5 0]], 0.0), (PatrolState: [location=[0 5 3]], 1.0), 
+(PatrolState: [location=[0 5 0]], PatrolActionStop)
+(PatrolState: [location=[0 5 0]], 1), 
+(PatrolState: [location=[0 6 0]], PatrolActionMoveForward)
+(PatrolState: [location=[0 6 0]], 0.0), (PatrolState: [location=[0 7 0]], 1.0), 
+(PatrolState: [location=[0 6 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 6 0]], 0.0), (PatrolState: [location=[0 6 1]], 1.0), 
+(PatrolState: [location=[0 6 0]], PatrolActionTurnRight)
+(PatrolState: [location=[0 6 0]], 0.0), (PatrolState: [location=[0 6 3]], 1.0), 
+(PatrolState: [location=[0 6 0]], PatrolActionStop)
+(PatrolState: [location=[0 6 0]], 1), 
+(PatrolState: [location=[0 7 0]], PatrolActionMoveForward)
+(PatrolState: [location=[0 7 0]], 0.0), (PatrolState: [location=[0 8 0]], 1.0), 
+(PatrolState: [location=[0 7 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 7 0]], 0.0), (PatrolState: [location=[0 7 1]], 1.0), 
+(PatrolState: [location=[0 7 0]], PatrolActionTurnRight)
+(PatrolState: [location=[0 7 0]], 0.0), (PatrolState: [location=[0 7 3]], 1.0), 
+(PatrolState: [location=[0 7 0]], PatrolActionStop)
+(PatrolState: [location=[0 7 0]], 1), 
+(PatrolState: [location=[0 8 0]], PatrolActionMoveForward)
+(PatrolState: [location=[0 8 0]], 1), 
+(PatrolState: [location=[0 8 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 8 0]], 0.0), (PatrolState: [location=[0 8 1]], 1.0), 
+(PatrolState: [location=[0 8 0]], PatrolActionTurnRight)
+(PatrolState: [location=[0 8 0]], 0.0), (PatrolState: [location=[0 8 3]], 1.0), 
+(PatrolState: [location=[0 8 0]], PatrolActionStop)
+(PatrolState: [location=[0 8 0]], 1), 
+(PatrolState: [location=[1 1 0]], PatrolActionMoveForward)
+(PatrolState: [location=[1 1 0]], 1), 
+(PatrolState: [location=[1 1 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[1 1 0]], 0.0), (PatrolState: [location=[1 1 1]], 1.0), 
+(PatrolState: [location=[1 1 0]], PatrolActionTurnRight)
+(PatrolState: [location=[1 1 0]], 0.0), (PatrolState: [location=[1 1 3]], 1.0), 
+(PatrolState: [location=[1 1 0]], PatrolActionStop)
+(PatrolState: [location=[1 1 0]], 1), 
+(PatrolState: [location=[2 1 0]], PatrolActionMoveForward)
+(PatrolState: [location=[2 1 0]], 1), 
+(PatrolState: [location=[2 1 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[2 1 0]], 0.0), (PatrolState: [location=[2 1 1]], 1.0), 
+(PatrolState: [location=[2 1 0]], PatrolActionTurnRight)
+(PatrolState: [location=[2 1 0]], 0.0), (PatrolState: [location=[2 1 3]], 1.0), 
+(PatrolState: [location=[2 1 0]], PatrolActionStop)
+(PatrolState: [location=[2 1 0]], 1), 
+(PatrolState: [location=[3 1 0]], PatrolActionMoveForward)
+(PatrolState: [location=[3 1 0]], 1), 
+(PatrolState: [location=[3 1 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[3 1 0]], 0.0), (PatrolState: [location=[3 1 1]], 1.0), 
+(PatrolState: [location=[3 1 0]], PatrolActionTurnRight)
+(PatrolState: [location=[3 1 0]], 0.0), (PatrolState: [location=[3 1 3]], 1.0), 
+(PatrolState: [location=[3 1 0]], PatrolActionStop)
+(PatrolState: [location=[3 1 0]], 1), 
+(PatrolState: [location=[4 1 0]], PatrolActionMoveForward)
+(PatrolState: [location=[4 1 0]], 1), 
+(PatrolState: [location=[4 1 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[4 1 0]], 0.0), (PatrolState: [location=[4 1 1]], 1.0), 
+(PatrolState: [location=[4 1 0]], PatrolActionTurnRight)
+(PatrolState: [location=[4 1 0]], 0.0), (PatrolState: [location=[4 1 3]], 1.0), 
+(PatrolState: [location=[4 1 0]], PatrolActionStop)
+(PatrolState: [location=[4 1 0]], 1), 
+(PatrolState: [location=[5 1 0]], PatrolActionMoveForward)
+(PatrolState: [location=[5 1 0]], 1), 
+(PatrolState: [location=[5 1 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[5 1 0]], 0.0), (PatrolState: [location=[5 1 1]], 1.0), 
+(PatrolState: [location=[5 1 0]], PatrolActionTurnRight)
+(PatrolState: [location=[5 1 0]], 0.0), (PatrolState: [location=[5 1 3]], 1.0), 
+(PatrolState: [location=[5 1 0]], PatrolActionStop)
+(PatrolState: [location=[5 1 0]], 1), 
+(PatrolState: [location=[6 1 0]], PatrolActionMoveForward)
+(PatrolState: [location=[6 1 0]], 1), 
+(PatrolState: [location=[6 1 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[6 1 0]], 0.0), (PatrolState: [location=[6 1 1]], 1.0), 
+(PatrolState: [location=[6 1 0]], PatrolActionTurnRight)
+(PatrolState: [location=[6 1 0]], 0.0), (PatrolState: [location=[6 1 3]], 1.0), 
+(PatrolState: [location=[6 1 0]], PatrolActionStop)
+(PatrolState: [location=[6 1 0]], 1), 
+(PatrolState: [location=[7 1 0]], PatrolActionMoveForward)
+(PatrolState: [location=[7 1 0]], 1), 
+(PatrolState: [location=[7 1 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[7 1 0]], 0.0), (PatrolState: [location=[7 1 1]], 1.0), 
+(PatrolState: [location=[7 1 0]], PatrolActionTurnRight)
+(PatrolState: [location=[7 1 0]], 0.0), (PatrolState: [location=[7 1 3]], 1.0), 
+(PatrolState: [location=[7 1 0]], PatrolActionStop)
+(PatrolState: [location=[7 1 0]], 1), 
+(PatrolState: [location=[8 1 0]], PatrolActionMoveForward)
+(PatrolState: [location=[8 1 0]], 1), 
+(PatrolState: [location=[8 1 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[8 1 0]], 0.0), (PatrolState: [location=[8 1 1]], 1.0), 
+(PatrolState: [location=[8 1 0]], PatrolActionTurnRight)
+(PatrolState: [location=[8 1 0]], 0.0), (PatrolState: [location=[8 1 3]], 1.0), 
+(PatrolState: [location=[8 1 0]], PatrolActionStop)
+(PatrolState: [location=[8 1 0]], 1), 
+(PatrolState: [location=[9 1 0]], PatrolActionMoveForward)
+(PatrolState: [location=[9 1 0]], 1), 
+(PatrolState: [location=[9 1 0]], PatrolActionTurnLeft)
+(PatrolState: [location=[9 1 0]], 0.0), (PatrolState: [location=[9 1 1]], 1.0), 
+(PatrolState: [location=[9 1 0]], PatrolActionTurnRight)
+(PatrolState: [location=[9 1 0]], 0.0), (PatrolState: [location=[9 1 3]], 1.0), 
+(PatrolState: [location=[9 1 0]], PatrolActionStop)
+(PatrolState: [location=[9 1 0]], 1), 
+(PatrolState: [location=[10  1  0]], PatrolActionMoveForward)
+(PatrolState: [location=[10  1  0]], 1), 
+(PatrolState: [location=[10  1  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[10  1  0]], 0.0), (PatrolState: [location=[10  1  1]], 1.0), 
+(PatrolState: [location=[10  1  0]], PatrolActionTurnRight)
+(PatrolState: [location=[10  1  0]], 0.0), (PatrolState: [location=[10  1  3]], 1.0), 
+(PatrolState: [location=[10  1  0]], PatrolActionStop)
+(PatrolState: [location=[10  1  0]], 1), 
+(PatrolState: [location=[11  1  0]], PatrolActionMoveForward)
+(PatrolState: [location=[11  1  0]], 1), 
+(PatrolState: [location=[11  1  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[11  1  0]], 0.0), (PatrolState: [location=[11  1  1]], 1.0), 
+(PatrolState: [location=[11  1  0]], PatrolActionTurnRight)
+(PatrolState: [location=[11  1  0]], 0.0), (PatrolState: [location=[11  1  3]], 1.0), 
+(PatrolState: [location=[11  1  0]], PatrolActionStop)
+(PatrolState: [location=[11  1  0]], 1), 
+(PatrolState: [location=[12  1  0]], PatrolActionMoveForward)
+(PatrolState: [location=[12  1  0]], 1), 
+(PatrolState: [location=[12  1  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[12  1  0]], 0.0), (PatrolState: [location=[12  1  1]], 1.0), 
+(PatrolState: [location=[12  1  0]], PatrolActionTurnRight)
+(PatrolState: [location=[12  1  0]], 0.0), (PatrolState: [location=[12  1  3]], 1.0), 
+(PatrolState: [location=[12  1  0]], PatrolActionStop)
+(PatrolState: [location=[12  1  0]], 1), 
+(PatrolState: [location=[13  1  0]], PatrolActionMoveForward)
+(PatrolState: [location=[13  1  0]], 1), 
+(PatrolState: [location=[13  1  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[13  1  0]], 0.0), (PatrolState: [location=[13  1  1]], 1.0), 
+(PatrolState: [location=[13  1  0]], PatrolActionTurnRight)
+(PatrolState: [location=[13  1  0]], 0.0), (PatrolState: [location=[13  1  3]], 1.0), 
+(PatrolState: [location=[13  1  0]], PatrolActionStop)
+(PatrolState: [location=[13  1  0]], 1), 
+(PatrolState: [location=[14  1  0]], PatrolActionMoveForward)
+(PatrolState: [location=[14  1  0]], 1), 
+(PatrolState: [location=[14  1  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[14  1  0]], 0.0), (PatrolState: [location=[14  1  1]], 1.0), 
+(PatrolState: [location=[14  1  0]], PatrolActionTurnRight)
+(PatrolState: [location=[14  1  0]], 0.0), (PatrolState: [location=[14  1  3]], 1.0), 
+(PatrolState: [location=[14  1  0]], PatrolActionStop)
+(PatrolState: [location=[14  1  0]], 1), 
+(PatrolState: [location=[15  1  0]], PatrolActionMoveForward)
+(PatrolState: [location=[15  1  0]], 1), 
+(PatrolState: [location=[15  1  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[15  1  0]], 0.0), (PatrolState: [location=[15  1  1]], 1.0), 
+(PatrolState: [location=[15  1  0]], PatrolActionTurnRight)
+(PatrolState: [location=[15  1  0]], 0.0), (PatrolState: [location=[15  1  3]], 1.0), 
+(PatrolState: [location=[15  1  0]], PatrolActionStop)
+(PatrolState: [location=[15  1  0]], 1), 
+(PatrolState: [location=[16  1  0]], PatrolActionMoveForward)
+(PatrolState: [location=[16  1  0]], 0.0), (PatrolState: [location=[16  2  0]], 1.0), 
+(PatrolState: [location=[16  1  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  1  0]], 0.0), (PatrolState: [location=[16  1  1]], 1.0), 
+(PatrolState: [location=[16  1  0]], PatrolActionTurnRight)
+(PatrolState: [location=[16  1  0]], 0.0), (PatrolState: [location=[16  1  3]], 1.0), 
+(PatrolState: [location=[16  1  0]], PatrolActionStop)
+(PatrolState: [location=[16  1  0]], 1), 
+(PatrolState: [location=[16  2  0]], PatrolActionMoveForward)
+(PatrolState: [location=[16  2  0]], 0.0), (PatrolState: [location=[16  3  0]], 1.0), 
+(PatrolState: [location=[16  2  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  2  0]], 0.0), (PatrolState: [location=[16  2  1]], 1.0), 
+(PatrolState: [location=[16  2  0]], PatrolActionTurnRight)
+(PatrolState: [location=[16  2  0]], 0.0), (PatrolState: [location=[16  2  3]], 1.0), 
+(PatrolState: [location=[16  2  0]], PatrolActionStop)
+(PatrolState: [location=[16  2  0]], 1), 
+(PatrolState: [location=[16  3  0]], PatrolActionMoveForward)
+(PatrolState: [location=[16  3  0]], 0.0), (PatrolState: [location=[16  4  0]], 1.0), 
+(PatrolState: [location=[16  3  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  3  0]], 0.0), (PatrolState: [location=[16  3  1]], 1.0), 
+(PatrolState: [location=[16  3  0]], PatrolActionTurnRight)
+(PatrolState: [location=[16  3  0]], 0.0), (PatrolState: [location=[16  3  3]], 1.0), 
+(PatrolState: [location=[16  3  0]], PatrolActionStop)
+(PatrolState: [location=[16  3  0]], 1), 
+(PatrolState: [location=[16  4  0]], PatrolActionMoveForward)
+(PatrolState: [location=[16  4  0]], 0.0), (PatrolState: [location=[16  5  0]], 1.0), 
+(PatrolState: [location=[16  4  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  4  0]], 0.0), (PatrolState: [location=[16  4  1]], 1.0), 
+(PatrolState: [location=[16  4  0]], PatrolActionTurnRight)
+(PatrolState: [location=[16  4  0]], 0.0), (PatrolState: [location=[16  4  3]], 1.0), 
+(PatrolState: [location=[16  4  0]], PatrolActionStop)
+(PatrolState: [location=[16  4  0]], 1), 
+(PatrolState: [location=[16  5  0]], PatrolActionMoveForward)
+(PatrolState: [location=[16  5  0]], 0.0), (PatrolState: [location=[16  6  0]], 1.0), 
+(PatrolState: [location=[16  5  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  5  0]], 0.0), (PatrolState: [location=[16  5  1]], 1.0), 
+(PatrolState: [location=[16  5  0]], PatrolActionTurnRight)
+(PatrolState: [location=[16  5  0]], 0.0), (PatrolState: [location=[16  5  3]], 1.0), 
+(PatrolState: [location=[16  5  0]], PatrolActionStop)
+(PatrolState: [location=[16  5  0]], 1), 
+(PatrolState: [location=[16  6  0]], PatrolActionMoveForward)
+(PatrolState: [location=[16  6  0]], 0.0), (PatrolState: [location=[16  7  0]], 1.0), 
+(PatrolState: [location=[16  6  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  6  0]], 0.0), (PatrolState: [location=[16  6  1]], 1.0), 
+(PatrolState: [location=[16  6  0]], PatrolActionTurnRight)
+(PatrolState: [location=[16  6  0]], 0.0), (PatrolState: [location=[16  6  3]], 1.0), 
+(PatrolState: [location=[16  6  0]], PatrolActionStop)
+(PatrolState: [location=[16  6  0]], 1), 
+(PatrolState: [location=[16  7  0]], PatrolActionMoveForward)
+(PatrolState: [location=[16  7  0]], 0.0), (PatrolState: [location=[16  8  0]], 1.0), 
+(PatrolState: [location=[16  7  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  7  0]], 0.0), (PatrolState: [location=[16  7  1]], 1.0), 
+(PatrolState: [location=[16  7  0]], PatrolActionTurnRight)
+(PatrolState: [location=[16  7  0]], 0.0), (PatrolState: [location=[16  7  3]], 1.0), 
+(PatrolState: [location=[16  7  0]], PatrolActionStop)
+(PatrolState: [location=[16  7  0]], 1), 
+(PatrolState: [location=[16  8  0]], PatrolActionMoveForward)
+(PatrolState: [location=[16  8  0]], 1), 
+(PatrolState: [location=[16  8  0]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  8  0]], 0.0), (PatrolState: [location=[16  8  1]], 1.0), 
+(PatrolState: [location=[16  8  0]], PatrolActionTurnRight)
+(PatrolState: [location=[16  8  0]], 0.0), (PatrolState: [location=[16  8  3]], 1.0), 
+(PatrolState: [location=[16  8  0]], PatrolActionStop)
+(PatrolState: [location=[16  8  0]], 1), 
+(PatrolState: [location=[0 1 1]], PatrolActionMoveForward)
+(PatrolState: [location=[0 1 1]], 1), 
+(PatrolState: [location=[0 1 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 1 1]], 0.0), (PatrolState: [location=[0 1 2]], 1.0), 
+(PatrolState: [location=[0 1 1]], PatrolActionTurnRight)
+(PatrolState: [location=[0 1 1]], 0.0), (PatrolState: [location=[0 1 0]], 1.0), 
+(PatrolState: [location=[0 1 1]], PatrolActionStop)
+(PatrolState: [location=[0 1 1]], 1), 
+(PatrolState: [location=[0 2 1]], PatrolActionMoveForward)
+(PatrolState: [location=[0 2 1]], 1), 
+(PatrolState: [location=[0 2 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 2 1]], 0.0), (PatrolState: [location=[0 2 2]], 1.0), 
+(PatrolState: [location=[0 2 1]], PatrolActionTurnRight)
+(PatrolState: [location=[0 2 1]], 0.0), (PatrolState: [location=[0 2 0]], 1.0), 
+(PatrolState: [location=[0 2 1]], PatrolActionStop)
+(PatrolState: [location=[0 2 1]], 1), 
+(PatrolState: [location=[0 3 1]], PatrolActionMoveForward)
+(PatrolState: [location=[0 3 1]], 1), 
+(PatrolState: [location=[0 3 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 3 1]], 0.0), (PatrolState: [location=[0 3 2]], 1.0), 
+(PatrolState: [location=[0 3 1]], PatrolActionTurnRight)
+(PatrolState: [location=[0 3 1]], 0.0), (PatrolState: [location=[0 3 0]], 1.0), 
+(PatrolState: [location=[0 3 1]], PatrolActionStop)
+(PatrolState: [location=[0 3 1]], 1), 
+(PatrolState: [location=[0 4 1]], PatrolActionMoveForward)
+(PatrolState: [location=[0 4 1]], 1), 
+(PatrolState: [location=[0 4 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 4 1]], 0.0), (PatrolState: [location=[0 4 2]], 1.0), 
+(PatrolState: [location=[0 4 1]], PatrolActionTurnRight)
+(PatrolState: [location=[0 4 1]], 0.0), (PatrolState: [location=[0 4 0]], 1.0), 
+(PatrolState: [location=[0 4 1]], PatrolActionStop)
+(PatrolState: [location=[0 4 1]], 1), 
+(PatrolState: [location=[0 5 1]], PatrolActionMoveForward)
+(PatrolState: [location=[0 5 1]], 1), 
+(PatrolState: [location=[0 5 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 5 1]], 0.0), (PatrolState: [location=[0 5 2]], 1.0), 
+(PatrolState: [location=[0 5 1]], PatrolActionTurnRight)
+(PatrolState: [location=[0 5 1]], 0.0), (PatrolState: [location=[0 5 0]], 1.0), 
+(PatrolState: [location=[0 5 1]], PatrolActionStop)
+(PatrolState: [location=[0 5 1]], 1), 
+(PatrolState: [location=[0 6 1]], PatrolActionMoveForward)
+(PatrolState: [location=[0 6 1]], 1), 
+(PatrolState: [location=[0 6 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 6 1]], 0.0), (PatrolState: [location=[0 6 2]], 1.0), 
+(PatrolState: [location=[0 6 1]], PatrolActionTurnRight)
+(PatrolState: [location=[0 6 1]], 0.0), (PatrolState: [location=[0 6 0]], 1.0), 
+(PatrolState: [location=[0 6 1]], PatrolActionStop)
+(PatrolState: [location=[0 6 1]], 1), 
+(PatrolState: [location=[0 7 1]], PatrolActionMoveForward)
+(PatrolState: [location=[0 7 1]], 1), 
+(PatrolState: [location=[0 7 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 7 1]], 0.0), (PatrolState: [location=[0 7 2]], 1.0), 
+(PatrolState: [location=[0 7 1]], PatrolActionTurnRight)
+(PatrolState: [location=[0 7 1]], 0.0), (PatrolState: [location=[0 7 0]], 1.0), 
+(PatrolState: [location=[0 7 1]], PatrolActionStop)
+(PatrolState: [location=[0 7 1]], 1), 
+(PatrolState: [location=[0 8 1]], PatrolActionMoveForward)
+(PatrolState: [location=[0 8 1]], 1), 
+(PatrolState: [location=[0 8 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 8 1]], 0.0), (PatrolState: [location=[0 8 2]], 1.0), 
+(PatrolState: [location=[0 8 1]], PatrolActionTurnRight)
+(PatrolState: [location=[0 8 1]], 0.0), (PatrolState: [location=[0 8 0]], 1.0), 
+(PatrolState: [location=[0 8 1]], PatrolActionStop)
+(PatrolState: [location=[0 8 1]], 1), 
+(PatrolState: [location=[1 1 1]], PatrolActionMoveForward)
+(PatrolState: [location=[1 1 1]], 0.0), (PatrolState: [location=[0 1 1]], 1.0), 
+(PatrolState: [location=[1 1 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[1 1 1]], 0.0), (PatrolState: [location=[1 1 2]], 1.0), 
+(PatrolState: [location=[1 1 1]], PatrolActionTurnRight)
+(PatrolState: [location=[1 1 1]], 0.0), (PatrolState: [location=[1 1 0]], 1.0), 
+(PatrolState: [location=[1 1 1]], PatrolActionStop)
+(PatrolState: [location=[1 1 1]], 1), 
+(PatrolState: [location=[2 1 1]], PatrolActionMoveForward)
+(PatrolState: [location=[2 1 1]], 0.0), (PatrolState: [location=[1 1 1]], 1.0), 
+(PatrolState: [location=[2 1 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[2 1 1]], 0.0), (PatrolState: [location=[2 1 2]], 1.0), 
+(PatrolState: [location=[2 1 1]], PatrolActionTurnRight)
+(PatrolState: [location=[2 1 1]], 0.0), (PatrolState: [location=[2 1 0]], 1.0), 
+(PatrolState: [location=[2 1 1]], PatrolActionStop)
+(PatrolState: [location=[2 1 1]], 1), 
+(PatrolState: [location=[3 1 1]], PatrolActionMoveForward)
+(PatrolState: [location=[3 1 1]], 0.0), (PatrolState: [location=[2 1 1]], 1.0), 
+(PatrolState: [location=[3 1 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[3 1 1]], 0.0), (PatrolState: [location=[3 1 2]], 1.0), 
+(PatrolState: [location=[3 1 1]], PatrolActionTurnRight)
+(PatrolState: [location=[3 1 1]], 0.0), (PatrolState: [location=[3 1 0]], 1.0), 
+(PatrolState: [location=[3 1 1]], PatrolActionStop)
+(PatrolState: [location=[3 1 1]], 1), 
+(PatrolState: [location=[4 1 1]], PatrolActionMoveForward)
+(PatrolState: [location=[4 1 1]], 0.0), (PatrolState: [location=[3 1 1]], 1.0), 
+(PatrolState: [location=[4 1 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[4 1 1]], 0.0), (PatrolState: [location=[4 1 2]], 1.0), 
+(PatrolState: [location=[4 1 1]], PatrolActionTurnRight)
+(PatrolState: [location=[4 1 1]], 0.0), (PatrolState: [location=[4 1 0]], 1.0), 
+(PatrolState: [location=[4 1 1]], PatrolActionStop)
+(PatrolState: [location=[4 1 1]], 1), 
+(PatrolState: [location=[5 1 1]], PatrolActionMoveForward)
+(PatrolState: [location=[5 1 1]], 0.0), (PatrolState: [location=[4 1 1]], 1.0), 
+(PatrolState: [location=[5 1 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[5 1 1]], 0.0), (PatrolState: [location=[5 1 2]], 1.0), 
+(PatrolState: [location=[5 1 1]], PatrolActionTurnRight)
+(PatrolState: [location=[5 1 1]], 0.0), (PatrolState: [location=[5 1 0]], 1.0), 
+(PatrolState: [location=[5 1 1]], PatrolActionStop)
+(PatrolState: [location=[5 1 1]], 1), 
+(PatrolState: [location=[6 1 1]], PatrolActionMoveForward)
+(PatrolState: [location=[6 1 1]], 0.0), (PatrolState: [location=[5 1 1]], 1.0), 
+(PatrolState: [location=[6 1 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[6 1 1]], 0.0), (PatrolState: [location=[6 1 2]], 1.0), 
+(PatrolState: [location=[6 1 1]], PatrolActionTurnRight)
+(PatrolState: [location=[6 1 1]], 0.0), (PatrolState: [location=[6 1 0]], 1.0), 
+(PatrolState: [location=[6 1 1]], PatrolActionStop)
+(PatrolState: [location=[6 1 1]], 1), 
+(PatrolState: [location=[7 1 1]], PatrolActionMoveForward)
+(PatrolState: [location=[7 1 1]], 0.0), (PatrolState: [location=[6 1 1]], 1.0), 
+(PatrolState: [location=[7 1 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[7 1 1]], 0.0), (PatrolState: [location=[7 1 2]], 1.0), 
+(PatrolState: [location=[7 1 1]], PatrolActionTurnRight)
+(PatrolState: [location=[7 1 1]], 0.0), (PatrolState: [location=[7 1 0]], 1.0), 
+(PatrolState: [location=[7 1 1]], PatrolActionStop)
+(PatrolState: [location=[7 1 1]], 1), 
+(PatrolState: [location=[8 1 1]], PatrolActionMoveForward)
+(PatrolState: [location=[8 1 1]], 0.0), (PatrolState: [location=[7 1 1]], 1.0), 
+(PatrolState: [location=[8 1 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[8 1 1]], 0.0), (PatrolState: [location=[8 1 2]], 1.0), 
+(PatrolState: [location=[8 1 1]], PatrolActionTurnRight)
+(PatrolState: [location=[8 1 1]], 0.0), (PatrolState: [location=[8 1 0]], 1.0), 
+(PatrolState: [location=[8 1 1]], PatrolActionStop)
+(PatrolState: [location=[8 1 1]], 1), 
+(PatrolState: [location=[9 1 1]], PatrolActionMoveForward)
+(PatrolState: [location=[9 1 1]], 0.0), (PatrolState: [location=[8 1 1]], 1.0), 
+(PatrolState: [location=[9 1 1]], PatrolActionTurnLeft)
+(PatrolState: [location=[9 1 1]], 0.0), (PatrolState: [location=[9 1 2]], 1.0), 
+(PatrolState: [location=[9 1 1]], PatrolActionTurnRight)
+(PatrolState: [location=[9 1 1]], 0.0), (PatrolState: [location=[9 1 0]], 1.0), 
+(PatrolState: [location=[9 1 1]], PatrolActionStop)
+(PatrolState: [location=[9 1 1]], 1), 
+(PatrolState: [location=[10  1  1]], PatrolActionMoveForward)
+(PatrolState: [location=[10  1  1]], 0.0), (PatrolState: [location=[9 1 1]], 1.0), 
+(PatrolState: [location=[10  1  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[10  1  1]], 0.0), (PatrolState: [location=[10  1  2]], 1.0), 
+(PatrolState: [location=[10  1  1]], PatrolActionTurnRight)
+(PatrolState: [location=[10  1  1]], 0.0), (PatrolState: [location=[10  1  0]], 1.0), 
+(PatrolState: [location=[10  1  1]], PatrolActionStop)
+(PatrolState: [location=[10  1  1]], 1), 
+(PatrolState: [location=[11  1  1]], PatrolActionMoveForward)
+(PatrolState: [location=[11  1  1]], 0.0), (PatrolState: [location=[10  1  1]], 1.0), 
+(PatrolState: [location=[11  1  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[11  1  1]], 0.0), (PatrolState: [location=[11  1  2]], 1.0), 
+(PatrolState: [location=[11  1  1]], PatrolActionTurnRight)
+(PatrolState: [location=[11  1  1]], 0.0), (PatrolState: [location=[11  1  0]], 1.0), 
+(PatrolState: [location=[11  1  1]], PatrolActionStop)
+(PatrolState: [location=[11  1  1]], 1), 
+(PatrolState: [location=[12  1  1]], PatrolActionMoveForward)
+(PatrolState: [location=[12  1  1]], 0.0), (PatrolState: [location=[11  1  1]], 1.0), 
+(PatrolState: [location=[12  1  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[12  1  1]], 0.0), (PatrolState: [location=[12  1  2]], 1.0), 
+(PatrolState: [location=[12  1  1]], PatrolActionTurnRight)
+(PatrolState: [location=[12  1  1]], 0.0), (PatrolState: [location=[12  1  0]], 1.0), 
+(PatrolState: [location=[12  1  1]], PatrolActionStop)
+(PatrolState: [location=[12  1  1]], 1), 
+(PatrolState: [location=[13  1  1]], PatrolActionMoveForward)
+(PatrolState: [location=[13  1  1]], 0.0), (PatrolState: [location=[12  1  1]], 1.0), 
+(PatrolState: [location=[13  1  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[13  1  1]], 0.0), (PatrolState: [location=[13  1  2]], 1.0), 
+(PatrolState: [location=[13  1  1]], PatrolActionTurnRight)
+(PatrolState: [location=[13  1  1]], 0.0), (PatrolState: [location=[13  1  0]], 1.0), 
+(PatrolState: [location=[13  1  1]], PatrolActionStop)
+(PatrolState: [location=[13  1  1]], 1), 
+(PatrolState: [location=[14  1  1]], PatrolActionMoveForward)
+(PatrolState: [location=[14  1  1]], 0.0), (PatrolState: [location=[13  1  1]], 1.0), 
+(PatrolState: [location=[14  1  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[14  1  1]], 0.0), (PatrolState: [location=[14  1  2]], 1.0), 
+(PatrolState: [location=[14  1  1]], PatrolActionTurnRight)
+(PatrolState: [location=[14  1  1]], 0.0), (PatrolState: [location=[14  1  0]], 1.0), 
+(PatrolState: [location=[14  1  1]], PatrolActionStop)
+(PatrolState: [location=[14  1  1]], 1), 
+(PatrolState: [location=[15  1  1]], PatrolActionMoveForward)
+(PatrolState: [location=[15  1  1]], 0.0), (PatrolState: [location=[14  1  1]], 1.0), 
+(PatrolState: [location=[15  1  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[15  1  1]], 0.0), (PatrolState: [location=[15  1  2]], 1.0), 
+(PatrolState: [location=[15  1  1]], PatrolActionTurnRight)
+(PatrolState: [location=[15  1  1]], 0.0), (PatrolState: [location=[15  1  0]], 1.0), 
+(PatrolState: [location=[15  1  1]], PatrolActionStop)
+(PatrolState: [location=[15  1  1]], 1), 
+(PatrolState: [location=[16  1  1]], PatrolActionMoveForward)
+(PatrolState: [location=[16  1  1]], 0.0), (PatrolState: [location=[15  1  1]], 1.0), 
+(PatrolState: [location=[16  1  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  1  1]], 0.0), (PatrolState: [location=[16  1  2]], 1.0), 
+(PatrolState: [location=[16  1  1]], PatrolActionTurnRight)
+(PatrolState: [location=[16  1  1]], 0.0), (PatrolState: [location=[16  1  0]], 1.0), 
+(PatrolState: [location=[16  1  1]], PatrolActionStop)
+(PatrolState: [location=[16  1  1]], 1), 
+(PatrolState: [location=[16  2  1]], PatrolActionMoveForward)
+(PatrolState: [location=[16  2  1]], 1), 
+(PatrolState: [location=[16  2  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  2  1]], 0.0), (PatrolState: [location=[16  2  2]], 1.0), 
+(PatrolState: [location=[16  2  1]], PatrolActionTurnRight)
+(PatrolState: [location=[16  2  1]], 0.0), (PatrolState: [location=[16  2  0]], 1.0), 
+(PatrolState: [location=[16  2  1]], PatrolActionStop)
+(PatrolState: [location=[16  2  1]], 1), 
+(PatrolState: [location=[16  3  1]], PatrolActionMoveForward)
+(PatrolState: [location=[16  3  1]], 1), 
+(PatrolState: [location=[16  3  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  3  1]], 0.0), (PatrolState: [location=[16  3  2]], 1.0), 
+(PatrolState: [location=[16  3  1]], PatrolActionTurnRight)
+(PatrolState: [location=[16  3  1]], 0.0), (PatrolState: [location=[16  3  0]], 1.0), 
+(PatrolState: [location=[16  3  1]], PatrolActionStop)
+(PatrolState: [location=[16  3  1]], 1), 
+(PatrolState: [location=[16  4  1]], PatrolActionMoveForward)
+(PatrolState: [location=[16  4  1]], 1), 
+(PatrolState: [location=[16  4  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  4  1]], 0.0), (PatrolState: [location=[16  4  2]], 1.0), 
+(PatrolState: [location=[16  4  1]], PatrolActionTurnRight)
+(PatrolState: [location=[16  4  1]], 0.0), (PatrolState: [location=[16  4  0]], 1.0), 
+(PatrolState: [location=[16  4  1]], PatrolActionStop)
+(PatrolState: [location=[16  4  1]], 1), 
+(PatrolState: [location=[16  5  1]], PatrolActionMoveForward)
+(PatrolState: [location=[16  5  1]], 1), 
+(PatrolState: [location=[16  5  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  5  1]], 0.0), (PatrolState: [location=[16  5  2]], 1.0), 
+(PatrolState: [location=[16  5  1]], PatrolActionTurnRight)
+(PatrolState: [location=[16  5  1]], 0.0), (PatrolState: [location=[16  5  0]], 1.0), 
+(PatrolState: [location=[16  5  1]], PatrolActionStop)
+(PatrolState: [location=[16  5  1]], 1), 
+(PatrolState: [location=[16  6  1]], PatrolActionMoveForward)
+(PatrolState: [location=[16  6  1]], 1), 
+(PatrolState: [location=[16  6  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  6  1]], 0.0), (PatrolState: [location=[16  6  2]], 1.0), 
+(PatrolState: [location=[16  6  1]], PatrolActionTurnRight)
+(PatrolState: [location=[16  6  1]], 0.0), (PatrolState: [location=[16  6  0]], 1.0), 
+(PatrolState: [location=[16  6  1]], PatrolActionStop)
+(PatrolState: [location=[16  6  1]], 1), 
+(PatrolState: [location=[16  7  1]], PatrolActionMoveForward)
+(PatrolState: [location=[16  7  1]], 1), 
+(PatrolState: [location=[16  7  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  7  1]], 0.0), (PatrolState: [location=[16  7  2]], 1.0), 
+(PatrolState: [location=[16  7  1]], PatrolActionTurnRight)
+(PatrolState: [location=[16  7  1]], 0.0), (PatrolState: [location=[16  7  0]], 1.0), 
+(PatrolState: [location=[16  7  1]], PatrolActionStop)
+(PatrolState: [location=[16  7  1]], 1), 
+(PatrolState: [location=[16  8  1]], PatrolActionMoveForward)
+(PatrolState: [location=[16  8  1]], 1), 
+(PatrolState: [location=[16  8  1]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  8  1]], 0.0), (PatrolState: [location=[16  8  2]], 1.0), 
+(PatrolState: [location=[16  8  1]], PatrolActionTurnRight)
+(PatrolState: [location=[16  8  1]], 0.0), (PatrolState: [location=[16  8  0]], 1.0), 
+(PatrolState: [location=[16  8  1]], PatrolActionStop)
+(PatrolState: [location=[16  8  1]], 1), 
+(PatrolState: [location=[0 1 2]], PatrolActionMoveForward)
+(PatrolState: [location=[0 1 2]], 1), 
+(PatrolState: [location=[0 1 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 1 2]], 0.0), (PatrolState: [location=[0 1 3]], 1.0), 
+(PatrolState: [location=[0 1 2]], PatrolActionTurnRight)
+(PatrolState: [location=[0 1 2]], 0.0), (PatrolState: [location=[0 1 1]], 1.0), 
+(PatrolState: [location=[0 1 2]], PatrolActionStop)
+(PatrolState: [location=[0 1 2]], 1), 
+(PatrolState: [location=[0 2 2]], PatrolActionMoveForward)
+(PatrolState: [location=[0 2 2]], 0.0), (PatrolState: [location=[0 1 2]], 1.0), 
+(PatrolState: [location=[0 2 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 2 2]], 0.0), (PatrolState: [location=[0 2 3]], 1.0), 
+(PatrolState: [location=[0 2 2]], PatrolActionTurnRight)
+(PatrolState: [location=[0 2 2]], 0.0), (PatrolState: [location=[0 2 1]], 1.0), 
+(PatrolState: [location=[0 2 2]], PatrolActionStop)
+(PatrolState: [location=[0 2 2]], 1), 
+(PatrolState: [location=[0 3 2]], PatrolActionMoveForward)
+(PatrolState: [location=[0 3 2]], 0.0), (PatrolState: [location=[0 2 2]], 1.0), 
+(PatrolState: [location=[0 3 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 3 2]], 0.0), (PatrolState: [location=[0 3 3]], 1.0), 
+(PatrolState: [location=[0 3 2]], PatrolActionTurnRight)
+(PatrolState: [location=[0 3 2]], 0.0), (PatrolState: [location=[0 3 1]], 1.0), 
+(PatrolState: [location=[0 3 2]], PatrolActionStop)
+(PatrolState: [location=[0 3 2]], 1), 
+(PatrolState: [location=[0 4 2]], PatrolActionMoveForward)
+(PatrolState: [location=[0 4 2]], 0.0), (PatrolState: [location=[0 3 2]], 1.0), 
+(PatrolState: [location=[0 4 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 4 2]], 0.0), (PatrolState: [location=[0 4 3]], 1.0), 
+(PatrolState: [location=[0 4 2]], PatrolActionTurnRight)
+(PatrolState: [location=[0 4 2]], 0.0), (PatrolState: [location=[0 4 1]], 1.0), 
+(PatrolState: [location=[0 4 2]], PatrolActionStop)
+(PatrolState: [location=[0 4 2]], 1), 
+(PatrolState: [location=[0 5 2]], PatrolActionMoveForward)
+(PatrolState: [location=[0 5 2]], 0.0), (PatrolState: [location=[0 4 2]], 1.0), 
+(PatrolState: [location=[0 5 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 5 2]], 0.0), (PatrolState: [location=[0 5 3]], 1.0), 
+(PatrolState: [location=[0 5 2]], PatrolActionTurnRight)
+(PatrolState: [location=[0 5 2]], 0.0), (PatrolState: [location=[0 5 1]], 1.0), 
+(PatrolState: [location=[0 5 2]], PatrolActionStop)
+(PatrolState: [location=[0 5 2]], 1), 
+(PatrolState: [location=[0 6 2]], PatrolActionMoveForward)
+(PatrolState: [location=[0 6 2]], 0.0), (PatrolState: [location=[0 5 2]], 1.0), 
+(PatrolState: [location=[0 6 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 6 2]], 0.0), (PatrolState: [location=[0 6 3]], 1.0), 
+(PatrolState: [location=[0 6 2]], PatrolActionTurnRight)
+(PatrolState: [location=[0 6 2]], 0.0), (PatrolState: [location=[0 6 1]], 1.0), 
+(PatrolState: [location=[0 6 2]], PatrolActionStop)
+(PatrolState: [location=[0 6 2]], 1), 
+(PatrolState: [location=[0 7 2]], PatrolActionMoveForward)
+(PatrolState: [location=[0 7 2]], 0.0), (PatrolState: [location=[0 6 2]], 1.0), 
+(PatrolState: [location=[0 7 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 7 2]], 0.0), (PatrolState: [location=[0 7 3]], 1.0), 
+(PatrolState: [location=[0 7 2]], PatrolActionTurnRight)
+(PatrolState: [location=[0 7 2]], 0.0), (PatrolState: [location=[0 7 1]], 1.0), 
+(PatrolState: [location=[0 7 2]], PatrolActionStop)
+(PatrolState: [location=[0 7 2]], 1), 
+(PatrolState: [location=[0 8 2]], PatrolActionMoveForward)
+(PatrolState: [location=[0 8 2]], 0.0), (PatrolState: [location=[0 7 2]], 1.0), 
+(PatrolState: [location=[0 8 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 8 2]], 0.0), (PatrolState: [location=[0 8 3]], 1.0), 
+(PatrolState: [location=[0 8 2]], PatrolActionTurnRight)
+(PatrolState: [location=[0 8 2]], 0.0), (PatrolState: [location=[0 8 1]], 1.0), 
+(PatrolState: [location=[0 8 2]], PatrolActionStop)
+(PatrolState: [location=[0 8 2]], 1), 
+(PatrolState: [location=[1 1 2]], PatrolActionMoveForward)
+(PatrolState: [location=[1 1 2]], 1), 
+(PatrolState: [location=[1 1 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[1 1 2]], 0.0), (PatrolState: [location=[1 1 3]], 1.0), 
+(PatrolState: [location=[1 1 2]], PatrolActionTurnRight)
+(PatrolState: [location=[1 1 2]], 0.0), (PatrolState: [location=[1 1 1]], 1.0), 
+(PatrolState: [location=[1 1 2]], PatrolActionStop)
+(PatrolState: [location=[1 1 2]], 1), 
+(PatrolState: [location=[2 1 2]], PatrolActionMoveForward)
+(PatrolState: [location=[2 1 2]], 1), 
+(PatrolState: [location=[2 1 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[2 1 2]], 0.0), (PatrolState: [location=[2 1 3]], 1.0), 
+(PatrolState: [location=[2 1 2]], PatrolActionTurnRight)
+(PatrolState: [location=[2 1 2]], 0.0), (PatrolState: [location=[2 1 1]], 1.0), 
+(PatrolState: [location=[2 1 2]], PatrolActionStop)
+(PatrolState: [location=[2 1 2]], 1), 
+(PatrolState: [location=[3 1 2]], PatrolActionMoveForward)
+(PatrolState: [location=[3 1 2]], 1), 
+(PatrolState: [location=[3 1 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[3 1 2]], 0.0), (PatrolState: [location=[3 1 3]], 1.0), 
+(PatrolState: [location=[3 1 2]], PatrolActionTurnRight)
+(PatrolState: [location=[3 1 2]], 0.0), (PatrolState: [location=[3 1 1]], 1.0), 
+(PatrolState: [location=[3 1 2]], PatrolActionStop)
+(PatrolState: [location=[3 1 2]], 1), 
+(PatrolState: [location=[4 1 2]], PatrolActionMoveForward)
+(PatrolState: [location=[4 1 2]], 1), 
+(PatrolState: [location=[4 1 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[4 1 2]], 0.0), (PatrolState: [location=[4 1 3]], 1.0), 
+(PatrolState: [location=[4 1 2]], PatrolActionTurnRight)
+(PatrolState: [location=[4 1 2]], 0.0), (PatrolState: [location=[4 1 1]], 1.0), 
+(PatrolState: [location=[4 1 2]], PatrolActionStop)
+(PatrolState: [location=[4 1 2]], 1), 
+(PatrolState: [location=[5 1 2]], PatrolActionMoveForward)
+(PatrolState: [location=[5 1 2]], 1), 
+(PatrolState: [location=[5 1 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[5 1 2]], 0.0), (PatrolState: [location=[5 1 3]], 1.0), 
+(PatrolState: [location=[5 1 2]], PatrolActionTurnRight)
+(PatrolState: [location=[5 1 2]], 0.0), (PatrolState: [location=[5 1 1]], 1.0), 
+(PatrolState: [location=[5 1 2]], PatrolActionStop)
+(PatrolState: [location=[5 1 2]], 1), 
+(PatrolState: [location=[6 1 2]], PatrolActionMoveForward)
+(PatrolState: [location=[6 1 2]], 1), 
+(PatrolState: [location=[6 1 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[6 1 2]], 0.0), (PatrolState: [location=[6 1 3]], 1.0), 
+(PatrolState: [location=[6 1 2]], PatrolActionTurnRight)
+(PatrolState: [location=[6 1 2]], 0.0), (PatrolState: [location=[6 1 1]], 1.0), 
+(PatrolState: [location=[6 1 2]], PatrolActionStop)
+(PatrolState: [location=[6 1 2]], 1), 
+(PatrolState: [location=[7 1 2]], PatrolActionMoveForward)
+(PatrolState: [location=[7 1 2]], 1), 
+(PatrolState: [location=[7 1 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[7 1 2]], 0.0), (PatrolState: [location=[7 1 3]], 1.0), 
+(PatrolState: [location=[7 1 2]], PatrolActionTurnRight)
+(PatrolState: [location=[7 1 2]], 0.0), (PatrolState: [location=[7 1 1]], 1.0), 
+(PatrolState: [location=[7 1 2]], PatrolActionStop)
+(PatrolState: [location=[7 1 2]], 1), 
+(PatrolState: [location=[8 1 2]], PatrolActionMoveForward)
+(PatrolState: [location=[8 1 2]], 1), 
+(PatrolState: [location=[8 1 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[8 1 2]], 0.0), (PatrolState: [location=[8 1 3]], 1.0), 
+(PatrolState: [location=[8 1 2]], PatrolActionTurnRight)
+(PatrolState: [location=[8 1 2]], 0.0), (PatrolState: [location=[8 1 1]], 1.0), 
+(PatrolState: [location=[8 1 2]], PatrolActionStop)
+(PatrolState: [location=[8 1 2]], 1), 
+(PatrolState: [location=[9 1 2]], PatrolActionMoveForward)
+(PatrolState: [location=[9 1 2]], 1), 
+(PatrolState: [location=[9 1 2]], PatrolActionTurnLeft)
+(PatrolState: [location=[9 1 2]], 0.0), (PatrolState: [location=[9 1 3]], 1.0), 
+(PatrolState: [location=[9 1 2]], PatrolActionTurnRight)
+(PatrolState: [location=[9 1 2]], 0.0), (PatrolState: [location=[9 1 1]], 1.0), 
+(PatrolState: [location=[9 1 2]], PatrolActionStop)
+(PatrolState: [location=[9 1 2]], 1), 
+(PatrolState: [location=[10  1  2]], PatrolActionMoveForward)
+(PatrolState: [location=[10  1  2]], 1), 
+(PatrolState: [location=[10  1  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[10  1  2]], 0.0), (PatrolState: [location=[10  1  3]], 1.0), 
+(PatrolState: [location=[10  1  2]], PatrolActionTurnRight)
+(PatrolState: [location=[10  1  2]], 0.0), (PatrolState: [location=[10  1  1]], 1.0), 
+(PatrolState: [location=[10  1  2]], PatrolActionStop)
+(PatrolState: [location=[10  1  2]], 1), 
+(PatrolState: [location=[11  1  2]], PatrolActionMoveForward)
+(PatrolState: [location=[11  1  2]], 1), 
+(PatrolState: [location=[11  1  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[11  1  2]], 0.0), (PatrolState: [location=[11  1  3]], 1.0), 
+(PatrolState: [location=[11  1  2]], PatrolActionTurnRight)
+(PatrolState: [location=[11  1  2]], 0.0), (PatrolState: [location=[11  1  1]], 1.0), 
+(PatrolState: [location=[11  1  2]], PatrolActionStop)
+(PatrolState: [location=[11  1  2]], 1), 
+(PatrolState: [location=[12  1  2]], PatrolActionMoveForward)
+(PatrolState: [location=[12  1  2]], 1), 
+(PatrolState: [location=[12  1  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[12  1  2]], 0.0), (PatrolState: [location=[12  1  3]], 1.0), 
+(PatrolState: [location=[12  1  2]], PatrolActionTurnRight)
+(PatrolState: [location=[12  1  2]], 0.0), (PatrolState: [location=[12  1  1]], 1.0), 
+(PatrolState: [location=[12  1  2]], PatrolActionStop)
+(PatrolState: [location=[12  1  2]], 1), 
+(PatrolState: [location=[13  1  2]], PatrolActionMoveForward)
+(PatrolState: [location=[13  1  2]], 1), 
+(PatrolState: [location=[13  1  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[13  1  2]], 0.0), (PatrolState: [location=[13  1  3]], 1.0), 
+(PatrolState: [location=[13  1  2]], PatrolActionTurnRight)
+(PatrolState: [location=[13  1  2]], 0.0), (PatrolState: [location=[13  1  1]], 1.0), 
+(PatrolState: [location=[13  1  2]], PatrolActionStop)
+(PatrolState: [location=[13  1  2]], 1), 
+(PatrolState: [location=[14  1  2]], PatrolActionMoveForward)
+(PatrolState: [location=[14  1  2]], 1), 
+(PatrolState: [location=[14  1  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[14  1  2]], 0.0), (PatrolState: [location=[14  1  3]], 1.0), 
+(PatrolState: [location=[14  1  2]], PatrolActionTurnRight)
+(PatrolState: [location=[14  1  2]], 0.0), (PatrolState: [location=[14  1  1]], 1.0), 
+(PatrolState: [location=[14  1  2]], PatrolActionStop)
+(PatrolState: [location=[14  1  2]], 1), 
+(PatrolState: [location=[15  1  2]], PatrolActionMoveForward)
+(PatrolState: [location=[15  1  2]], 1), 
+(PatrolState: [location=[15  1  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[15  1  2]], 0.0), (PatrolState: [location=[15  1  3]], 1.0), 
+(PatrolState: [location=[15  1  2]], PatrolActionTurnRight)
+(PatrolState: [location=[15  1  2]], 0.0), (PatrolState: [location=[15  1  1]], 1.0), 
+(PatrolState: [location=[15  1  2]], PatrolActionStop)
+(PatrolState: [location=[15  1  2]], 1), 
+(PatrolState: [location=[16  1  2]], PatrolActionMoveForward)
+(PatrolState: [location=[16  1  2]], 1), 
+(PatrolState: [location=[16  1  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  1  2]], 0.0), (PatrolState: [location=[16  1  3]], 1.0), 
+(PatrolState: [location=[16  1  2]], PatrolActionTurnRight)
+(PatrolState: [location=[16  1  2]], 0.0), (PatrolState: [location=[16  1  1]], 1.0), 
+(PatrolState: [location=[16  1  2]], PatrolActionStop)
+(PatrolState: [location=[16  1  2]], 1), 
+(PatrolState: [location=[16  2  2]], PatrolActionMoveForward)
+(PatrolState: [location=[16  2  2]], 0.0), (PatrolState: [location=[16  1  2]], 1.0), 
+(PatrolState: [location=[16  2  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  2  2]], 0.0), (PatrolState: [location=[16  2  3]], 1.0), 
+(PatrolState: [location=[16  2  2]], PatrolActionTurnRight)
+(PatrolState: [location=[16  2  2]], 0.0), (PatrolState: [location=[16  2  1]], 1.0), 
+(PatrolState: [location=[16  2  2]], PatrolActionStop)
+(PatrolState: [location=[16  2  2]], 1), 
+(PatrolState: [location=[16  3  2]], PatrolActionMoveForward)
+(PatrolState: [location=[16  3  2]], 0.0), (PatrolState: [location=[16  2  2]], 1.0), 
+(PatrolState: [location=[16  3  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  3  2]], 0.0), (PatrolState: [location=[16  3  3]], 1.0), 
+(PatrolState: [location=[16  3  2]], PatrolActionTurnRight)
+(PatrolState: [location=[16  3  2]], 0.0), (PatrolState: [location=[16  3  1]], 1.0), 
+(PatrolState: [location=[16  3  2]], PatrolActionStop)
+(PatrolState: [location=[16  3  2]], 1), 
+(PatrolState: [location=[16  4  2]], PatrolActionMoveForward)
+(PatrolState: [location=[16  4  2]], 0.0), (PatrolState: [location=[16  3  2]], 1.0), 
+(PatrolState: [location=[16  4  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  4  2]], 0.0), (PatrolState: [location=[16  4  3]], 1.0), 
+(PatrolState: [location=[16  4  2]], PatrolActionTurnRight)
+(PatrolState: [location=[16  4  2]], 0.0), (PatrolState: [location=[16  4  1]], 1.0), 
+(PatrolState: [location=[16  4  2]], PatrolActionStop)
+(PatrolState: [location=[16  4  2]], 1), 
+(PatrolState: [location=[16  5  2]], PatrolActionMoveForward)
+(PatrolState: [location=[16  5  2]], 0.0), (PatrolState: [location=[16  4  2]], 1.0), 
+(PatrolState: [location=[16  5  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  5  2]], 0.0), (PatrolState: [location=[16  5  3]], 1.0), 
+(PatrolState: [location=[16  5  2]], PatrolActionTurnRight)
+(PatrolState: [location=[16  5  2]], 0.0), (PatrolState: [location=[16  5  1]], 1.0), 
+(PatrolState: [location=[16  5  2]], PatrolActionStop)
+(PatrolState: [location=[16  5  2]], 1), 
+(PatrolState: [location=[16  6  2]], PatrolActionMoveForward)
+(PatrolState: [location=[16  6  2]], 0.0), (PatrolState: [location=[16  5  2]], 1.0), 
+(PatrolState: [location=[16  6  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  6  2]], 0.0), (PatrolState: [location=[16  6  3]], 1.0), 
+(PatrolState: [location=[16  6  2]], PatrolActionTurnRight)
+(PatrolState: [location=[16  6  2]], 0.0), (PatrolState: [location=[16  6  1]], 1.0), 
+(PatrolState: [location=[16  6  2]], PatrolActionStop)
+(PatrolState: [location=[16  6  2]], 1), 
+(PatrolState: [location=[16  7  2]], PatrolActionMoveForward)
+(PatrolState: [location=[16  7  2]], 0.0), (PatrolState: [location=[16  6  2]], 1.0), 
+(PatrolState: [location=[16  7  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  7  2]], 0.0), (PatrolState: [location=[16  7  3]], 1.0), 
+(PatrolState: [location=[16  7  2]], PatrolActionTurnRight)
+(PatrolState: [location=[16  7  2]], 0.0), (PatrolState: [location=[16  7  1]], 1.0), 
+(PatrolState: [location=[16  7  2]], PatrolActionStop)
+(PatrolState: [location=[16  7  2]], 1), 
+(PatrolState: [location=[16  8  2]], PatrolActionMoveForward)
+(PatrolState: [location=[16  8  2]], 0.0), (PatrolState: [location=[16  7  2]], 1.0), 
+(PatrolState: [location=[16  8  2]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  8  2]], 0.0), (PatrolState: [location=[16  8  3]], 1.0), 
+(PatrolState: [location=[16  8  2]], PatrolActionTurnRight)
+(PatrolState: [location=[16  8  2]], 0.0), (PatrolState: [location=[16  8  1]], 1.0), 
+(PatrolState: [location=[16  8  2]], PatrolActionStop)
+(PatrolState: [location=[16  8  2]], 1), 
+(PatrolState: [location=[0 1 3]], PatrolActionMoveForward)
+(PatrolState: [location=[0 1 3]], 0.0), (PatrolState: [location=[1 1 3]], 1.0), 
+(PatrolState: [location=[0 1 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 1 3]], 0.0), (PatrolState: [location=[0 1 0]], 1.0), 
+(PatrolState: [location=[0 1 3]], PatrolActionTurnRight)
+(PatrolState: [location=[0 1 3]], 0.0), (PatrolState: [location=[0 1 2]], 1.0), 
+(PatrolState: [location=[0 1 3]], PatrolActionStop)
+(PatrolState: [location=[0 1 3]], 1), 
+(PatrolState: [location=[0 2 3]], PatrolActionMoveForward)
+(PatrolState: [location=[0 2 3]], 1), 
+(PatrolState: [location=[0 2 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 2 3]], 0.0), (PatrolState: [location=[0 2 0]], 1.0), 
+(PatrolState: [location=[0 2 3]], PatrolActionTurnRight)
+(PatrolState: [location=[0 2 3]], 0.0), (PatrolState: [location=[0 2 2]], 1.0), 
+(PatrolState: [location=[0 2 3]], PatrolActionStop)
+(PatrolState: [location=[0 2 3]], 1), 
+(PatrolState: [location=[0 3 3]], PatrolActionMoveForward)
+(PatrolState: [location=[0 3 3]], 1), 
+(PatrolState: [location=[0 3 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 3 3]], 0.0), (PatrolState: [location=[0 3 0]], 1.0), 
+(PatrolState: [location=[0 3 3]], PatrolActionTurnRight)
+(PatrolState: [location=[0 3 3]], 0.0), (PatrolState: [location=[0 3 2]], 1.0), 
+(PatrolState: [location=[0 3 3]], PatrolActionStop)
+(PatrolState: [location=[0 3 3]], 1), 
+(PatrolState: [location=[0 4 3]], PatrolActionMoveForward)
+(PatrolState: [location=[0 4 3]], 1), 
+(PatrolState: [location=[0 4 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 4 3]], 0.0), (PatrolState: [location=[0 4 0]], 1.0), 
+(PatrolState: [location=[0 4 3]], PatrolActionTurnRight)
+(PatrolState: [location=[0 4 3]], 0.0), (PatrolState: [location=[0 4 2]], 1.0), 
+(PatrolState: [location=[0 4 3]], PatrolActionStop)
+(PatrolState: [location=[0 4 3]], 1), 
+(PatrolState: [location=[0 5 3]], PatrolActionMoveForward)
+(PatrolState: [location=[0 5 3]], 1), 
+(PatrolState: [location=[0 5 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 5 3]], 0.0), (PatrolState: [location=[0 5 0]], 1.0), 
+(PatrolState: [location=[0 5 3]], PatrolActionTurnRight)
+(PatrolState: [location=[0 5 3]], 0.0), (PatrolState: [location=[0 5 2]], 1.0), 
+(PatrolState: [location=[0 5 3]], PatrolActionStop)
+(PatrolState: [location=[0 5 3]], 1), 
+(PatrolState: [location=[0 6 3]], PatrolActionMoveForward)
+(PatrolState: [location=[0 6 3]], 1), 
+(PatrolState: [location=[0 6 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 6 3]], 0.0), (PatrolState: [location=[0 6 0]], 1.0), 
+(PatrolState: [location=[0 6 3]], PatrolActionTurnRight)
+(PatrolState: [location=[0 6 3]], 0.0), (PatrolState: [location=[0 6 2]], 1.0), 
+(PatrolState: [location=[0 6 3]], PatrolActionStop)
+(PatrolState: [location=[0 6 3]], 1), 
+(PatrolState: [location=[0 7 3]], PatrolActionMoveForward)
+(PatrolState: [location=[0 7 3]], 1), 
+(PatrolState: [location=[0 7 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 7 3]], 0.0), (PatrolState: [location=[0 7 0]], 1.0), 
+(PatrolState: [location=[0 7 3]], PatrolActionTurnRight)
+(PatrolState: [location=[0 7 3]], 0.0), (PatrolState: [location=[0 7 2]], 1.0), 
+(PatrolState: [location=[0 7 3]], PatrolActionStop)
+(PatrolState: [location=[0 7 3]], 1), 
+(PatrolState: [location=[0 8 3]], PatrolActionMoveForward)
+(PatrolState: [location=[0 8 3]], 1), 
+(PatrolState: [location=[0 8 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[0 8 3]], 0.0), (PatrolState: [location=[0 8 0]], 1.0), 
+(PatrolState: [location=[0 8 3]], PatrolActionTurnRight)
+(PatrolState: [location=[0 8 3]], 0.0), (PatrolState: [location=[0 8 2]], 1.0), 
+(PatrolState: [location=[0 8 3]], PatrolActionStop)
+(PatrolState: [location=[0 8 3]], 1), 
+(PatrolState: [location=[1 1 3]], PatrolActionMoveForward)
+(PatrolState: [location=[1 1 3]], 0.0), (PatrolState: [location=[2 1 3]], 1.0), 
+(PatrolState: [location=[1 1 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[1 1 3]], 0.0), (PatrolState: [location=[1 1 0]], 1.0), 
+(PatrolState: [location=[1 1 3]], PatrolActionTurnRight)
+(PatrolState: [location=[1 1 3]], 0.0), (PatrolState: [location=[1 1 2]], 1.0), 
+(PatrolState: [location=[1 1 3]], PatrolActionStop)
+(PatrolState: [location=[1 1 3]], 1), 
+(PatrolState: [location=[2 1 3]], PatrolActionMoveForward)
+(PatrolState: [location=[2 1 3]], 0.0), (PatrolState: [location=[3 1 3]], 1.0), 
+(PatrolState: [location=[2 1 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[2 1 3]], 0.0), (PatrolState: [location=[2 1 0]], 1.0), 
+(PatrolState: [location=[2 1 3]], PatrolActionTurnRight)
+(PatrolState: [location=[2 1 3]], 0.0), (PatrolState: [location=[2 1 2]], 1.0), 
+(PatrolState: [location=[2 1 3]], PatrolActionStop)
+(PatrolState: [location=[2 1 3]], 1), 
+(PatrolState: [location=[3 1 3]], PatrolActionMoveForward)
+(PatrolState: [location=[3 1 3]], 0.0), (PatrolState: [location=[4 1 3]], 1.0), 
+(PatrolState: [location=[3 1 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[3 1 3]], 0.0), (PatrolState: [location=[3 1 0]], 1.0), 
+(PatrolState: [location=[3 1 3]], PatrolActionTurnRight)
+(PatrolState: [location=[3 1 3]], 0.0), (PatrolState: [location=[3 1 2]], 1.0), 
+(PatrolState: [location=[3 1 3]], PatrolActionStop)
+(PatrolState: [location=[3 1 3]], 1), 
+(PatrolState: [location=[4 1 3]], PatrolActionMoveForward)
+(PatrolState: [location=[4 1 3]], 0.0), (PatrolState: [location=[5 1 3]], 1.0), 
+(PatrolState: [location=[4 1 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[4 1 3]], 0.0), (PatrolState: [location=[4 1 0]], 1.0), 
+(PatrolState: [location=[4 1 3]], PatrolActionTurnRight)
+(PatrolState: [location=[4 1 3]], 0.0), (PatrolState: [location=[4 1 2]], 1.0), 
+(PatrolState: [location=[4 1 3]], PatrolActionStop)
+(PatrolState: [location=[4 1 3]], 1), 
+(PatrolState: [location=[5 1 3]], PatrolActionMoveForward)
+(PatrolState: [location=[5 1 3]], 0.0), (PatrolState: [location=[6 1 3]], 1.0), 
+(PatrolState: [location=[5 1 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[5 1 3]], 0.0), (PatrolState: [location=[5 1 0]], 1.0), 
+(PatrolState: [location=[5 1 3]], PatrolActionTurnRight)
+(PatrolState: [location=[5 1 3]], 0.0), (PatrolState: [location=[5 1 2]], 1.0), 
+(PatrolState: [location=[5 1 3]], PatrolActionStop)
+(PatrolState: [location=[5 1 3]], 1), 
+(PatrolState: [location=[6 1 3]], PatrolActionMoveForward)
+(PatrolState: [location=[6 1 3]], 0.0), (PatrolState: [location=[7 1 3]], 1.0), 
+(PatrolState: [location=[6 1 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[6 1 3]], 0.0), (PatrolState: [location=[6 1 0]], 1.0), 
+(PatrolState: [location=[6 1 3]], PatrolActionTurnRight)
+(PatrolState: [location=[6 1 3]], 0.0), (PatrolState: [location=[6 1 2]], 1.0), 
+(PatrolState: [location=[6 1 3]], PatrolActionStop)
+(PatrolState: [location=[6 1 3]], 1), 
+(PatrolState: [location=[7 1 3]], PatrolActionMoveForward)
+(PatrolState: [location=[7 1 3]], 0.0), (PatrolState: [location=[8 1 3]], 1.0), 
+(PatrolState: [location=[7 1 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[7 1 3]], 0.0), (PatrolState: [location=[7 1 0]], 1.0), 
+(PatrolState: [location=[7 1 3]], PatrolActionTurnRight)
+(PatrolState: [location=[7 1 3]], 0.0), (PatrolState: [location=[7 1 2]], 1.0), 
+(PatrolState: [location=[7 1 3]], PatrolActionStop)
+(PatrolState: [location=[7 1 3]], 1), 
+(PatrolState: [location=[8 1 3]], PatrolActionMoveForward)
+(PatrolState: [location=[8 1 3]], 0.0), (PatrolState: [location=[9 1 3]], 1.0), 
+(PatrolState: [location=[8 1 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[8 1 3]], 0.0), (PatrolState: [location=[8 1 0]], 1.0), 
+(PatrolState: [location=[8 1 3]], PatrolActionTurnRight)
+(PatrolState: [location=[8 1 3]], 0.0), (PatrolState: [location=[8 1 2]], 1.0), 
+(PatrolState: [location=[8 1 3]], PatrolActionStop)
+(PatrolState: [location=[8 1 3]], 1), 
+(PatrolState: [location=[9 1 3]], PatrolActionMoveForward)
+(PatrolState: [location=[9 1 3]], 0.0), (PatrolState: [location=[10  1  3]], 1.0), 
+(PatrolState: [location=[9 1 3]], PatrolActionTurnLeft)
+(PatrolState: [location=[9 1 3]], 0.0), (PatrolState: [location=[9 1 0]], 1.0), 
+(PatrolState: [location=[9 1 3]], PatrolActionTurnRight)
+(PatrolState: [location=[9 1 3]], 0.0), (PatrolState: [location=[9 1 2]], 1.0), 
+(PatrolState: [location=[9 1 3]], PatrolActionStop)
+(PatrolState: [location=[9 1 3]], 1), 
+(PatrolState: [location=[10  1  3]], PatrolActionMoveForward)
+(PatrolState: [location=[10  1  3]], 0.0), (PatrolState: [location=[11  1  3]], 1.0), 
+(PatrolState: [location=[10  1  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[10  1  3]], 0.0), (PatrolState: [location=[10  1  0]], 1.0), 
+(PatrolState: [location=[10  1  3]], PatrolActionTurnRight)
+(PatrolState: [location=[10  1  3]], 0.0), (PatrolState: [location=[10  1  2]], 1.0), 
+(PatrolState: [location=[10  1  3]], PatrolActionStop)
+(PatrolState: [location=[10  1  3]], 1), 
+(PatrolState: [location=[11  1  3]], PatrolActionMoveForward)
+(PatrolState: [location=[11  1  3]], 0.0), (PatrolState: [location=[12  1  3]], 1.0), 
+(PatrolState: [location=[11  1  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[11  1  3]], 0.0), (PatrolState: [location=[11  1  0]], 1.0), 
+(PatrolState: [location=[11  1  3]], PatrolActionTurnRight)
+(PatrolState: [location=[11  1  3]], 0.0), (PatrolState: [location=[11  1  2]], 1.0), 
+(PatrolState: [location=[11  1  3]], PatrolActionStop)
+(PatrolState: [location=[11  1  3]], 1), 
+(PatrolState: [location=[12  1  3]], PatrolActionMoveForward)
+(PatrolState: [location=[12  1  3]], 0.0), (PatrolState: [location=[13  1  3]], 1.0), 
+(PatrolState: [location=[12  1  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[12  1  3]], 0.0), (PatrolState: [location=[12  1  0]], 1.0), 
+(PatrolState: [location=[12  1  3]], PatrolActionTurnRight)
+(PatrolState: [location=[12  1  3]], 0.0), (PatrolState: [location=[12  1  2]], 1.0), 
+(PatrolState: [location=[12  1  3]], PatrolActionStop)
+(PatrolState: [location=[12  1  3]], 1), 
+(PatrolState: [location=[13  1  3]], PatrolActionMoveForward)
+(PatrolState: [location=[13  1  3]], 0.0), (PatrolState: [location=[14  1  3]], 1.0), 
+(PatrolState: [location=[13  1  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[13  1  3]], 0.0), (PatrolState: [location=[13  1  0]], 1.0), 
+(PatrolState: [location=[13  1  3]], PatrolActionTurnRight)
+(PatrolState: [location=[13  1  3]], 0.0), (PatrolState: [location=[13  1  2]], 1.0), 
+(PatrolState: [location=[13  1  3]], PatrolActionStop)
+(PatrolState: [location=[13  1  3]], 1), 
+(PatrolState: [location=[14  1  3]], PatrolActionMoveForward)
+(PatrolState: [location=[14  1  3]], 0.0), (PatrolState: [location=[15  1  3]], 1.0), 
+(PatrolState: [location=[14  1  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[14  1  3]], 0.0), (PatrolState: [location=[14  1  0]], 1.0), 
+(PatrolState: [location=[14  1  3]], PatrolActionTurnRight)
+(PatrolState: [location=[14  1  3]], 0.0), (PatrolState: [location=[14  1  2]], 1.0), 
+(PatrolState: [location=[14  1  3]], PatrolActionStop)
+(PatrolState: [location=[14  1  3]], 1), 
+(PatrolState: [location=[15  1  3]], PatrolActionMoveForward)
+(PatrolState: [location=[15  1  3]], 0.0), (PatrolState: [location=[16  1  3]], 1.0), 
+(PatrolState: [location=[15  1  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[15  1  3]], 0.0), (PatrolState: [location=[15  1  0]], 1.0), 
+(PatrolState: [location=[15  1  3]], PatrolActionTurnRight)
+(PatrolState: [location=[15  1  3]], 0.0), (PatrolState: [location=[15  1  2]], 1.0), 
+(PatrolState: [location=[15  1  3]], PatrolActionStop)
+(PatrolState: [location=[15  1  3]], 1), 
+(PatrolState: [location=[16  1  3]], PatrolActionMoveForward)
+(PatrolState: [location=[16  1  3]], 1), 
+(PatrolState: [location=[16  1  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  1  3]], 0.0), (PatrolState: [location=[16  1  0]], 1.0), 
+(PatrolState: [location=[16  1  3]], PatrolActionTurnRight)
+(PatrolState: [location=[16  1  3]], 0.0), (PatrolState: [location=[16  1  2]], 1.0), 
+(PatrolState: [location=[16  1  3]], PatrolActionStop)
+(PatrolState: [location=[16  1  3]], 1), 
+(PatrolState: [location=[16  2  3]], PatrolActionMoveForward)
+(PatrolState: [location=[16  2  3]], 1), 
+(PatrolState: [location=[16  2  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  2  3]], 0.0), (PatrolState: [location=[16  2  0]], 1.0), 
+(PatrolState: [location=[16  2  3]], PatrolActionTurnRight)
+(PatrolState: [location=[16  2  3]], 0.0), (PatrolState: [location=[16  2  2]], 1.0), 
+(PatrolState: [location=[16  2  3]], PatrolActionStop)
+(PatrolState: [location=[16  2  3]], 1), 
+(PatrolState: [location=[16  3  3]], PatrolActionMoveForward)
+(PatrolState: [location=[16  3  3]], 1), 
+(PatrolState: [location=[16  3  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  3  3]], 0.0), (PatrolState: [location=[16  3  0]], 1.0), 
+(PatrolState: [location=[16  3  3]], PatrolActionTurnRight)
+(PatrolState: [location=[16  3  3]], 0.0), (PatrolState: [location=[16  3  2]], 1.0), 
+(PatrolState: [location=[16  3  3]], PatrolActionStop)
+(PatrolState: [location=[16  3  3]], 1), 
+(PatrolState: [location=[16  4  3]], PatrolActionMoveForward)
+(PatrolState: [location=[16  4  3]], 1), 
+(PatrolState: [location=[16  4  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  4  3]], 0.0), (PatrolState: [location=[16  4  0]], 1.0), 
+(PatrolState: [location=[16  4  3]], PatrolActionTurnRight)
+(PatrolState: [location=[16  4  3]], 0.0), (PatrolState: [location=[16  4  2]], 1.0), 
+(PatrolState: [location=[16  4  3]], PatrolActionStop)
+(PatrolState: [location=[16  4  3]], 1), 
+(PatrolState: [location=[16  5  3]], PatrolActionMoveForward)
+(PatrolState: [location=[16  5  3]], 1), 
+(PatrolState: [location=[16  5  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  5  3]], 0.0), (PatrolState: [location=[16  5  0]], 1.0), 
+(PatrolState: [location=[16  5  3]], PatrolActionTurnRight)
+(PatrolState: [location=[16  5  3]], 0.0), (PatrolState: [location=[16  5  2]], 1.0), 
+(PatrolState: [location=[16  5  3]], PatrolActionStop)
+(PatrolState: [location=[16  5  3]], 1), 
+(PatrolState: [location=[16  6  3]], PatrolActionMoveForward)
+(PatrolState: [location=[16  6  3]], 1), 
+(PatrolState: [location=[16  6  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  6  3]], 0.0), (PatrolState: [location=[16  6  0]], 1.0), 
+(PatrolState: [location=[16  6  3]], PatrolActionTurnRight)
+(PatrolState: [location=[16  6  3]], 0.0), (PatrolState: [location=[16  6  2]], 1.0), 
+(PatrolState: [location=[16  6  3]], PatrolActionStop)
+(PatrolState: [location=[16  6  3]], 1), 
+(PatrolState: [location=[16  7  3]], PatrolActionMoveForward)
+(PatrolState: [location=[16  7  3]], 1), 
+(PatrolState: [location=[16  7  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  7  3]], 0.0), (PatrolState: [location=[16  7  0]], 1.0), 
+(PatrolState: [location=[16  7  3]], PatrolActionTurnRight)
+(PatrolState: [location=[16  7  3]], 0.0), (PatrolState: [location=[16  7  2]], 1.0), 
+(PatrolState: [location=[16  7  3]], PatrolActionStop)
+(PatrolState: [location=[16  7  3]], 1), 
+(PatrolState: [location=[16  8  3]], PatrolActionMoveForward)
+(PatrolState: [location=[16  8  3]], 1), 
+(PatrolState: [location=[16  8  3]], PatrolActionTurnLeft)
+(PatrolState: [location=[16  8  3]], 0.0), (PatrolState: [location=[16  8  0]], 1.0), 
+(PatrolState: [location=[16  8  3]], PatrolActionTurnRight)
+(PatrolState: [location=[16  8  3]], 0.0), (PatrolState: [location=[16  8  2]], 1.0), 
+(PatrolState: [location=[16  8  3]], PatrolActionStop)
+(PatrolState: [location=[16  8  3]], 1), 

@@ -5,14 +5,11 @@ from imitation.util import util
 
 expert_demos_ex = sacred.Experiment("expert_demos")
 
-
 @expert_demos_ex.config
 def expert_demos_defaults():
-    # env_name = "CliffWalking-v0"
-    # total_timesteps = int(7.5e5)
-
-    env_name = "imitationNM/PatrolModel-v0"
-    total_timesteps = int(7.5e5) # int(5e4) 
+    
+    env_name = "imitationNM/PatrolModel-v0" 
+    total_timesteps = int(5e6) 
     normalize = False 
     num_vec = 8  # Number of environments in VecEnv
 
@@ -138,6 +135,17 @@ def cliff_walker():
     total_timesteps = int(1e6)
     normalize = False
 
+@expert_demos_ex.named_config
+def sorting_onions():
+    env_name = "imitationNM/SortingOnions-v0"
+    total_timesteps = int(7.5e5) # int(5e4) 
+    normalize = False 
+
+@expert_demos_ex.named_config
+def perimeter_patrol():
+    env_name = "imitationNM/PatrolModel-v0"
+    total_timesteps = int(5e4) 
+    normalize = False 
 
 # Custom env configs
 @expert_demos_ex.named_config

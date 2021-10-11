@@ -134,14 +134,14 @@ def rollouts_and_policy(
         log_dir=log_dir,
         max_episode_steps=max_episode_steps,
         post_wrappers=[lambda env, idx: wrappers.RolloutInfoWrapper(env)],
-    )
-
-    callback_objs = []
+    ) 
+    
+    callback_objs = [] 
     if reward_type is not None:
-        reward_fn = load_reward(reward_type, reward_path, venv)
-        venv = RewardVecEnvWrapper(venv, reward_fn)
-        callback_objs.append(venv.make_log_callback())
-        logging.info(f"Wrapped env in reward {reward_type} from {reward_path}.")
+        reward_fn = load_reward(reward_type, reward_path, venv) 
+        venv = RewardVecEnvWrapper(venv, reward_fn) 
+        callback_objs.append(venv.make_log_callback()) 
+        logging.info(f"Wrapped env in reward {reward_type} from {reward_path}.") 
 
     vec_normalize = None
     if normalize:
@@ -158,8 +158,8 @@ def rollouts_and_policy(
     policy = util.init_rl(venv, verbose=1, **init_rl_kwargs)
     ##############################
     # only for debugging environment
-    trajs = rollout.generate_trajectories_patrolMDP(policy, venv, eval_sample_until)
-    exit(0)
+    # trajs = rollout.generate_trajectories_patrolMDP(policy, venv, eval_sample_until)
+    # exit(0)
     ##############################
 
     policy.learn(total_timesteps, callback=callback)
@@ -173,8 +173,9 @@ def rollouts_and_policy(
         serialize.save_stable_model(output_dir, policy, vec_normalize)
 
     # Final evaluation of expert policy.
-    trajs = rollout.generate_trajectories(policy, venv, eval_sample_until)
+    # trajs = rollout.generate_trajectories(policy, venv, eval_sample_until)
     # trajs, policy_acts = rollout.generate_trajectories_sortingMDP(policy, venv, eval_sample_until)
+    trajs, policy_acts = rollout.generate_trajectories_patrolMDP(policy, venv, eval_sample_until)
     # with open('./expert_policy_recent_run.txt', 'w') as writer:
     #     for a in policy_acts:
     #         writer.write(str(a)+"\n")

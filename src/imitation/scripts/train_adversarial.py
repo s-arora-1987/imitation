@@ -251,7 +251,7 @@ def train(
     trajs, policy_acts = rollout.generate_trajectories_sortingMDP(
         trainer.gen_algo, trainer.venv_train, sample_until=sample_until_eval
     )
-    # write learned policy
+    # read expert's policy
     reader = open("./expert_policy_successful_training.txt", "r") 
     policy_acts_expert = []
     for act in reader: 

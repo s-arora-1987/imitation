@@ -1,0 +1,248 @@
+
+state:[0 1 0]   action:PatrolActionMoveForward
+
+state:[0 2 0]   action:PatrolActionTurnRight
+
+state:[0 3 0]   action:PatrolActionTurnRight
+
+state:[0 4 0]   action:PatrolActionTurnLeft
+
+state:[0 5 0]   action:PatrolActionMoveForward
+
+state:[0 6 0]   action:PatrolActionTurnLeft
+
+state:[0 7 0]   action:PatrolActionTurnRight
+
+state:[0 8 0]   action:PatrolActionTurnRight
+
+state:[1 1 0]   action:PatrolActionTurnRight
+
+state:[2 1 0]   action:PatrolActionTurnLeft
+
+state:[3 1 0]   action:PatrolActionTurnLeft
+
+state:[4 1 0]   action:PatrolActionTurnLeft
+
+state:[5 1 0]   action:PatrolActionTurnLeft
+
+state:[6 1 0]   action:PatrolActionTurnRight
+
+state:[7 1 0]   action:PatrolActionTurnRight
+
+state:[8 1 0]   action:PatrolActionTurnRight
+
+state:[9 1 0]   action:PatrolActionTurnLeft
+
+state:[10  1  0]   action:PatrolActionTurnLeft
+
+state:[11  1  0]   action:PatrolActionTurnLeft
+
+state:[12  1  0]   action:PatrolActionTurnLeft
+
+state:[13  1  0]   action:PatrolActionTurnLeft
+
+state:[14  1  0]   action:PatrolActionTurnRight
+
+state:[15  1  0]   action:PatrolActionTurnLeft
+
+state:[16  1  0]   action:PatrolActionTurnRight
+
+state:[16  2  0]   action:PatrolActionTurnRight
+
+state:[16  3  0]   action:PatrolActionTurnLeft
+
+state:[16  4  0]   action:PatrolActionTurnRight
+
+state:[16  5  0]   action:PatrolActionMoveForward
+
+state:[16  6  0]   action:PatrolActionTurnLeft
+
+state:[16  7  0]   action:PatrolActionTurnLeft
+
+state:[16  8  0]   action:PatrolActionTurnRight
+
+state:[0 1 1]   action:PatrolActionTurnLeft
+
+state:[0 2 1]   action:PatrolActionTurnLeft
+
+state:[0 3 1]   action:PatrolActionTurnRight
+
+state:[0 4 1]   action:PatrolActionTurnRight
+
+state:[0 5 1]   action:PatrolActionTurnLeft
+
+state:[0 6 1]   action:PatrolActionTurnRight
+
+state:[0 7 1]   action:PatrolActionTurnRight
+
+state:[0 8 1]   action:PatrolActionTurnLeft
+
+state:[1 1 1]   action:PatrolActionTurnLeft
+
+state:[2 1 1]   action:PatrolActionTurnLeft
+
+state:[3 1 1]   action:PatrolActionTurnLeft
+
+state:[4 1 1]   action:PatrolActionTurnRight
+
+state:[5 1 1]   action:PatrolActionTurnLeft
+
+state:[6 1 1]   action:PatrolActionMoveForward
+
+state:[7 1 1]   action:PatrolActionMoveForward
+
+state:[8 1 1]   action:PatrolActionMoveForward
+
+state:[9 1 1]   action:PatrolActionTurnLeft
+
+state:[10  1  1]   action:PatrolActionTurnRight
+
+state:[11  1  1]   action:PatrolActionTurnRight
+
+state:[12  1  1]   action:PatrolActionTurnRight
+
+state:[13  1  1]   action:PatrolActionTurnLeft
+
+state:[14  1  1]   action:PatrolActionTurnLeft
+
+state:[15  1  1]   action:PatrolActionTurnRight
+
+state:[16  1  1]   action:PatrolActionTurnRight
+
+state:[16  2  1]   action:PatrolActionTurnLeft
+
+state:[16  3  1]   action:PatrolActionTurnLeft
+
+state:[16  4  1]   action:PatrolActionTurnRight
+
+state:[16  5  1]   action:PatrolActionTurnLeft
+
+state:[16  6  1]   action:PatrolActionTurnLeft
+
+state:[16  7  1]   action:PatrolActionTurnRight
+
+state:[16  8  1]   action:PatrolActionTurnLeft
+
+state:[0 1 2]   action:PatrolActionTurnLeft
+
+state:[0 2 2]   action:PatrolActionMoveForward
+
+state:[0 3 2]   action:PatrolActionTurnRight
+
+state:[0 4 2]   action:PatrolActionTurnLeft
+
+state:[0 5 2]   action:PatrolActionTurnRight
+
+state:[0 6 2]   action:PatrolActionTurnRight
+
+state:[0 7 2]   action:PatrolActionTurnLeft
+
+state:[0 8 2]   action:PatrolActionTurnLeft
+
+state:[1 1 2]   action:PatrolActionTurnRight
+
+state:[2 1 2]   action:PatrolActionTurnLeft
+
+state:[3 1 2]   action:PatrolActionTurnLeft
+
+state:[4 1 2]   action:PatrolActionTurnRight
+
+state:[5 1 2]   action:PatrolActionTurnLeft
+
+state:[6 1 2]   action:PatrolActionTurnRight
+
+state:[7 1 2]   action:PatrolActionTurnRight
+
+state:[8 1 2]   action:PatrolActionTurnLeft
+
+state:[9 1 2]   action:PatrolActionTurnRight
+
+state:[10  1  2]   action:PatrolActionTurnLeft
+
+state:[11  1  2]   action:PatrolActionTurnLeft
+
+state:[12  1  2]   action:PatrolActionTurnRight
+
+state:[13  1  2]   action:PatrolActionTurnLeft
+
+state:[14  1  2]   action:PatrolActionTurnRight
+
+state:[15  1  2]   action:PatrolActionTurnLeft
+
+state:[16  1  2]   action:PatrolActionTurnLeft
+
+state:[16  2  2]   action:PatrolActionTurnRight
+
+state:[16  3  2]   action:PatrolActionTurnLeft
+
+state:[16  4  2]   action:PatrolActionTurnLeft
+
+state:[16  5  2]   action:PatrolActionTurnLeft
+
+state:[16  6  2]   action:PatrolActionTurnRight
+
+state:[16  7  2]   action:PatrolActionTurnRight
+
+state:[16  8  2]   action:PatrolActionTurnLeft
+
+state:[0 1 3]   action:PatrolActionTurnRight
+
+state:[0 2 3]   action:PatrolActionTurnLeft
+
+state:[0 3 3]   action:PatrolActionTurnLeft
+
+state:[0 4 3]   action:PatrolActionTurnRight
+
+state:[0 5 3]   action:PatrolActionTurnLeft
+
+state:[0 6 3]   action:PatrolActionTurnLeft
+
+state:[0 7 3]   action:PatrolActionTurnLeft
+
+state:[0 8 3]   action:PatrolActionTurnLeft
+
+state:[1 1 3]   action:PatrolActionTurnLeft
+
+state:[2 1 3]   action:PatrolActionTurnLeft
+
+state:[3 1 3]   action:PatrolActionTurnLeft
+
+state:[4 1 3]   action:PatrolActionMoveForward
+
+state:[5 1 3]   action:PatrolActionMoveForward
+
+state:[6 1 3]   action:PatrolActionTurnLeft
+
+state:[7 1 3]   action:PatrolActionTurnLeft
+
+state:[8 1 3]   action:PatrolActionTurnLeft
+
+state:[9 1 3]   action:PatrolActionTurnLeft
+
+state:[10  1  3]   action:PatrolActionTurnRight
+
+state:[11  1  3]   action:PatrolActionTurnRight
+
+state:[12  1  3]   action:PatrolActionTurnLeft
+
+state:[13  1  3]   action:PatrolActionTurnLeft
+
+state:[14  1  3]   action:PatrolActionTurnLeft
+
+state:[15  1  3]   action:PatrolActionTurnRight
+
+state:[16  1  3]   action:PatrolActionTurnLeft
+
+state:[16  2  3]   action:PatrolActionTurnLeft
+
+state:[16  3  3]   action:PatrolActionTurnRight
+
+state:[16  4  3]   action:PatrolActionTurnLeft
+
+state:[16  5  3]   action:PatrolActionTurnRight
+
+state:[16  6  3]   action:PatrolActionTurnLeft
+
+state:[16  7  3]   action:PatrolActionTurnRight
+
+state:[16  8  3]   action:PatrolActionTurnRight

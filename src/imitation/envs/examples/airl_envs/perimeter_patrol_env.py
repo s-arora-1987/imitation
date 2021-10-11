@@ -66,12 +66,15 @@ class PatrolModel(DiscreteEnv):
 
     def __init__(self):
 
-        p_fail = 0.05 
+        p_fail = 0.0 
         terminal=PatrolState(np.array( [-1,-1, -1] )) 
 
-        self._actions = [PatrolActionMoveForward(), PatrolActionTurnLeft(), PatrolActionTurnRight(), PatrolActionStop()]
-        self._p_fail = float(p_fail)
-        self._terminal = terminal
+        self._actions = [PatrolActionMoveForward(), PatrolActionTurnLeft(), 
+        PatrolActionTurnRight(), PatrolActionStop()] 
+        self._actionList = ['PatrolActionMoveForward', 'PatrolActionTurnLeft', 
+        'PatrolActionTurnRight', 'PatrolActionStop'] 
+        self._p_fail = float(p_fail) 
+        self._terminal = terminal 
         
         """All states in the MDP"""
         self._stateList = []
@@ -108,24 +111,33 @@ class PatrolModel(DiscreteEnv):
 
         self._rewardmodel = Boyd2RewardGroupedFeatures(self) 
         weights = [1, 0, 0, 0, 0.75, 0] 
+        # weights = [1, -0.75, 0.0, -0.75, 0.75, -0.75] 
         norm_weights = [float(i)/sum(np.absolute(weights)) for i in weights] 
         self._rewardmodel.params = norm_weights
 
         P = {}
+        p_str = ""
         for s in range(nS):
             P[s] = {a: [] for a in range(nA)}
             for a in range(nA):
-                trans_dict = self.T(self._stateList[s],self._actions[a])
-                rew = self._rewardmodel.reward(self._stateList[s],self._actions[a])
+                pstate = self._stateList[s]
+                paction = self._actions[a]
+                p_str += "\n"+str((pstate,paction))+"\n"
+                trans_dict = self.T(pstate,paction)
+                rew = self._rewardmodel.reward(pstate,paction)
                 list_p_sa = []
-                for next_state in trans_dict:
-                    ns = self._stateList.index(next_state)
-                    list_p_sa.append((trans_dict[next_state], ns, rew, False))
-                P[s][a] = list_p_sa
+                for next_pstate in trans_dict:
+                    ns = self._stateList.index(next_pstate)
+                    list_p_sa.append((trans_dict[next_pstate], ns, rew, False))
+                    p_str += str((next_pstate,trans_dict[next_pstate]))+", " 
+                P[s][a] = list_p_sa 
+                
+        with open('./env_transition_dict.txt', 'w') as writer:
+            writer.write(p_str)
 
         self.P = P
         self._timestep = 0
-        self._episode_length = 4
+        self._episode_length = 40
 
         super(PatrolModel, self).__init__(nS, nA, self.P, self.isd) 
 
@@ -133,12 +145,11 @@ class PatrolModel(DiscreteEnv):
         return self._stateList
 
     def actionList():
-        self._actionList = ['PatrolActionMoveForward', 'PatrolActionTurnLeft', 
-        'PatrolActionTurnRight', 'PatrolActionStop']
         return self._actionList
 
     def reset(self):
         self.s = categorical_sample(self.isd, self.np_random)
+        # print("state sampled in reset ",self._stateList[self.s])
         self.lastaction = None
         self._timestep = 0
         return int(self.s)
@@ -148,6 +159,8 @@ class PatrolModel(DiscreteEnv):
         transitions = self.P[self.s][a]
         i = categorical_sample([t[0] for t in transitions], self.np_random)
         p, s, r, d = transitions[i]
+        # print("step  s {}, a {}, ns {}, options {}".format
+        # (self._stateList[self.s],self._actionList[a],self._stateList[s],transitions))
         self.s = s
         self.lastaction = a
         if self._timestep == self._episode_length:
@@ -206,47 +219,6 @@ class PatrolModel(DiscreteEnv):
             result.append( '\n' )
         return ''.join(result)
 
-
-
-def boyd2MapParams(attacker=False):
-    if attacker:
-        themap = np.array( [[1, 1, 1, 1, 1, 1, 1, 1, 1], 
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 1, 1, 1, 1, 1, 1, 1]])
-    else:
-        themap = np.array( [[0, 1, 1, 1, 1, 1, 1, 1, 1], 
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                     [0, 1, 1, 1, 1, 1, 1, 1, 1]])
-        
-    return ( themap, 25.55, 8.65, 7.25, 16.52 )
 
 class State(object):
     '''
@@ -459,15 +431,15 @@ class Boyd2RewardGroupedFeatures(LinearReward):
         if (self._model.is_legal(next_state) and not moved):
             if action.__class__.__name__ == "PatrolActionTurnLeft" or action.__class__.__name__ == "PatrolActionTurnRight":
 
-                if (state.location[0] >= 1 and state.location[0] <= 15):
+                if (state.location[0] >= 1 and state.location[0] <= 15):# longer hallway
                     result[1] = 1
-                if ((state.location[0] <= 1 or state.location[0] >= 15) and state.location[1] <= 2):
+                if ((state.location[0] <= 1 or state.location[0] >= 15) and state.location[1] <= 2): #turning points
                     result[2] = 1
-                if (state.location[1] >= 2 and state.location[1] <= 3):
+                if (state.location[1] >= 2 and state.location[1] <= 3): # small hallway
                     result[3] = 1
-                if (state.location[1] >= 4 and state.location[1] <= 5):
+                if (state.location[1] >= 4 and state.location[1] <= 5): # small hallway
                     result[4] = 1
-                if (state.location[1] >= 6 and state.location[1] <= 8):
+                if (state.location[1] >= 6 and state.location[1] <= 8): # turning around points
                     result[5] = 1
 
         return result

@@ -347,29 +347,29 @@ def generate_trajectories_patrolMDP(
 
     # store state action pair in a dictionary
     det_policy_as_dict_only_discr_sp = {}
-    stateList = []
+    statesList = []
     mappatrol = np.array( [[0, 1, 1, 1, 1, 1, 1, 1, 1], 
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 1, 1, 1, 1, 1, 1, 1]])
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1]] )
     nz = np.nonzero(mappatrol == 1)
     for o in range(4):
         for c, ind in enumerate(nz[0]):
-            s = array( [nz[0][c], nz[1][c], o] )
-            stateList.append( PatrolState( s ) )
+            s = np.array( [nz[0][c], nz[1][c], o] )
+            statesList.append( s )
     actionList = ['PatrolActionMoveForward', 'PatrolActionTurnLeft', 
     'PatrolActionTurnRight', 'PatrolActionStop']
     
@@ -378,13 +378,13 @@ def generate_trajectories_patrolMDP(
     for obs in range(size_statespace):
         ss = "state:"+str(statesList[obs])
         acts, _ = get_action(obs, deterministic=True)
-        aa = "action:"+actionList[acts]
+        aa = "  action:"+actionList[acts]
         pol_str += "\n"+ss+" "+aa+"\n"
         det_policy_as_dict_only_discr_sp[obs] = acts
 
-        print("det_policy_as_dict_only_discr_sp \n ",det_policy_as_dict_only_discr_sp)
-        with open('./learned_policy_patrolling.txt', 'w') as writer:
-            writer.write(pol_str)
+    print("det_policy_as_dict_only_discr_sp \n ",det_policy_as_dict_only_discr_sp)
+    with open('./learned_policy_patrolling.txt', 'w') as writer:
+        writer.write(pol_str)
 
     # Collect rollout tuples.
     trajectories = []
@@ -399,6 +399,7 @@ def generate_trajectories_patrolMDP(
         # really big).
         trajectories_accum.add_step(dict(obs=ob), env_idx)
 
+    traj_str = ""
     # Now, we sample until `sample_until(trajectories)` is true. 
     # If we just stopped then this would introduce a bias towards shorter episodes,
     # since longer episodes are more likely to still be active, i.e. in the process
@@ -421,8 +422,12 @@ def generate_trajectories_patrolMDP(
         rews = rews.astype(np.float64)
         new_trajs = trajectories_accum.add_steps_and_auto_finish(
             acts, obs, rews, dones, infos
-        )
-        trajectories.extend(new_trajs)
+        ) 
+        trajectories.extend(new_trajs) 
+
+        traj_str += "\n"+"state:"+str(statesList[obs[0]])
+        traj_str += "\n"+"action:"+actionList[acts[0]]
+        traj_str += "\n"+"done:"+str(dones[0])
 
         if sample_until(trajectories):
             # break 
@@ -430,6 +435,9 @@ def generate_trajectories_patrolMDP(
             # # Termination condition has been reached. Mark as inactive any environments
             # # where a trajectory was completed this timestep.
             active &= ~dones
+
+    with open('./trajectories_rollout.txt', 'w') as writer:
+        writer.write(traj_str)
 
     # Note that we just drop partial trajectories. This is not ideal for some
     # algos; e.g. BC can probably benefit from partial trajectories, too.

@@ -9,4 +9,4 @@ do
     done
 done
 
-echo "Message Body" | mail -s "experiment finished" sarora@udel.edu
+echo "Message Body" | mail -s "AIRL experiment finished" sarora@udel.edu
